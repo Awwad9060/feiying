@@ -1,0 +1,74 @@
+.modalShow {
+	display:block!important;
+}
+.bigModal {
+	display: none;
+    animation: showAlert 0.3s ease-in-out;
+    -webkit-animation: showAlert 0.3s ease-in-out;
+    -moz-animation: showAlert 0.3s ease-in-out;
+}
+.modal-Overlay {
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.92;
+    z-index: 10002;
+	position: fixed;
+	background: #111;
+	filter:alpha(opacity=92);
+}
+.modal-Body {
+	top:0;
+	left:50%;
+    width: 700px;
+	height:320px;
+    /*background: #fff;
+    /*border: #888 solid 1px; 
+    box-shadow: 0 0 0.3125em rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 0.3125em rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 0.3125em rgba(0,0,0,0.3);
+    transition: transform .6s ease-in-out;
+    transform: translate(2%,20%);*/
+    z-index: 10003;
+	position: fixed;
+	margin-top:160px;
+	margin-left:-350px;
+}
+.modal-Body .ChatImg {
+	width:100%;
+	height:100%;
+	/*text-align:center;
+	margin-top:-150px;*/
+	position:relative;
+}
+.modal-Body .ChatImg  img {
+	max-width:100%;
+	width:auto;
+	height:auto;
+	display:block;
+	margin:0 auto;
+}
+.modal-Body a {
+	top:82px;
+	right:24px;
+	width:114px;
+	height:114px;
+	display:block;
+	position:absolute;
+}
+.close-submit {
+	top:0;
+	right:0;
+	border:0;
+	color:#eee;
+	/*width:20px;
+	height:20px;*/
+	font-size:2em;
+	font-weight:600;
+	/*background:#333;*/
+	padding:2px 5px;
+	background:none;
+	position:absolute;
+}

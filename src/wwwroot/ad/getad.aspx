@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="getad.aspx.cs" Inherits="ad_getad" %>

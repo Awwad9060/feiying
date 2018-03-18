@@ -1,0 +1,298 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="all" name="robots" />
+<title>国际特价机票,国际特价机票查询,国际特价机票预订</title>
+<meta name="keywords" content="国际特价机票,国际特价机票查询,国际特价机票预订" />
+<meta name="Description"  content="国际特价机票网为您提供优惠的特价国际机票,打折国际机票,拥有国际优惠机票查抢订系统，专业预定国内、国际机票，尽力为你争取实惠机票价格 ，预定世界各地酒店及东南亚签证服务；预订热线：4008-850-663" />
+<link href="/new/main.css" rel="stylesheet" type="text/css" />
+<link href="/new/news.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<form name="form2" method="post" action="news_469.htm?id=469" id="form2">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTczODI2NzcxNGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFCWNoZU5pbWluZ89uksBCE39HdTakOcXM9RKnXdUX" />
+</div>
+
+<!--header start-->
+<div class="headertop"><span><img src="/images/home.jpg" alt="" /><img src="/images/homeinfor.jpg" alt="" />国际、国内机票服务热线：4008-850-663(免费)</span></div>
+<div class="headerbottom">
+  <div class="headerbottom_left"><a href="#" title=""><img src="/images/logo.jpg" alt="" /></a></div>
+  <div class="headerbottom_right">
+      <div class="headerbottom_rightone">
+    
+    <a href="login.aspx" title="">会员登录</a>|<a href="regAgree.aspx" title="会员注册">会员注册</a>
+     
+    </div>    <ul class="menu_1">
+      <li class="four"><a href="http://www.fei580.com" title="首页">首&nbsp;页</a></li>
+      <li class="two"><a href="/recommend.aspx" title="特价机票">特价机票</a></li>
+      <li class="two"><a href="/international.aspx" title="国际机票">国际机票</a></li>
+      <li class="two"><a href="/ticket" title="国内机票">国内机票</a></li>
+      <li class="two"><a href="/hotel" title="特价酒店">特价酒店</a></li>
+      <li class="two"><a href="/quan.aspx" title="飞瀛圈">飞瀛圈</a></li>
+      <li class="two" style="background:none;"><a href="/service.aspx" title="关于飞瀛">关于飞瀛</a></li>
+      <li class="new_imgs" style="padding:0px;background:none;"><img src="/images/new.gif" alt="" /></li>
+    </ul>
+    <div class="menubottom">
+	    <ul class="nohidden">
+	      <li class="two"><a href="/airline.aspx" title="">航空公司</a></li>
+	      <li class="two"><a href="/airport.aspx" title="">世界机场</a></li>
+	      <li class="two"><a href="/airplane.aspx" title="">民航机型</a></li>
+	      <li class="one"><a href="/news.aspx" title="">新闻资讯</a></li>
+	    </ul>
+            
+<div class="menu_rightinput">
+    <input name="SearchControl1$searchkey" type="text" id="SearchControl1_searchkey" class="headerinput" /><input type="submit" name="SearchControl1$buttSearch" value="" id="SearchControl1_buttSearch" class="heaersubmit" />
+</div>
+    </div>
+    <div class="header_nav">您现在位置：<a href="http://www.fei580.com" title="">飞瀛首页</a>&gt;&nbsp;<a href="/new/">国际特价机票</a></div>
+  </div>
+</div>
+<!--header end-->
+
+
+<div style="margin:0px auto;width:966px;">
+
+<div class="clear">
+<!--boxright start-->
+	  <div class="newsdoc_left">
+	  
+	    <img src="/images/news05.jpg" style="float:left;" />
+	    <div class="newsdoc_leftboxtwo">
+	        <div class="newsdoc_leftboxsev">
+			
+	          <div class="newsdoc_leftboxeight">
+	            <h2><a href="#">推荐国际机票</a></h2>
+	            <ul>
+					                                  
+                                 {dede:field runphp='yes'}
+// 读取文件内容到数组
+$contentArr = file('http://www.fei580.com/new/url/all.txt');
+//总行数
+$totleLines = count($contentArr);
+//随机行数
+//$current = rand(1, $totleLines);
+//随机的内容输出
+
+
+//$arr=explode("|",$contentArr[$current]);
+
+//echo "id={$arr[0]},姓名={$arr[1]}";
+
+
+$I=0;
+$RRR ="";
+while($I<8){
+ $current = rand(0, $totleLines-1);
+ $arr=explode(",",$contentArr[$current]);
+  $RRR =$RRR ."<li><a href=\"".$arr[1]."\">".$arr[0]."</a> </li>";
+  $I=$I+1;
+}
+
+ @me=$RRR;
+{/dede:field}
+                           
+					        
+					    </ul>
+	          </div>
+			  
+			   <div class="newsdoc_leftboxeight">
+	            <h2>热门国际机票</h2>
+	            <ul>
+					         
+                                 {dede:field runphp='yes'}
+// 读取文件内容到数组
+$contentArr = file('http://www.fei580.com/new/url/hot.txt');
+//总行数
+$totleLines = count($contentArr);
+//随机行数
+//$current = rand(1, $totleLines);
+//随机的内容输出
+
+
+//$arr=explode("|",$contentArr[$current]);
+
+//echo "id={$arr[0]},姓名={$arr[1]}";
+
+
+$I=0;
+$RRR ="";
+while($I<8){
+ $current = rand(0, $totleLines-1);
+ $arr=explode(",",$contentArr[$current]);
+  $RRR =$RRR ."<li><a href=\"".$arr[1]."\">".$arr[0]."</a> </li>";
+  $I=$I+1;
+}
+
+ @me=$RRR;
+{/dede:field}
+                           
+                           
+                                
+                           
+					        
+					    </ul>
+	          </div>
+	          
+	           <div class="newsdoc_leftboxeight">
+	            <h2>机票乘机常识</h2>
+	            <ul>
+				 {dede:arclist row=18  tid="103"}
+               <li><a href="[field:arcurl/]">[field:title/]</a></li>
+             {/dede:arclist}
+					         
+                                 
+                           
+					    </ul>
+	          </div>
+			  <div class="newsdoc_leftboxeight">
+	            <h2>机票常见疑问</h2>
+	            <ul>
+					 {dede:arclist row=18 tid="104" }
+               <li><a href="[field:arcurl/]">[field:title/]</a></li>
+             {/dede:arclist}
+                           
+                           
+					        
+					    </ul>
+	          </div>
+			  
+			  
+	        </div>
+	      <img src="/images/news010.jpg" style="float:left;" />
+	     	      
+	    </div>
+	    <img src="/images/news06.jpg" style="float:left;" />
+	  </div>
+	<!--boxright end-->
+	<!--boxright start-->
+	  <div class="newsdoc_right">
+	    <select style="vertical-align:middle;"><option>全部</option></select><input type="text" class="news_text" value="请输入搜索内容" /><input type="submit" value="" class="news_submit" />
+	    <div class="newsdoc_rightbox">
+	      <div class="newsdoc_righttitle"><strong>热门排行榜</strong><code>本周TOP10</code></div>
+	      <ul class="newsdoc_rightul">
+	        
+                 {dede:arclist row=10 tid="103,104" orderby=click}
+               <li><a href="[field:arcurl/]">[field:title/]</a></li>
+             {/dede:arclist}
+                           
+	      </ul>
+	    </div>
+	    
+	    <div class="news_ad">
+	     <script type="text/javascript" src="/ad/getad.aspx?width=244&height=220&id=7"></script>
+	     </div>
+	    
+	    <strong class="newsdoc_righttitletwo">特别推荐文章</strong>
+	    <ul class="newsdoc_rightultwo">
+	               
+                                 {dede:arclist row=10  orderby='rand'}
+               <li><a href="[field:arcurl/]">[field:title/]</a></li>
+             {/dede:arclist}
+                           
+	    </ul>
+	    
+	  
+	    <img src="/images/news02.jpg" style="float:left;" />
+	  </div>
+	<!--boxright end-->
+	
+	
+</div>
+
+</div>
+ 
+
+  <!--sixlinebox start-->
+<div class="clear"></div>
+<div class="sixlinebox">
+  <ul>
+    <li class="one"><img src="/images/01.gif" alt="" /><br />了解飞瀛</li>
+    <li class="two">
+    <a href="/news_37.htm" title="飞瀛网介绍" target="_blank">飞瀛网介绍</a><br />
+    <a href="/news_38.htm" title="服务范围" target="_blank">服务范围</a><br />
+    <a href="/news_39.htm" title="会员规则" target="_blank">会员规则</a><br />
+    <a href="/news_45.htm" title="积分规则" target="_blank">积分规则</a><br />   
+    </li>
+  </ul>
+  
+  <ul>
+    <li class="one"><img src="/images/02.gif" alt="" /><br />领先服务</li>
+    <li class="two">
+    <a href="/news_41.htm" title="IDS机票抢订" target="_blank">IDS机票抢订</a><br />
+    <a href="/news_42.htm" title="价格优势" target="_blank">价格优势</a><br />
+    <a href="/news_43.htm" title="服务优势" target="_blank">服务优势</a><br />
+    <a href="/news_44.htm" title="网站互动特色" target="_blank">网站互动特色</a><br />   
+    </li> 
+  </ul>
+  
+
+
+
+  <ul>
+    <li class="one"><img src="/images/03.gif" alt="" /><br />订购帮助</li>
+   <li class="two">
+    <a href="/news_47.htm" title="机票订购流程" target="_blank">机票订购流程</a><br />
+    <a href="/news_46.htm" title="多样支付方式" target="_blank">多样支付方式</a><br />
+    <a href="/news_49.htm" title="会员特权" target="_blank">会员特权</a><br />
+    <a href="/news_48.htm" title="跟踪服务" target="_blank">跟踪服务</a><br />   
+    </li>
+  </ul>
+   
+ 
+ 
+ 
+  <ul>
+    <li class="one"><img src="/images/04.gif" alt="" /><br />接触飞瀛</li>
+    <li class="two">
+    <a href="/news_50.htm" title="业务战略合作" target="_blank">业务战略合作</a><br />
+    <a href="/news_51.htm" title="网站推广合作" target="_blank">网站推广合作</a><br />
+    <a href="/news_52.htm" title="招贤纳士" target="_blank">招贤纳士</a><br />
+    <a href="/news_53.htm" title="组织活动" target="_blank">组织活动</a><br />   
+    </li>
+  </ul>
+</div>
+<!--sixlinebox start-->
+
+<!--sevlinebox start-->
+  <div style="margin:0px auto;width:955px;">
+  <div style="margin:0px auto;width:955px;">
+  <div class="friendtitle">快速导航</div>
+  <div class="friendbox">
+  <a href="http://www.fei580.com/">国际机票</a>
+  <a href="http://www.fei580.com/new/">国际特价机票</a>
+  <a href="http://www.fei580.com/">国际机票价格</a>
+  <a href="http://www.fei580.com/">国际机票查询</a>
+  <a href="http://www.fei580.com/recommend.aspx">特价机票</a>
+  <a href="http://www.fei580.com/ticket/">国内机票</a>
+  <a href="http://www.fei580.com/internatoArea.aspx?state=1">亚洲特价机票</a>
+  <a href="http://www.fei580.com/internatoArea.aspx?state=2">欧洲特价机票</a>
+  <a href="http://www.fei580.com/internatoArea.aspx?state=3">北美洲特价机票</a>
+  <a href="http://www.fei580.com/internatoArea.aspx?state=5">大洋洲特价机票</a>
+  <a href="http://www.fei580.com/internatoArea.aspx?state=6">非洲特价机票</a>
+  </div>
+  </div>
+<!--sevlinebox start-->
+
+ 
+ 
+<!--footer start-->
+<ul class="footer">
+  <li class="one"><code><a href="#" title="" class="white">TOP</a></code><span><a href="http://www.fei580.com" title="" class="white">HOME</a></span></li>
+  <li class="two"><a href="http://www.szdc.org/book.php?tid=14342" target="_blank" title="国际机票"><img src="/images/bottomlogo.jpg" alt="" /></a></li>
+  <li class="three">
+      <span><a href="http://www.fei580.com" title="飞瀛网">飞瀛网</a> <a href="http://www.fei580.com/service.aspx">广州市飞瀛商务服务有限公司</a></span>  <img src="/images/copyright.jpg" alt=""  /> <a href="http://www.szdc.org/book.php?tid=14299" title="设计版权"  target="_blank" style="color:#0053a0;">版权认证网站</a>
+<br />
+      Copyright © 1999 - 2010   All Rights Reserved E-Mail：gzfeiying@sina.cn
+<br />
+      订票热线：4008-850-663(免费) 020-38039887(国际)　020-38039589(国内) 办公时间：9:00～18:00
+<br />粤ICP备10039560号 <script src="http://s16.cnzz.com/stat.php?id=2364036&web_id=2364036" language="JavaScript"></script>
+
+  </li>
+</ul>
+<!--footer end-->
+</form>
+</body>
+</html>

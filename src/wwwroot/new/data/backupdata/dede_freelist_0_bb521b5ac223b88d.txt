@@ -1,0 +1,1 @@
+INSERT INTO `dede_freelist` VALUES('1','sitemap','{listdir}/sm{page}.html','/sitemap','index.html','1','{style}/list_map.htm','1308798560','100','0','{dede:list  pagesize=\'300\' col=\'1\' titlelen=\'60\' orderby=\'pubdate\' orderway=\'desc\' \r\n typeid=\'413\'  channel=\'17\' }<li> [field:textlink/]<p class=intro>[field:description/]...</p></li>{/dede:list}','','');

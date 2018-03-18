@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>广州到{dede:field.typename/}机票,广州到{dede:field.typename/}票价查询,北京到{dede:field.typename/}机票查询_{dede:global.cfg_webname/}-飞瀛网</title>
+<meta name="keywords" content="广州到{dede:field.typename/}机票,广州到{dede:field.typename/}票价查询,广州到{dede:field.typename/}机票查询" />
+<meta name="description" content="{dede:field.typename/}特价机票,专业提供:广州到{dede:field.typename/}特价机票、广州到{dede:field.typename/}票价查询、广州到{dede:field.typename/}机票查询欢迎咨询预订,免费咨询电话:4008-850-663" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<link href="{dede:global.cfg_templeturl/}/fei580/css/main.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/fei580/css/index_new.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/fei580/css/article.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/js/jquery.suggest.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_templeturl/}/js/TwoCalendar.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templeturl/}/js/jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templeturl/}/js/jquery.bgiframe.min.js"></script>
+<script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js" type="text/javascript"></script>
+<script type="text/javascript">uaredirect("http://m.fei580.com", "http://www.fei580.com");</script>
+</head>
+
+<body>
+<div class="mainbody" >
+{dede:include filename="head.htm"/}
+<div class="contain">
+  <!--leftcontain start-->
+  <div class="lcontain">
+  {dede:sql sql="SELECT * FROM dede_arctype WHERE id=~typeid~"}
+  <!--ticketinfo-->
+   <div class="ticketinfo_box">
+    <div class="ticketinfo_left"></div>
+    <div class="ticketinfo_right">
+     <div class="fly_ticket">广州到[field:typename/]机票</div>
+     <div class="fly_from_to">
+      <div class="fly_from">出发城市：<b>广州</b></div>
+      <div class="fly_to">到达城市：<b>[field:typename/]</b></div>
+     </div>
+     <div class="fly_from_to">
+      <div class="fly_from">航空公司：<b>[field:description/]</b></div>
+      <div class="fly_to">航位等级：<b>经济舱</b></div>
+     </div>
+     <div class="fly_price_buy">
+      <div class="fly_from">价格：<b>[field:seotitle/]</b></div>
+      <div class="fly_to"><a href="http://qiao.baidu.com/v3/?module=default&controller=im&action=index&ucid=2415525&type=n&siteid=293251" target="_blank" rel="nofollow"><img src="/new/templets/fei580/images/ticketcx.png" width="125" height="35" border="0" /></a></div>
+     </div>
+    </div>
+   </div>
+   <!--ticketinfo-end-->
+   <div class="clear"></div>
+   <div class="ticket_sm">
+   <div class="ticket_p">
+	     <p><strong>广州到[field:typename/]机票限制条件和说明:</strong></p>
+	     <p>单程价格：[field:seotitle/]&#160;&#160; </p>
+	     <p>往返价格：[field:keywords/] </p>
+	     <p>航空公司：[field:description/]（可以按客户要求改变航空公司和转机点）</p>
+	     <p>舱位等级：经济舱</p>
+	     <p>使用说明：</p>
+	     <p>1．此票价为净价，不含任何费用</p>
+	     <p>2．票价如有更改,恕不另行通知</p>
+	     <p>3．不可签转,不可更改行程</p>
+	     <p>4．所有航段必须有确认的订座,不可开OPEN票. </p>
+	     <p>5．退票手续 :可退票,需缴纳手续费</p>
+	     <p>6．误机(NOSHOW) :需收取误机费</p>
+	     <p>7．更改订座 : 允许更改。乘客必须于出发日之前取消原订的航班，否则按照 '误机' 处理</p>
+	     <p>8．儿童票价 :成人票价的75% </p>
+	     <p>9．婴儿票价 :使用 IATA 公布成人票价的10% </p>
+	     <p class="ticketbz">注：以上信息仅供参考，详细请咨询客服！</p>
+	     <p class="ticketqz">广州到[field:typename/]机票，有位特惠价格抢订：400-885-0663(免费)</p>
+   </div>
+   </div>
+   <!---->
+   {/dede:sql}
+   <div class="clear"></div>
+   {dede:sql sql="SELECT  *  FROM dede_arctype WHERE typename=~typename~ LIMIT 0,1"}
+   <div class="ticket_info">
+   <p><strong>[field:typename/]相关介绍:</strong></p>
+   [field:content/]
+   </div>
+   {/dede:sql}
+   <!---->
+   <div class="clear"></div>
+   <div class="xgticket_box fleft mleft10">
+    <h1>北京到{dede:field.typename/}相关机票</h1>
+     <ul class="xgticket_ul">
+      {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+      <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+      {/dede:loop}
+      {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+      <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+      {/dede:loop}   
+      {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+      <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+      {/dede:loop}   
+      {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+      <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+      {/dede:loop}   
+     </ul>
+   </div>
+   <div class="xgticket_box fleft mleft10">
+    <h1>{dede:field.typename/}相关机票文章</h1>
+     <ul class="xgticket_ul">
+      {dede:arclist row='8' typeid="103,407,408" orderby='rand'}
+      <li><a href="[field:arcurl/]">[field:title/]</a></li>
+      {/dede:arclist}
+     </ul>
+   </div>
+  </div>
+  <!--leftcontain end-->
+  <!--rightside start-->
+  <div class="rightside">
+    <div class="tsearch">
+     <h1 class="sptitle">国际机票查询</h1>
+   <table width="100%" border="0" cellspacing="5">
+     <tr>
+       <td width="80" align="right" valign="bottom">&#160;</td>
+       <td width="90" align="center" valign="bottom"><img src="/new/templets/fei580/images/n.jpg" alt="单程" width="20" height="20" border="0" align="top" onclick="imgDC();"  id="DC" style="cursor:pointer;">单程&#160;&#160;<img src="/new/templets/fei580/images/y.jpg" alt="单程" width="20" height="20" border="0" align="top" onclick="imgSC()" id="SC" style="cursor:pointer;"/>往返</td>
+       <td width="40"><input  type="hidden" name="tripType" id="tripType" value=""></td>
+     </tr>
+     <tr>
+       <td width="80" height="35" align="center">出发地：</td>
+       <td><input type="text" id="scity" name="scity"  class="input" style="margin-top:0px;"/><div id="suggest" class="ac_results"></div></td>
+       <td style="cursor:pointer;" onclick="inputscity()"><input  type="hidden" name="citycode" id="citycode" value="1"></td>
+     </tr>
+     <tr>
+       <td width="80" height="35" align="center">目的地：</td>
+       <td><input type="text" id="ecity" name="ecity"  class="input"  style="margin-top:0px;"/><div id="suggest1" class="ac_results"></div></td>
+       <td  style="cursor:pointer;" onclick="inputecity()">&#160;</td>
+     </tr>
+     <tr>
+       <td width="80" height="35" align="center">出发日期：</td>
+       <td><input type="text"  class="input" style="margin-top:0px;" name="godate" id="godate" value="2011-12-02" onblur="if(this.value=='') {this.value='';this.style.color='#888';}" onfocus="if(this.value==''){this.value='';this.style.color='#000';}MyCalendar.SetDate(this)"/></td>
+       <td style="cursor:pointer;" onclick="inputgodate()">&#160;</td>
+     </tr>
+     <tr>
+       <td width="80" height="35" align="center">回程日期：</td>
+       <td><input  type="text"  class="input" style="margin-top:0px;" value="2012-01-01" onfocus="if(this.value==''){this.value='';this.style.color='#000';}MyCalendar.SetDate(this)" onblur="if(this.value=='') {this.value='';this.style.color='#888';}" id="backdate" name="backdate" /></td>
+       <td style="cursor:pointer;" onclick="inputbackdate()">&#160;</td>
+     </tr>
+     <tr>
+       <td width="80" height="35" align="center">&#160;</td>
+       <td style="cursor:pointer;" onclick="check()" background="/new/templets/js/chaxun.jpg">&#160;</td>
+       <td>&#160;</td>
+     </tr>
+   </table>
+    </div>
+  <!--other plan-->
+    <div class="spticket">
+     <h1 class="sptitle">推荐国际机票</h1>
+      <ul class="spticket_box">
+        {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+      </ul>
+    </div>
+    <!--other plan end-->
+    <div class="clear"></div>
+    <!---->
+    <div class="spticket">
+     <h1 class="sptitle">热门国际机票</h1>
+      <ul class="spticket_box">
+	    {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+      </ul>
+    </div>
+    <div class="clear"></div>
+    
+    </div>
+  <!--rightside end-->
+  </div>
+  <div class="clear"></div>
+  {dede:include filename="foot.htm"/}
+</div> 
+{dede:include filename="kf.html"/}
+</body>
+</html>
+<script type="text/javascript"> 
+function secBoard1(n)
+  {
+    for(i=0;i<secTable1.cells.length;i++)
+      secTable1.cells
+
+[i].className="sec3";
+    secTable1.cells[n].className="sec4";
+    for(i=0;i<mainTable1.tBodies.length;i++)
+      mainTable1.tBodies
+
+[i].style.display="none";
+    mainTable1.tBodies
+
+[n].style.display="block";
+  }
+function secBoard11(n)
+  {
+    for(i=0;i<secTable19.cells.length;i++)
+      secTable19.cells
+
+[i].className="sec3";
+    secTable19.cells[n].className="sec4";
+    for(i=0;i<mainTable19.tBodies.length;i++)
+      mainTable19.tBodies
+
+[i].style.display="none";
+    mainTable19.tBodies
+
+[n].style.display="block";
+  }
+</script>
+<script type="text/javascript" src="{dede:global.cfg_templeturl/}/js/jquery.suggest2.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templeturl/}/js/citydata.js"></script>
+<script type="text/javascript">
+function AutoScroll(obj){
+        jQuery(obj).find("ul:first").animate({
+                marginTop:"-102px"
+        },1000,function(){
+                jQuery(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+}
+jQuery(document).ready(function(){
+setInterval('AutoScroll("#scrollDiv")',3000)
+});
+
+
+jQuery(document).ready(function(){
+jQuery("#scity").suggest(citys,{hot_list:commoncitys,dataContainer:'#citycode',onSelect:function(){jQuery("#ecity").click();},attachObject:'#suggest'});
+jQuery("#ecity").suggest(citysint,{hot_list:commoncitysint,attachObject:'#suggest1'});
+
+jQuery('#form1').submit(function(){
+
+if(jQuery.trim(jQuery('#citycode').val()).length<=0){
+alert('请选择目的城市');	
+jQuery('#ecity').focus();
+return false
+	}	
+	})
+
+})
+function inputscity(){
+ document.getElementById('scity').value='';
+ document.getElementById('scity').focus();
+}
+function inputecity(){
+document.getElementById('ecity').value='';
+document.getElementById('ecity').focus();
+}
+function inputgodate(){
+document.getElementById('godate').value='';
+document.getElementById('godate').focus();
+}
+
+function inputbackdate(){
+document.getElementById('backdate').value='';
+document.getElementById('backdate').focus();
+}
+
+function imgDC(){
+   document.getElementById('backdate').disabled=true;
+   document.getElementById('DC').src="/new/templets/fei580/images/y.jpg";
+   document.getElementById('SC').src="/new/templets/fei580/images/n.jpg";
+   document.getElementById('tripType').value="0";
+}
+function imgSC(){
+   document.getElementById('backdate').disabled=false;
+   document.getElementById('DC').src="/new/templets/fei580/images/n.jpg";
+   document.getElementById('SC').src="/new/templets/fei580/images/y.jpg"
+   document.getElementById('tripType').value="1";
+}
+
+var myDate = new Date();
+document.getElementById("godate").value=myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+document.getElementById("backdate").value=myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate();
+
+function check(){
+var fromcity=document.getElementById("citycode").value;
+var tocityName=encodeURI(document.getElementById("ecity").value);
+var tripType=document.getElementById("tripType").value;
+var tripDate=document.getElementById("godate").value;
+var backDate=document.getElementById("backdate").value;
+var utl="http://www.fei580.com/searchTicket.aspx?fromcity="+fromcity+"&tocityName="+tocityName+"&tripType="+tripType+"&tripDate="+tripDate+"&backDate="+backDate;
+window.open(utl,'_blank');
+}
+</script>

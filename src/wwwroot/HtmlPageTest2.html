@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>脚本之家</title>
+</head>
+<body onload="show()">
+    <div id="tb"></div>
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+                $.ajax({
+                    type: "get",
+                    url: "LocList.xml",//这里通过设置url属性来获取xml
+                    dataType: "xml",
+                    timeout: 1000,      //设定超时
+                    cache: false,       //禁用缓存
+                    success: function (xml) {//这里是解析xml
+                        debugger;
+                        var str = "[";
+                        $(xml).find("CountryRegion").each(function (i) {
+                            var sName = $(this).attr("Name");   //获取id节点
+                            //str += "{cName:'" + sName + "',Nodes:[";
+                            
+                            var citys = $(this).find("City");
+                            for (var t = 0; t < citys.length; t++) {
+                                var cName = $(citys[t]).attr("Name");
+                                str += "{cName:'" + cName + "',parentName:'" + sName + "'},<br/>";
+                            }
+                            //str += "]},<br/>";
+                        });
+                        str += "]";
+                        document.write(str);
+                    }
+                });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+*{
+margin:0px;
+padding:0px;
+}
+body {background:#ffffff url(cata-top-bg.jpg) -38px 0px no-repeat;}
+
+img{
+border:none;
+}
+ul{
+list-style-type:none;
+}
+ol{
+list-style-type:none;
+}
+textarea{font-size:13px;}
+.mainbody {
+width:1005px;font-size:14px;color:#121212;font-family: '宋体','新宋体',arial,verdana,sans-serif;margin:0 auto; background:url(cata-content-bg.jpg) 5px 0px no-repeat;
+}
+.indexmain {margin: 15px auto 0px auto; width: 990px;}
+
+.clearfix{*zoom:1;}
+.clearfix:after{content:'\20';display:block;height:0;clear:both;}
+
+a:link {
+	color:#000; text-decoration:none;
+}
+a:visited {
+	color:#000; text-decoration:none;
+}
+a:hover {
+	color:#FE0000;text-decoration:underline;
+}
+a.redlink:link {
+	color:#EE0561; text-decoration:none;
+}
+a.redlink:visited {
+	color:#EE0561; text-decoration:none;
+}
+a.redlink:hover {
+	color:#FE0000;text-decoration:underline;
+}
+a.white:link {
+	color:#fff; text-decoration:none;
+}
+a.white:visited {
+	color:#fff; text-decoration:none;
+}
+a.white:hover {
+	color:#fff;text-decoration:underline;
+}
+a.blackline:link {
+	color:#000; text-decoration:underline;
+}
+a.blackline:visited {
+	color:#000; text-decoration:underline;
+}
+a.blackline:hover {
+	color:#FE0000;text-decoration:underline;
+}
+a.bluestr:link {
+	color:#0189BD; text-decoration:none;
+}
+a.bluestr:visited {
+	color:#0189BD; text-decoration:none;
+}
+a.bluestr:hover {
+	color:#0189BD;text-decoration:underline;
+}
+.hidden{
+display:none;
+}
+.nohidden{
+display:block;
+}
+.clear{
+clear:both;
+}
+.clearbox{
+clear:both;width:100%;
+}
+.top {
+	width:1000px;
+	height:605px;
+	margin:0 auto;
+}
+.top .logo {
+	float:right;
+	width:180px;
+	height:65px;
+	line-height:65px;
+}
+.top .logo a {
+	display:block;
+	width:180px;
+	height:65px;
+	cursor:pointer;
+}
+.top .logo h1 {
+	display:none;
+}
+.content {
+	width:800px;
+	height:auto;
+	margin:0 auto;
+}
+.content .iata {
+	width:100%;
+	height:auto;
+	padding-top:20px;
+	overflow:hidden
+}
+.content .cata {
+	width:100%;
+	height:auto;
+	margin-top:100px;
+	overflow:hidden
+}
+.content .about-iata-cata {
+	width:100%;
+	height:auto;
+	margin-top:60px;
+	overflow:hidden;
+}
+.content .about-iata-cata p {
+	text-indent:2em;
+	line-height:30px;
+}
+.content .about-iata-cata strong {
+	color:#006cce;
+}
+.content .cata-step {
+	width:100%;
+	height:1165px;
+	font-size:16px;
+	margin-top:140px;
+	overflow:hidden;
+}
+.content .cata-step .step-1 {
+	line-height:70px;
+	text-indent:6em;
+}
+.content .cata-step .step-2 {
+	margin-top:28px;
+	line-height:70px;
+	text-indent:6em;
+}
+.content .cata-step .step-3 {
+	margin-top:30px;
+	line-height:70px;
+	text-indent:6em;
+}
+.footer {
+	background: url(footerbg.jpg) 0 -20px no-repeat;
+	height: 120px;
+	overflow: hidden;
+	margin: 10px auto 0px;
+	width: 1000px;
+	font-size: 12px;
+}
+.footer li.one {
+	float: left;
+	width: 100%;
+	height: 23px;
+	line-height: 23px;
+	overflow: hidden;
+	font-family: arial, verdana, sans-serif;
+	font-size: 12px;
+}
+.footer li.one code {
+	float: right;
+	width: 95px;
+	text-indent: 28px;
+}
+.footer li.one span {
+	float: right;
+	width: 61px;
+	text-indent: 25px;
+}
+.footer li.two {
+	float: left;
+	width: 256px;
+	text-indent: 36px;
+}
+.footer li.three {
+	float: left;
+	width: 636px;
+	border-left: 1px solid rgb(201, 201, 201);
+	color: rgb(18, 18, 18);
+	padding-left: 29px;
+	line-height: 20px;
+}
+.footer li.three span {
+	margin-right: 10px;
+}
+.footer li.three span a:visited {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	background: url(http://www.fei580.com/images/bottomalink.jpg) 0px 3px no-repeat;
+	padding-left: 25px;
+}
+.footer li.three span a:link {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	background: url(http://www.fei580.com/images/bottomalink.jpg) 0px 3px no-repeat;
+	padding-left: 25px;
+}
+a.white:visited {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+a.white:link {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}

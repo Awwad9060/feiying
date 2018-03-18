@@ -1,0 +1,90 @@
+* {margin:0;padding:0;border:0;}
+body{
+	margin:0;
+	padding:0;
+	background:#fff url(../images/bg.jpg) center 0 no-repeat;
+}
+.clear {clear:both;}
+ul,ol {margin:0;padding:0;list-style:none;}
+#main{
+	width:750px;
+	margin:0 auto;
+	/*padding-top:210px;*/
+	font-size:14px;
+	font-family:'ËÎÌו';
+}
+.logo{
+	width:360px;
+	height:75px;
+    float:left;
+}
+#head {width:100%;height:100px;background:#fff;}
+.top {width:100%;background:#e8e8e8;border-bottom: solid 1px #cecece;}
+.topnav {width:750px;height:24px;line-height:24px;margin:0 auto;overflow:hidden;}
+.topnav ul {float:right;width:240px;height:24px;}
+.topnav ul li {float:left;height:24px;line-height:24px;color:#8D8D8D;margin:0 5px;}
+.topnav ul li a {text-decoration:none;color:#8D8D8D;font-size:12px;}
+.headlogo {width:950px;height:75px;margin:0 auto;}
+.nav {float:left;width:520px;height:32px;margin-left:40px;background:#fff;overflow:hidden;padding-top:43px;}
+.nav ul {width:100%;height:32px;}
+.nav ul li {float:left;list-style:none;width:130px;height:32px;overflow:hidden;}
+.paywayimg {width:750px;height:264px;}
+.cashier-nav {
+   float:left;
+   width:620px;
+   font-size: 14px;
+   margin: 15px 60px;
+   text-align: left;
+   height:30px;
+}
+.cashier-nav ol li {
+    float: left;
+	margin-left:10px;
+	line-height:30px;
+}
+.cashier-nav li.current {
+    color: #dc4e00;
+    font-weight: bold;
+	font-size:16px;
+}
+.cashier-nav li.last {
+    clear:right;
+}
+.content{
+	width:100%;
+	margin-top:5px;
+}
+.content .paytitle{
+	width:80px;
+	display:inline-block;
+	text-align:right;
+	float:left;
+	line-height:30px;
+	
+}
+.content .payinput{
+	float:left;
+	width:560px;
+	margin-left:10px;
+	margin-bottom:15px;
+	line-height:30px;
+}
+.payform {width:680px;margin-top:10px;text-align:left;margin-left:70px;margin-bottom:5px;}
+.content input {width:240px;height:30px;line-height:30px;border:solid 1px #7f9db9;font-weight:300;font-size:18px;}
+.content textarea {border:solid 1px #7f9db9;}
+.red-star {color:#FF3F00;display:inline-block;font-size:14px;}
+.null-star {color:#fff;}
+.note-help {color: #999999;font-size: 14px;line-height: 130%;padding-left: 3px;}
+.note-help2 {color: #999999;font-size: 12px;line-height: 130%;padding-left: 3px;}
+.new-btn-login-sp {width:130px;height:40px;margin-left:10px;margin-top:20px;}
+.new-btn-login {background:url(../images/ylpaybtn.gif);border:0;width:130px;height:40px;cursor:hand;}
+
+#foot{
+	margin-top:10px;
+}
+.foot-ul li {
+	text-align:center;
+	font-size: 13px;
+}
+.tishi {width:750px;margin:10px auto;color: #616161;line-height:20px;height:130px; text-align:left; padding-top:10px;font-size: 12px;}
+

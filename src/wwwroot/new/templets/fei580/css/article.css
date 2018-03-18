@@ -1,0 +1,84 @@
+.ticketinfo_box {margin:0 auto;width:710px;height:270px;background:url(../images/ticketbg.jpg) no-repeat;}
+.ticketinfo_left {float:left;width:165px;height:270px;}
+.ticketinfo_right {float:right;width:540px;height:270px;}
+.fly_ticket {width:520px;height:30px;line-height:30px;padding:20px 10px;font-size:16px;text-indent:2em;font-weight:800;}
+.fly_from_to {width:520px;height:30px;line-height:30px;padding:15px 10px;}
+.fly_from_to b {font-size:16px;}
+.fly_from, .fly_to {float:left;width:260px;text-align:center;font-size:14px;}
+.fly_price_buy {width:520px;height:35px;line-height:35px;padding:15px 10px;}
+.ticket_sm {margin:0 auto;width:710px;height:455px;background:url(../images/ticketinfobg.jpg) no-repeat;}
+.ticket_p {width:670px;height:auto;padding:10px 20px;}
+.ticket_p p {line-height:24px;font-size:13px;}
+.ticket_info {margin:0 auto;width:710px;height:auto;margin-top:10px;margin-bottom:10px;border:solid 1px #ccc;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.ticket_info p {padding:10px 20px;text-indent:2em;line-height:24px;}
+
+.article_box {width:100%;height:auto;padding:10px auto;border:solid 1px #eee;overflow:hidden;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.article_info {width:100%;height:60px;border-bottom:solid 1px #ccc;margin:0 auto;}
+.article_info h1 {width:100%;height:30px;line-height:30px;font-size:16px;text-align:center;color:#24a3e0;}
+.article_info .info {width:100%;height:30px;line-height:30px;color:#999;text-align:center;}
+.article_content {width:730px;height:auto;padding:5px 10px;line-height:24px;}
+.article_content img {display:block;margin:5px auto;text-align:center;vertical-align:middle;}
+.article_content p, .article_content div {line-height:24px;}
+
+.prenext {width:100%;height:60px;border-top:solid 1px #ccc;margin:0 auto;color:#999;}
+.prenext a:link, .prenext a:visited {color:#000;}
+.prenext a:hover {color:#f00;}
+.prenext p {line-height:30px;}
+
+.info_items{ background:#E8F5FD; margin-bottom:15px; padding-bottom:15px; position:relative; *zoom:1}
+.info_items:after,country_infos:after,.entry_content:after{ visibility:hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; overflow: hidden }
+.info_items .head{ height:40px; background:url(../images/ee_icon.png) no-repeat 0 0}
+.info_items .head h2{ margin-left:70px; font-weight:normal; line-height:40px; font-size:16px; color:#fff}
+
+.desc_top{ width:280px; float:left; display:inline; margin:30px 0 0 50px}
+.desc_top dl{ height:29px; line-height:29px; margin-bottom:10px; background:url(../images/ee_icon.png) no-repeat -65px -396px}
+.desc_top dl dt{ width:80px; height:22px; line-height:22px; float:left; display:inline; padding-left:15px; margin-top:4px; border-right:1px solid #666}
+.desc_top dl dd{ height:29px; float:left; display:inline; width:163px; padding-left:20px; overflow:hidden}
+
+.img_thin{ width:310px; height:160px; overflow:hidden; float:right; margin:15px 20px 0 0}
+
+.entry_items{ padding:10px 30px 0}
+.entry_items h3{font-size:14px; padding-left:0; position:relative; height:27px; color:#000}
+.entry_items h3 i{ width:12px; height:12px; font-size:0;line-height:0; overflow:hidden; float:left; text-indent:-9999em;background:url(../images/ee_icon.png) -574px -453px no-repeat; position:absolute; left:0; top:4px; display:none}
+.entry_items .more_show{ display:inline-block; height:16px; position:relative}
+.entry_items .more_show dfn{ padding-left:5px; float:left}
+.entry_items .more_show a{ color:#fff; display:inline-block; height:15px; width:65px; margin-top:3px; text-indent:-9999em; overflow:hidden; background:url(../images/ee_icon.png) -80px -451px no-repeat}
+.entry_items .more_hide{ height:32px;display:none; position:relative}
+.entry_items .more_hide a{ height:32px; width:32px; float:right; text-indent:-9999em; overflow:hidden; position:absolute; right:0; top:0; background:url(../images/ee_icon.png) -155px -434px no-repeat}
+
+.entry_content{ padding:0 0 10px 0; line-height:1.5; *zoom:1}
+.entry_content h4{ font-size:14px; font-weight:normal}
+.entry_content .entry_more{ display:none}
+
+#info_basic{ height:235px}
+#info_passport .head{background-position:0 -41px}
+#info_house .head{background-position:0 -83px}
+#info_turn .head{background:#fff url(../images/ee_icon.png) no-repeat 0 -124px}
+#info_turn .head h2{ border-top:2px solid #E8F5FD; line-height:38px; border-right:3px solid #E8F5FD}
+
+.country_infos{ display:none; background:#E8F5FD; *zoom:1}
+
+.media_poor { width:680px; margin:0 auto; height:170px; overflow:hidden; background:#fff url(../images/minus.png) repeat-x 0 184px; padding-top:20px; position:relative}
+.media_poor .button{ position:absolute; top:50%; margin-top:-15px; width:12px; height:23px; overflow:hidden; cursor:pointer; background:url(../images/ee_icon.png) no-repeat -32px -339px; text-align:center; line-height:30px; text-indent:-9999em}
+.media_poor #prev{ left:10px; background-position:-32px -339px}
+.media_poor #next{ right:10px; background-position:-44px -339px}
+.media_poor #prev:hover{background-position:-32px -362px}
+.media_poor #next:hover{ background-position:-44px -362px}
+.media_poor #prev.disabled{ background-position:-32px -385px; cursor:default}
+.media_poor #next.disabled{ background-position:-44px -385px; cursor:default}
+.media_poor .slider{width:620px; height:172px; overflow:hidden; margin:0 auto; position:relative}
+.media_poor .slider .slider_inner{ height:148px; width:680px; position:absolute; left:0; top:0}
+.media_poor .slider li{ height:148px; width:148px; background:url(../images/ee_icon.png) no-repeat -218px -246px; float:left; display:inline; margin-right:10px; text-align:center;cursor:pointer; position:relative}
+.media_poor .slider .logo{ width:80px; height:80px; overflow:hidden; margin:20px auto 5px}
+.media_poor .slider .title{ height:20px; overflow:hidden; text-align:center; padding:0 10px}
+.media_poor .slider .up{ width:15px; height:8px; font-size:0; line-height:0; display:none; overflow:hidden; position:absolute; left:50%; bottom:-22px; margin-left:-8px; background:url(../images/ee_icon.png) no-repeat -33px -415px}
+.media_poor .slider li.selected{ background:url(../images/ee_icon.png) no-repeat -65px -246px}
+
+.info_tips{ background:#faf0aa; padding:15px; border-radius:3px; margin:10px 15px}
+.info_tips .t{ height:23px; line-height:23px; position:relative; padding-left:35px}
+.info_tips .t i{ position:absolute; left:0; top:0; width:28px; height:23px; overflow:hidden; float:left; background:url(../images/ee_icon.png) no-repeat -189px -443px}
+.info_ban .t i{ background-position:-217px -443px}
+
+.info_k{ background:#bdc6cc; margin:10px 50px 0; text-align:center; padding:5px 10px}
+.disclaimer{ height:auto; padding:10px 10px 10px 60px; background:#f5f6f6; border:1px dashed #818181; position:relative}
+.disclaimer h2{ position:absolute; left:10px; top:28px; width:40px; height:40px; float:left; overflow:hidden; text-indent:-9999em; background:url(../images/ee_icon.png) no-repeat -32px -426px}

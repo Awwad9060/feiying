@@ -1,0 +1,7 @@
+﻿#divselect{float:left;width:90px;height:24px;line-height:24px;position:relative;margin-top:12px;z-index:10000;font-size:16px;font-family:"黑体";}
+#divselect cite{width:85px;height:24px;line-height:24px;display:block;margin-top:1px;text-indent:5px;cursor:pointer;font-style:normal;padding-left:5px;margin-left:5px;background:#e1e2e9;border: solid 1px #363636;color:#000;}
+.s-select {display:none;}
+#divselect ul{width:90px;background-color:#ffffff; position:absolute; z-index:20000;margin-left:5px;display:none;border:1px solid #363636;}
+#divselect ul li{height:24px; line-height:24px;font-size:16px;font-style:normal;font-family:"宋体";color:#000; text-indent:2px;}
+#divselect ul li a{display:block; height:24px; color:#000; text-decoration:none; padding-left:10px; padding-right:10px;}
+#divselect ul li a:hover{background-color:#CCC;font-family:"黑体";color:#06F;cursor:pointer;_cursor:hand;}

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.title/}官网,{dede:field.ename/}_{dede:field.web/}</title>
+<meta name="keywords" content="{dede:field.title/}官网,{dede:field.ename/},{dede:field.web/}" />
+<meta name="description" content="{dede:field.title/}官网:{dede:field.web/}专业提供机票查询欢迎咨询预订,免费咨询电话:4008-850-663"" />
+<link href="/new/templets/new/main.css" rel="stylesheet" type="text/css" />
+<link href="/new/templets/new/news.css" rel="stylesheet" type="text/css" />
+<link href="/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="mainbody">
+
+{dede:include filename="head.html"/}
+
+<div style="margin:0px auto;width:966px;">
+
+<div class="clear">
+<!--boxright start-->
+	  <div class="newsdoc_left">
+	  
+	    <img src="/images/news05.jpg" style="float:left;" />
+	    <div class="newsdoc_leftboxtwo">
+	      <div class="newsdoc_leftboxthree">
+	        <h1>{dede:field.title/}</h1>
+	      </div>
+	      <div style="margin:0px auto;width:655px">
+	      
+	        <div class="newsdoc_leftboxfour">
+	          <div class="newsdoc_leftboxfive">
+			  <div style="padding:10px; line-height:18px; font-size:12px;"><strong>{dede:field.title/}介绍:</strong></div>
+		     
+	 <table width="100%" border="1" cellspacing="0">
+  <tr>
+    <td colspan="6">
+	<div style="padding:10px; line-height:18px; font-size:12px;">
+
+<p><strong>名称</strong>：{dede:field.title/}<br />
+英文名称：{dede:field.ename/} <br />
+官方网址：{dede:field.web/}<br />
+所在地区：{dede:field.city/}<br />
+
+</p>
+
+</div></td>
+    </tr>
+  <tr>
+    <td colspan="6">
+	<div style="padding:10px;">
+	<strong>{dede:field.title/}介绍:</strong></br>
+	<p>{dede:field.remarks/}</p> </br>
+	<span class="STYLE1">注：{dede:field.city/}特价国际机票咨询！<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=421428259&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:421428259:49" alt="机票咨询" title="机票咨询"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://chatserver.comm100.cn/ChatWindow.aspx?siteId=80012788&visitorId=27252&planId=698&r=9208">点击咨询在线客服</a></span></br></br>
+	</div>
+	
+	</td>
+    </tr>
+</table>
+
+	          </div>
+	        </div>
+	       
+	        
+	      </div>
+	      
+	      <img src="/images/news08.jpg" style="float:left;margin-top:10px;" />
+	        <div class="newsdoc_leftboxsev">
+	          <div class="newsdoc_leftboxeight">
+	            <h2>{dede:field.title/}相关机票</h2>
+	            <ul>
+					        {dede:sql sql="SELECT * FROM dede_arctype WHERE reid=102 and typename=~city~"}
+ <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+ {/dede:sql} 
+ {dede:sql sql="SELECT * FROM dede_arctype WHERE reid=103 and typename=~city~"}
+ <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+ {/dede:sql} 
+ {dede:sql sql="SELECT * FROM dede_arctype WHERE reid=104 and typename=~city~"}
+ <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+ {/dede:sql} 
+ {dede:sql sql="SELECT * FROM dede_arctype WHERE reid=105 and typename=~city~"}
+ <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+ {/dede:sql} 
+  
+                {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+ {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+ {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+ {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}  
+ 
+					        
+					    </ul>
+	          </div>
+	          
+	           <div class="newsdoc_leftboxeight">
+	            <h2>更多{dede:field.typename/}相关内容</h2>
+	            <ul>
+					         
+                                  {dede:arclist row=12 orderby='rand'}
+               <li><a href="[field:arcurl/]">[field:title/]</a>
+			   <p>[field:description/]...</p>
+			   </li>
+			  
+             {/dede:arclist}
+                           
+					        
+					    </ul>
+	          </div>
+	        </div>
+	      <img src="/images/news010.jpg" style="float:left;" />
+	     	      
+	    </div>
+	    <img src="/images/news06.jpg" style="float:left;" />
+	  </div>
+	<!--boxright end-->
+	<!--boxright start-->
+	    <div class="newsdoc_right">
+	    <select style="vertical-align:middle;"><option>全部</option></select><input type="text" class="news_text" value="请输入搜索内容" /><input type="submit" value="" class="news_submit" />
+	    <div class="newsdoc_rightbox">
+	      <div class="newsdoc_righttitle"><strong>热门排行榜</strong><code>本周TOP10</code></div>
+	      <ul class="newsdoc_rightul">
+	        
+                {dede:loop table='dede_arctype' row='7'  if=' reid=102 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   {dede:loop table='dede_arctype' row='1'  if=' reid=103 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+ {dede:loop table='dede_arctype' row='1'  if=' reid=104 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+ {dede:loop table='dede_arctype' row='1'  if=' reid=105 ORDER BY RAND() '}
+<li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+{/dede:loop}   
+                           
+	      </ul>
+	    </div>
+	    
+	    <div class="news_ad">
+	     
+	     </div>
+	    
+	    <strong class="newsdoc_righttitletwo">特别推荐文章</strong>
+	    <ul class="newsdoc_rightultwo">
+	               
+                                {dede:arclist row=20 typeid="103,407,408" getall='1' orderby='hot'}
+               <li><a href="[field:arcurl/]">[field:title/]</a></li>
+             {/dede:arclist}
+                           
+	    </ul>
+	    
+	  
+	    <img src="/images/news02.jpg" style="float:left;" />
+	  </div>
+	<!--boxright end-->
+
+	
+	
+</div>
+
+</div>
+ 
+
+{dede:include filename="foot.html"/}
+</form>
+</div>
+</body>
+{dede:include filename="kf.html"/}
+</html>

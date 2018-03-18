@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.typename/}_{dede:global.cfg_webname/}-飞瀛网</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="Description"  content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<link href="{dede:global.cfg_templeturl/}/new/css/main.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/new/css/index_new.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/new/css/entryexit.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div class="mainbody" >
+{dede:include filename="head.htm"/}
+<div class="contain">
+  <!--searchleft start-->
+  <div class="leftside">
+  <!--other plan-->
+    <div class="spticket">
+     <h1 class="sptitle">推荐国际机票</h1>
+      <ul class="spticket_box">
+        {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+      </ul>
+    </div>
+    <!--other plan end-->
+    <div class="clear"></div>
+    <!---->
+    <div class="spticket">
+     <h1 class="sptitle">热门国际机票</h1>
+      <ul class="spticket_box">
+	    {dede:loop table='dede_arctype' row='2'  if=' reid=104 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">上海到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=105 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">北京到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=102 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">广州到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+        {dede:loop table='dede_arctype' row='2'  if=' reid=103 ORDER BY RAND() '}
+	    <li><a href="[field:typedir/]/">香港到[field:typename/]机票</a><span class="spr">[field:seotitle/]</span></li>
+        {/dede:loop}
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!---->
+    <div class="spticket">
+     <h1 class="sptitle">热门资讯</h1>
+      <ul class="spticket_box">
+        {dede:arclist row=12 typeid="102,407,408" getall='1' orderby='rand'}
+	    <li><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <!---->
+    </div>
+  <!--searchleft end-->
+  <!--searchright start-->
+  <div class="rcontain">
+    {dede:channelartlist row=6}
+    <div class="flylist_box">
+     <h1><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></h1>
+     <ul class="flylist_ul">
+	{dede:arclist titlelen='60' row='35'}
+        <li><a href="[field:arcurl /]">[field:title /]出入境规定</a></li>
+        {/dede:arclist}
+     </ul>
+    </div>
+    <div class="clear"></div>
+    {/dede:channelartlist}
+  </div>
+  <!--searchright end-->
+  </div>
+  <div class="clear"></div>
+{dede:include filename="foot.htm"/}
+</div> 
+{dede:include filename="kf.html"/}
+</body>
+</html>

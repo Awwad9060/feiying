@@ -1,0 +1,11 @@
+.footer_soft { height:150px; position:fixed; _position:absolute !important; left:0; bottom:0;_bottom:0; _top:expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight); width:100%; z-index:999999; }
+.footer_soft_bg { height:150px; background:#001122; opacity:.8; filter: alpha(opacity=80); }
+.footer_soft_Pos { position:absolute; height:150px; z-index:1; width:100%; top:0; left:0;  }
+.footer_soft_MiddleBox { height:150px; position:relative; width:990px; margin:0 auto; font-family:Microsoft Yahei;color:#fff; }
+.footer_soft_tx { float:left;padding-left:220px; width:140px; height:105px; margin-top:25px; }
+
+.footer_soft_img { display:block; position:absolute; left:42px; bottom:0; width:345px; height:254px; background:url(footer_soft_img.png) no-repeat; _background:url(footer_soft_img.gif) no-repeat; }
+.baidu-brige-chat {display:block;position:absolute; left:208px;top:70px;width:132px;height:128px;}
+.footer_soft_close { width:24px; height:24px; display:block; position:absolute; top:15px; right:15px; background:url(footer_soft_close.png) no-repeat; opacity:.8; filter: alpha(opacity=80); }
+.footer_soft_close:hover { opacity:1; filter: alpha(opacity=100);  }
+.footer_soft_link { float:left; width:385px;height:110px;padding:10px 0 0 40px;background:url(footer_soft_link.png) 15px 20px no-repeat; _background:url(footer_soft_link.gif) 10px 30px no-repeat; }

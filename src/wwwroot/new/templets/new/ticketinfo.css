@@ -1,0 +1,11 @@
+.ticketinfo_box {width:100%;height:270px;background:url(img/ticketbg.jpg) no-repeat;}
+.tickettable {width:530px;height:260px;margin-top:5px;margin-left:170px;}
+.tickettable table , .tickettable table td , .tickettable table tr {border:0;}
+.tickettable h1 {line-height:65px;}
+.ticketinfo_article {width:100%;height:455px;background:url(img/ticketinfobg.jpg) no-repeat;}
+.ticketinfo_content {width:640px;height:415px;padding:20px;}
+.ticketinfo_content p {line-height:24px;font-size:13px;}
+.ticketbz {font-size:15px;font-weight:600;color:#F60;}
+.ticketqz {font-size:15px;font-weight:600;}
+.ticketinfo_other {width:100%;height:auto;margin-top:10px;border:solid 1px #999;}
+.ticketinfo_other p {line-height:24px;text-indent:2em;padding:5px 10px;}

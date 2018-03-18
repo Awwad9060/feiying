@@ -1,0 +1,117 @@
+.searchside {float:left;width:215px;margin-left:5px;font-style:normal;}
+.searchresult {float:left;width:750px;margin-left:10px;}
+.searchleft {float:left;width:100%;}
+.research {float:left;width:100%;height:29px;border-bottom:3px solid #CECECE; font-size:13px;background:url(../images/researchbg.gif) no-repeat left bottom;}
+.searchleftbox {float:left;width:214px;border:solid 1px #cecece;-webkit-border-bottom-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px;-moz-border-radius-bottomleft: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;}
+.searchleftbox table th {font-size:12px;color:#999; font-style:normal;font-weight:0;}
+.searchlefttable {
+-webkit-border-bottom-right-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+.searchlefttable th {font-size:12px;color:#999; font-style:normal;}
+.searchl_input {padding:2px 3px;width:135px;height:27px;line-height:27px;background:url(../images/input2_20130510.jpg) no-repeat 0 0;border:0;}
+.searchl_input2 {
+	position:absolute;
+	background:url(../images/input2_201305.jpg) no-repeat 0 0;
+	border:1px solid #f8f8f8;
+	height:30px;
+	width:135px;
+	line-height:27px;
+	padding-left:5px;
+	font-size:12px;
+	margin-top:0;
+	top: 85px;
+	}
+.select2 {padding-top:0px;*padding-top:5px;padding-left:0px;height:27px; width:135px; visibility:hidden;background:url(../images/input2_201305.jpg) no-repeat 0 0;}
+.searchmitcss{
+width:140px;height:50px;background:url(../images/searchbtnl.jpg) no-repeat;border:none;cursor:pointer;margin-left:50px;
+}
+.otherfly {
+margin-top:9px;float:left;width:100%;background:url(../images/plannumbg.gif) no-repeat 0 0;-webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;-moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+}
+.otherfly .flytitle {padding-left:20px;text-indnet:40px;color:#fff;font-size:14px;line-height:40px;}
+.otherfly_box {width:214px;padding:10px 0;border-left:solid 1px #24a3e0;border-bottom:solid 1px #24a3e0;border-right:solid 1px #24a3e0;}
+.otherfly_box li {height:30px;line-height:30px;color:#000;}
+.flyactive {background:#eee;}
+.searchlids {width:100%;height:145px;margin-top:10px;}
+.searchlids .searchidst {width:100%;height:85px;border-bottom:dashed 1px #cecece;}
+.searchlids .searchidsp {width:100%;height:60px;line-height:30px;text-indent:2em;margin-top:5px; }
+
+.searchrtitle{
+clear:both;width:100%;height:30px;overflow:hidden;background:url(../images/searchrbg.gif) no-repeat right top;
+}
+.searchrtitle code{
+float:right;
+}
+.searchrtitle strong{
+float:right;width:220px;padding:0px 0px 0px 60px;font-size:16px;height:30px;line-height:30px;_padding-top:2px;overflow:hidden;font-family: 'Helvetica';
+}
+.searchrnav{
+clear:both;float:left;width:100%;background:url(../images/searchnavbg.jpg) no-repeat;_background:url(../images/searchnavbg.jpg) no-repeat;height:16px;line-height:16px;overflow:hidden;text-indent:34px;color:#fff;
+}
+.searchrnav strong{
+color:#EFFF02;margin:0px 3px;
+}
+.searchrtag{
+width:748px;height:36px;background:#cbedff;_background:#cbedff;height:36px;line-height:36px;overflow:hidden;border-left:1px solid #C0C0C2;border-right:1px solid #C0C0C2;
+}
+.searchrtag li {float:left;}
+.searchrtag li.one a:link {color:#fff;}
+.searchrtag li.two a:link {color:#999;}
+.searchrtag li.one a:hover {color:#f00;}
+.searchrtag li.two a:hover {color:#111;}
+.searchrtag li.one{
+float:left;background:url(../images/search012.jpg) repeat-x;height:36px;line-height:36px;overflow:hidden;margin-left:4px;display:inline;padding:0px 14px 0px 14px;font-size:15px;color:#fff;cursor:pointer;
+}
+.searchrtag li.two{
+float:left;height:36px;line-height:36px;overflow:hidden;margin-left:4px;display:inline;padding:0px 14px 0px 14px;font-size:15px;color:#999;cursor:pointer;
+}
+.flymore {width:748px;height:30px;line-height:30px;overflow:hidden;border-left:1px solid #C0C0C2;border-right:1px solid #C0C0C2;border-bottom:1px solid #C0C0C2;text-indent:2em;}
+.flymore a {padding:0 10px;}
+.searchrdiv {color:#898989;width:748px;height:30px;line-height:30px;border-left:1px solid #C0C0C2;border-right:1px solid #C0C0C2;border-bottom:1px solid #C0C0C2;}
+.searchrdiv code{
+float:left;padding-right:5px;padding-left:5px;
+}
+a.slink_a:link {
+margin:5px;float:left;color:#fff;width:74px;height:18px;line-height:20px;overflow:hidden;text-align:center;background:url(../images/search013.jpg) no-repeat;text-decoration:none;
+}
+a.slink_a:visited {
+margin:5px;float:left;color:#fff;width:74px;height:18px;line-height:20px;overflow:hidden;text-align:center;background:url(../images/search013.jpg) no-repeat;text-decoration:none;}
+a.slink_a:hover {
+margin:5px;float:left;color:#fff;width:74px;height:18px;line-height:20px;overflow:hidden;text-align:center;background:url(../images/search013.jpg) no-repeat;text-decoration:none;}
+
+/*result table style*/
+.searchlisttable{
+float:left;width:749px;border-left:1px solid #70bcfd;border-right:1px solid #70bcfd;border-top:solid 3px #70bcfd;
+}
+.searchlisttable  td{
+padding:7px 6px;border-bottom:1px solid #70bcfd;
+}
+.searchlist {width:100%;height:auto;background:#fff;overflow:hidden;margin:5px auto;}
+.searchlist .flynav {width:749px;height:18px;background:#fff;text-align:center;}
+.searchlist .flynav ul {width:180px;height:18px;background:#70bcfd;color:#fff;float:left;margin:0;}
+.searchlist .flynav ul li {line-height:18px;border-top:2px solid #70bcfd;_padding-top:4px;}
+.table {width:754px;height:auto;}
+.searchlisttable ul {padding-top:2px;}
+.searchlisttable .lititle {line-height:20px;font-weight:bold;font-size:12px;}
+.searchlisttable .lititle1 {line-height:20px;font-weight:bold;font-size:14px;}
+.searchlisttable .lititle2 {line-height:18px;color:#999;font-size:12px;}
+.searchlisttable .lititle3 {line-height:20px;font-size:12px;}
+.searchlisttable .lititle4 {line-height:20px;color:#999;font-size:12px;_padding-top:4px;}
+.searchlisttable .price {line-height:20px;font-weight:800;font-family:Helvetica;font-size:21px;color:#2771ec;}
+.searchlisttable .jiwei {line-height:18px;text-algin:right;text-indent:1.5em;}
+.searchlisttable .hbinfo {}
+.searchlisttable .hbchat {}
+
+.searchlist {width:100%;}
+.searchlistdiv{
+color:#898989;width:749px;height:30px;line-height:30px;text-indent:2em;border-left:solid 1px #999;border-bottom:solid 1px #999;border-right:solid 1px #999;
+}
+.searchlistdiv code{
+float:left;padding-right:5px;padding-left:5px;
+}
+/*result table end*/

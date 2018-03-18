@@ -1,0 +1,296 @@
+﻿body {
+	font-family: "���";
+	font-size: 12px;
+	line-height: 150%;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	color:#666666;
+}
+.Content{
+         width:98%;
+		 text-align:left;
+		 }
+.Position{
+margin-bottom:5px;
+}
+.Position1{
+	font-size: 14px;
+	font-weight: bold;
+	color: #006699;
+	padding-left:5px;
+}
+.Enquiries{
+	font-size: 14px;
+	color:#006699;
+}
+.Borders{
+	border: 1px solid #bdbdbd;
+	font-size: 14px;
+	font-weight: bold;
+}
+.jaba{
+	height:26px;
+	background-image: url(../../images/admin_cam/m_06.gif);
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #bdbdbd;
+	border-left-color: #bdbdbd;
+	}
+.Borders1{
+     height:33px;
+	background-image: url(../../images/admin_cam/aa_17.gif);
+}
+.Borders2{
+	height:27px;
+	background: url(../../images/admin_cam/aa_07.gif);
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.Borders3 {
+	color:#666666;
+}
+
+.Borders3 a{
+        color: #167eff;
+        text-decoration: none;
+}
+
+.Borders3 a:hover{
+	color: #ff6600;
+	text-decoration: underline;
+}
+.Borders4 {
+        color: #167eff;
+}
+
+.Borders4 a{
+	color:#167eff;
+	text-decoration: none;
+}
+.Borders4 a:hover{
+	color: #ff6600;
+	text-decoration: underline;
+}
+.Flip{	
+    font-size: 12px;
+	font-weight: normal;
+	color:#666666;
+	}
+.Flip a{
+	text-decoration:none;
+      color:#666666;
+	}
+.Flip a:hover{
+	color: #ff6600;
+
+}
+.kuang{
+	background-color:#f7f7f7;
+	padding-left:5px;
+	font-size: 14px;
+}
+.kuang1{
+background-color:#ffffff;
+padding-left:5px;
+	font-size: 14px;
+}
+.kuang2{
+background-color:#ffffff;
+padding-left:5px;
+	font-size: 12px;
+}
+.kuang3{
+	border: 1px solid #dddddd;
+	background-color:#f2fbff;
+}
+ 
+ 
+.Enterprise{
+	border: 1px solid #dddddd;
+	margin-bottom:10px;
+}
+.xx{
+	background-image: url(../../images/admin_cam/m_03.gif);
+}
+.Enterprise1{
+	font-size: 14px;
+	color: #009400;
+	margin-left:10px;
+	padding-top:5px;
+	padding-left:5px;
+	padding-bottom:5px;
+}
+.Enterprise2{
+	font-size: 16px;
+	color: #009400;
+	margin-top:10px;
+	padding-top:5px;
+	padding-left:5px;
+	padding-bottom:5px;
+	border: 1px solid #dddddd;
+	border-bottom:none;
+}
+
+
+
+
+/**************�������*************/
+.font1{
+	font-size:14px;
+	color:#016599;
+	}
+/***************ְ�ť�����***************/
+.font2 a:link,.font2 a:visited{
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:normal;
+	text-decoration:none;
+	}
+.font2 a:hover{
+	color:#FF6600;
+	}
+/****************��ı����****************/
+.font3,.font4{
+	color:#656565;
+	font-size:12px;
+	font-weight:normal;
+	}
+.font4{
+	font-size:14px;
+	}
+.font5 a{
+	color:#FF6600;
+	text-decoration:underline;
+	font-size:12px;
+	font-weight:normal;
+	}
+.font5 a:hover{
+	color:#FF0000;
+	text-decoration:underline;
+	}
+.font6{
+	font-size:14px;
+	font-weight:bold;
+	}
+.fontshow{font-size:12px;}
+/**************��»����*************/
+.line{
+	background:url(../../images/admin_cam/a-1_03.gif) repeat-x bottom;
+	height:1px;
+	}
+.line1{
+	background:url(../../images/admin_cam/b_03.gif) repeat-x;
+	height:33px;
+	}
+.line2 {
+	border-right: 1px solid #BDBDBD;
+	}
+.more{
+	background:url(../../images/admin_cam/img_8.gif) no-repeat;
+	height:22px;
+	width:62px;
+	float:left;
+	}
+.more1{
+	background:url(../../images/admin_cam/bt.jpg) no-repeat;
+	height:22px;
+	width:75px;
+	}
+.button1{
+     width:62px;
+	 height:22px;
+	 background-image:url(../../images/admin_cam/img_8.gif);  
+	 color:#FFFFFF;
+	 border-width:0;
+	 cursor:pointer;
+}
+.button2{
+     width:84px;
+	 height:22px;
+	 background-image:url(../../images/admin_cam/bt.gif);  
+	 color:#FFFFFF;
+	 border-width:0;
+	 cursor:pointer;
+}
+	
+	
+.blue-line{
+	background-color:#6fc9fe;
+	height:3px;
+	width:100%;
+	}
+
+.ph{
+	width:137px;
+	height:25px;
+	background-image: url(../../images/admin_cam/ca_03.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	float:left;
+	line-height:25px;
+	text-align:center;
+	color:#FFFFFF;
+	font-weight: bold;border:0
+}
+	
+.ph1{
+	width:137px;
+	height:25px;
+	background: url(../../images/admin_cam/ca_04.gif) no-repeat left top;
+	float:left;
+		line-height:25px;
+	text-align:center;
+	color:#000000;
+	font-weight: bold;border:0
+}
+.ph2{
+	width:137px;
+	height:25px;
+	background: url(../../images/admin_cam/ca_05.gif) no-repeat left top;
+	float:left;
+	line-height:25px;
+	text-align:center;
+	color:#000000;
+	font-weight: bold;border:0
+}
+.ph3{
+	width:145px;
+	height:25px;
+	background: url(../../images/admin_cam/ca_06.gif) no-repeat left top;
+	float:left;
+	line-height:25px;
+	text-align:center;
+	color:#000000;
+	font-weight: bold;border:0
+}
+
+
+
+
+
+
+.ys{
+      color:#0265cb;
+	  font-weight:bold;
+	  }
+	  
+.button7{
+	background-image:url(../../images/admin_cam/rz_03.gif);
+	height:17px;
+	width:93px;
+	color:#000000;
+	}
+.button6{
+	background-image:url(../../images/admin_cam/an_03.gif);
+	height:57px;
+	width:84px;
+	border-width:0;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;}
+
+.shengl1{table-layout:fixed;}

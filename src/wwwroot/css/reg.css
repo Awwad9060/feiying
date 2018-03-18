@@ -1,0 +1,34 @@
+﻿.fuwu_rightbox{
+margin:38px auto 0px auto;width:900px;position:relative;padding:15px 25px 50px 40px;position:relative;z-index:1;
+}
+
+.fuwu_leftbox{
+float:left;width:148px;margin:-6px -24px 0px 0px;position:relative;z-index:2;font-size:12px;
+}
+.fuwu_leftbox li.one{
+float:left;width:100%;height:19px;overflow:hidden;background:url(../images/fuwu_01.jpg) no-repeat;text-indent:37px;margin-top:18px;line-height:19px;overflow:hidden;cursor:pointer;
+}
+.fuwu_leftbox li.two{
+float:left;width:100%;height:19px;overflow:hidden;background:url(../images/fuwu_01.jpg) no-repeat 0px -19px;text-indent:37px;margin-top:18px;line-height:19px;overflow:hidden;cursor:pointer;
+}
+.fuwu_rightboxcenter{
+line-height:150%;font-size:12px;
+}
+.fuwu_inputcss{
+margin-top:38px;text-align:center;background:url(../images/fuwu_002.jpg) no-repeat 130px 4px;padding-left:195px;font-size:18px;text-align:left;line-height:26px;
+}
+.fuwu_inputvss{
+width:88px;height:25px;background:url(../images/fuwu_004.jpg) no-repeat;cursor:pointer;border:none;font-size:12px;
+}
+.fuwu_tablecss{
+width:100%;margin-top:30px;
+}
+.fuwu_tablecss th{
+font-weight:normal;width:210px;text-align:right;
+}
+.typeinput{
+border:1px solid #AEAEAE;width:178px;height:22px;line-height:22px;padding:0px 2px;margin-right:5px;
+}
+.fuwu_tablecss textarea{
+border:1px solid #AEAEAE;width:308px;height:142px;padding:5px;
+}

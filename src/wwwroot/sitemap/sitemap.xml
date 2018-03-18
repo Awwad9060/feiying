@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML文件需以utf-8编码-->
+<sitemapindex>
+    <sitemap>
+        <loc>http://www.fei580.com/sitemap/airline.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+	<sitemap>
+        <loc>http://www.fei580.com/sitemap/airport.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+	<sitemap>
+        <loc>http://www.fei580.com/sitemap/schedule.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+	<sitemap>
+        <loc>http://www.fei580.com/sitemap/flightno.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+	<sitemap>
+        <loc>http://www.fei580.com/sitemap/cschedule.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+	<sitemap>
+        <loc>http://www.fei580.com/sitemap/hongkong.xml</loc>
+        <lastmod>2017-09-06</lastmod>
+    </sitemap>
+</sitemapindex>

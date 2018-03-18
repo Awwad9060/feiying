@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="checklogin.aspx.cs" Inherits="share_checklogin" %>

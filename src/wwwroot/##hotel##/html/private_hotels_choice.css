@@ -1,0 +1,89 @@
+.priHtlChoice_hafRight {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 50%;
+	border-left: #5381C5 dashed 1px;
+	color: #666;
+	overflow: hidden;
+}
+
+.priHtlChoice_hafRight p {
+	margin: 0 15px;
+	padding: 0;
+	border-bottom: #5381C5 dashed 1px;
+	line-height: 24px;
+}
+
+
+.priHtlChoice_hafLeft {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 49%;
+	color: #666;
+	overflow: hidden;
+}
+
+.priHtlChoice_sumBlock01 {	
+	margin: 10px 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.priHtlChoice_hafLeft p {
+	margin: 0 15px;
+	padding: 0;
+	border-bottom: #5381C5 dashed 1px;
+	line-height: 22px;
+}
+
+.priHtlChoice_hotList01 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.priHtlChoice_hotList01 .priHtlChoice_hotList01_title {
+	padding: 0 0 6px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.priHtlChoice_hotList01 .priHtlChoice_hotList01_title a {
+	padding: 0 0 6px 0px;
+	text-decoration: underline;
+	color: #1171AD;
+}
+
+.priHtlChoice_hotList01_summary {
+	display: block;
+	margin: 5px 0 0 0;
+	padding: 0;
+	width: 100%;
+	line-height: 18px;
+	overflow: hidden;
+}
+
+.priHtlChoice_hotList01_summary img {
+	border: #000 solid 1px;
+}
+
+.priHtlChoice_hotList01_summary .priHtlChoice_sumPic {
+	display: block;
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0;
+	width: 70px;
+	height: 70px;
+}
+
+.priHtlChoice_allRoom {
+    float: right;
+	margin: 10px 0 0 0;
+    padding: 3px 0;
+}

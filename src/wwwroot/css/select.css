@@ -1,0 +1,8 @@
+﻿#divselect{width:225px;height:35px;line-height:35px;position:relative; z-index:10000;font-size:18px;font-family:"黑体";color:#06F;}
+#divselect cite{width:210px; height:33px;line-height:33px;border:1px solid #e2e2e2;  display:block; text-indent:5px;color:#06F; cursor:pointer;font-style:normal;padding-left:10px; padding-right:10px;background:url(../images/fcinputbg.jpg) no-repeat;}
+.fromcity {width:175px; height:30px;line-height:30px;border:0;margin-top:1px;font-size:18px;font-family:"黑体";color:#06F;text-indent:0px;}
+.s-select {display:none;}
+#divselect ul{width:230px;background-color:#ffffff; position:absolute; z-index:20000; margin-top:-1px;display:none;border:1px solid #e2e2e2;}
+#divselect ul li{height:24px; line-height:24px;font-size:18px;font-style:normal;font-family:"宋体";color:#06F; text-indent:10px;}
+#divselect ul li a{display:block; height:24px; color:#06F; text-decoration:none; padding-left:10px; padding-right:10px;}
+#divselect ul li a:hover{background-color:#CCC;font-family:"黑体";color:#06F;cursor:pointer;_cursor:hand;}

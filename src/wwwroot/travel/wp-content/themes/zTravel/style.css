@@ -1,0 +1,1279 @@
+/** Default **/
+html {
+	overflow-y:scroll;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+}
+article, aside, figure, figcaption, footer, header, main, nav, section, summary { display:block; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+body,button,input,select,textarea {
+	font-family:Open Sans,Microsoft Yahei,微软雅黑,宋体,Helvetica,Arial,Lucida Grande,Tahoma,Sans-serif;
+	font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+}
+.container {
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+a {text-decoration:none!important;}
+:focus {outline:0;}
+a,button,input {-webkit-tap-highlight-color:#ff0000;}
+.clear {clear:both;}
+.clearfix {content:".";}
+/**----------------------------------------------------------**/
+body {
+	background:#fff url('http://www.fei580.com/images/bg1700.jpg') center 0 no-repeat;
+}
+#header, #main {
+	height:auto;
+	overflow:hidden;
+}
+.top {
+	color:#000;
+	height:20px;
+	font-size:12px;
+	line-height:160%;
+}
+.top img {
+	margin-top:-2px;
+	margin-right:5px;
+}
+.logo-nav {
+	margin-top:100px;
+	*margin-top:0;
+	*padding-top:100px;
+}
+.logo {
+	float:left;
+	width:290px;
+	height:110px;
+	background:url('http://www.fei580.com/images/headbglast02.jpg') no-repeat;
+}
+.logo a {
+	float:left;
+	margin:7px 0 0 70px;
+	display:inline;
+}
+.nav {
+	float:right;
+	width:710px;
+	background:url('http://www.fei580.com/images/headbglast03.jpg') 0 top no-repeat;
+	height:110px;
+	overflow:hidden;
+}
+.lrsm {
+	height:21px;
+	font-size:14px;
+	line-height:21px;
+	text-align:right;
+	padding-right:15px;
+	overflow:hidden;
+}
+.lrsm a {
+	color:#111;
+	margin:0 10px;
+}
+.lrsm a:hover {color:#f00;}
+.menu {
+	float:left;
+	width:672px;
+	height:38px;
+	list-style:none;
+	padding-left:38px;
+	overflow:hidden;
+}
+.menu li {
+	float:left;
+	height:38px;
+	line-height:38px;
+	padding:0 7px 0 0 ;
+	background:url('http://www.fei580.com/images/menu001.jpg') right top no-repeat;
+}
+.menu li a:hover {
+	background: url('http://www.fei580.com/images/menuvs.jpg') no-repeat center;
+}
+.menu li.one a:visited {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    background: url('http://www.fei580.com/images/menuvs.jpg') no-repeat center;
+    width: 65px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+.menu li.one a:link {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    background: url('http://www.fei580.com/images/menuvs.jpg') no-repeat center;
+    width: 65px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+.menu li.two a:visited {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    width: 65px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+.menu li.two a:link {
+    color: #fff;
+    text-decoration: none;
+    float: left;
+    width: 65px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+.submenu {
+    height: 21px;
+    overflow: hidden;
+    padding-left: 34px;
+    margin-top: 3px;
+    float: left;
+    width: 676px;
+	font-size:13px;
+}
+.submenu ul {
+    float: left;
+    width: 440px;
+	list-style:none;
+    margin-top: 2px;
+}
+.submenu a:link,.submenu a:visited {color:#666;}
+.submenu a:hover, .breadcrumb a:hover {color:#f00!important;}
+.nohidden {
+    display: block;
+}
+.submenu ul li.two {
+    float: left;
+    background: url('http://www.fei580.com/images/menu0202.jpg') no-repeat;
+    padding: 0px 6px 0px 18px;
+    line-height: 16px;
+}
+.zn-search {
+	float:right;
+	width:236px;
+}
+.input-kw {
+	float:left;
+	width:142px;
+	font-size:12px;
+	margin:0 10px;
+	*padding-top:1px;
+	background:transparent;
+	border:0 solid transparent;
+}
+.submit-btn {
+	float:left;
+	width:30px;
+	height:15px;
+	border:0;
+	margin:0 3px;
+	display:inline;
+	background:transparent;
+	cursor:pointer;
+}
+.breadcrumb {
+	clear:both;
+	color:#a2a2a2;
+	font-size:12px;
+	padding-top:5px;
+	text-indent:10px;
+	line-height:18px;
+	overflow:hidden;
+}
+/**--------------------------------------------------------------------------------------**/
+#main {
+	padding:10px 0;
+}
+.ticket-confluence {
+	width:980px;
+	height:auto;
+	padding:10px 0;
+	background:#3a5b88;
+	margin:10px auto;
+	overflow:hidden;
+}
+.go-info, .data-info {
+	float:left;
+	color:#fff;
+	width:420px;
+	height:80px;
+	padding:0 14px;
+}
+.go-info {
+	border-right:2px solid #fff;
+}
+.data-info {
+	border-left:2px solid #fff;
+}
+.tfont {
+	font-style:normal;
+	font-weight:normal;
+}
+.check-btn {
+	float:right;
+	color:#fff;
+	width:80px;
+	font-size:16px;
+	font-weight:800;
+	text-align:center;
+	line-height:30px;
+	letter-spacing:2px;
+	background:#f57f00;
+	margin-top:-10px;
+	margin-bottom:-10px;
+	padding:25px 0;
+}
+.check-btn a {
+	display:block;
+	width:100%;
+	height:100%;
+	color:#fff;
+}
+#sidebar {
+	float:left;
+	width:215px;
+	height:auto;
+	padding:0 10px;
+}
+.currentkf {
+	height:auto;
+	padding-top:2px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	background:#008bc7;
+	position:relative;
+	overflow:hidden;
+}
+.currentkf h5 {
+	color:#fff;
+	font-weight:normal;
+	line-height:24px;
+}
+.currentkf img {
+	float:left;
+	width:80px;
+	height:80px;
+	margin-right:15px;
+}
+.currentkf p {
+	color:#fff;
+}
+.currentkf b {
+	font-size:28px;
+	font-weight:500;
+}
+.currentkf em {
+	top:18%;
+	left:50%;
+	font-size:24px;
+	margin-left:30px;
+	position:absolute;
+}
+.currentkf span {
+	top:42%;
+	left:50%;
+	font-size:14px;
+	margin-left:30px;
+	position:absolute;
+}
+.btn {
+	display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 2px 25px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.kf_chat {
+	margin-top:10px;
+	color: #ffffff;
+    background-color: #cf0a75;
+    border-color: #fa73bd;
+}
+#primary {
+	float:left;
+	width:745px;
+	height:auto;
+	padding:0 10px;
+}
+#go-city-navi {
+	height:40px;
+	line-height:40px;
+	padding:0 10px;
+	background:#254066;
+}
+#go-city-navi a {
+	float:left;
+	color:#fff;
+	padding:0 10px;
+	display:block;
+}
+#go-city-navi .more {
+	float:right;
+}
+.mainlist {
+	height:auto;
+	padding:10px;
+    background: #e8e8e8;
+}
+.mainlist li {
+	list-style:none;
+	background:#fff;
+	position:relative;
+	overflow:hidden;
+	margin:5px 0;
+}
+.flyinfo {
+	float:left;
+	width:80%;
+	padding-top:10px;
+	padding-left:10px;
+	padding-bottom:10px;
+	border-right:2px solid #e8e8e8;
+}
+.airfly {
+	width:100%;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+}
+.airfly .airline {
+	float:left;
+	width:150px;
+	white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.airfly .airtime {
+	float:left;
+	width:335px;
+	font-size:14px;
+	overflow:hidden;
+}
+.airfly .airdetail {
+	float:left;
+	width:95px;
+}
+.airtime .tripch {
+	display:block;
+	float:left;
+	width:50px;
+	text-align:center;
+}
+.airtime .flytime, .airtime .arrtime {
+	display:block;
+	float:left;
+	width:140px;
+}
+.air_logo {
+	padding:2px 2px;
+	margin-top:-2px;
+	margin-left:5px;
+	vertical-align: middle;
+	border:1px solid #e8e8e8;
+}
+.air_line {
+	font-size:14px;
+	margin-left:5px;
+}
+.air_detail {
+	color:#fff;
+	background:#e44b09;
+	padding:4px 10px;
+}
+.airticket {
+	clear:both;
+	width:100%;
+	height:auto;
+	margin-top:10px;
+	overflow:hidden;
+}
+.airticket .flight-port {
+	float:left;
+	width:120px;
+	height:100px;
+	padding:0 10px;
+	display: table;
+	text-align:center;
+}
+.flight-port .airport {
+	/*height:90px;*/
+	*margin-top:7px;
+	display:table-cell;
+	vertical-align: middle;
+}
+.airport p {
+	font-size:13px;
+}
+.dc {
+	margin-top:31px;
+}
+.airticket .flytimeinfo {
+	float:left;
+	width:300px;
+}
+.flytimeinfo .datetime {
+	float:left;
+	color:#999;
+	width:120px;
+	display:block;
+	font-size:14px;
+	text-align:center;
+	/*margin-top:24px;*/
+}
+.flytimeinfo .icons {
+	float:left;
+	width:40px;
+	text-align:center;
+}
+.transform-icon {
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+}
+.flybuy {
+	float:left;
+	width:111px;
+	height:auto;
+	padding:10px;
+	overflow:hidden;
+	border-left:2px solid #e8e8e8;
+}
+.flight-time {
+	width:100%;
+	/*height:45px;*/
+}
+.transfer {
+	margin-top:30px;
+}
+.detail-line-single {
+	padding: 85px 10px!important;
+}
+/*.transfer-go {
+	background:url(img/transfer.jpg) no-repeat 0 0;
+}
+.transfer-back {
+	background:url(img/transfer.jpg) no-repeat 0 -75px;
+}
+.non-stop-go {
+	background:url(img/flight.jpg) no-repeat 0 0;
+}
+.non-stop-back {
+	background:url(img/flight.jpg) no-repeat 0 -75px;
+}*/
+.flight-deline {
+	width:100%;
+	height:auto;
+	margin:5px 0;
+	font-size:12px;
+    overflow: hidden;
+	text-align:center;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.dc-flight {
+	margin-top:21px;
+}
+.price {
+	color:#fff;
+	width:100%;
+	height:40px;
+	font-size:24px;
+	font-weight:500;
+	line-height:40px;
+	text-align:center;
+	background:#e44b09;
+}
+.tax {
+	color:#fff;
+	width:100%;
+	height:20px;
+	font-size:13px;
+	line-height:20px;
+	text-align:center;
+	font-style:normal;
+	background:#d4480b;
+	position:relative;
+}
+.rtimed {
+	float:right;
+	bottom:-18px;
+	right:0;
+	color:#fff;
+	width:80px;
+	height:16px;
+	font-size:12px;
+	line-height:16px;
+	background:#e49b09;
+}
+.buylink {
+	width:100%;
+	height:30px;
+	line-height:30px;
+	margin:5px auto;
+	*margin:24px auto 10px;
+	text-align:center;
+	background:#096be4;
+}
+.onChat {
+	width:100%;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	background:#e4096e;
+}
+.buylink a, .onChat a {
+	color:#fff;
+}
+.paginator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+	text-align:center;
+}
+.paginator a {
+	color: #111;
+	padding: 5px 8px;
+	margin-right:5px;
+	font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+	border-radius: 5px;
+    background: #d7d7d7;
+    border: 1px solid #b7cad7;
+}
+.paginator span {
+	color: #eee;
+	padding: 5px 8px;
+	margin-right:5px;
+	font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+	border-radius: 5px;
+    background: #4f6dac;
+    border: 1px solid #b7cad7;
+}
+.paginator input {
+	color: #111;
+	padding: 5px 8px;
+	margin-right:5px;
+	font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+	border-radius: 5px;
+    background: #d7d7d7;
+    border: 1px solid #b7cad7;
+}
+.paginator a:hover, .paginator input:hover {
+	color: #eee;
+	background: #4f6dac;
+}
+.paginator input {
+	*margin-bottom:-6px;
+}
+#Pager_input {
+	width:24px;
+}
+#Pager_input:hover {
+	color: #111;
+	background: #fff;
+}
+#Pager_btn {
+	cursor:pointer;
+	*padding:2px 8px;
+}
+
+/**---------------------------------------------------------------------------------------**/
+.searchform {
+	width:100%;
+	height:auto;
+	margin-top:15px;
+	overflow:hidden;
+}
+.searchname {
+    width: 100%;
+    height: 29px;
+    border-bottom: 3px solid #CECECE;
+    font-size: 13px;
+    background: url(http://www.fei580.com/images/researchbg.gif) no-repeat left bottom;
+}
+.searchform table {
+	background:#f8f8f8;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.searchform th {
+	width:120px;
+	font-size:13px;
+	font-weight:600;
+	vertical-align: middle;
+}
+.searchform .textInput {
+	padding: 2px 8px 4px;
+    width: 135px;
+    height: 24px;
+    line-height: 24px;
+    background: url(http://www.fei580.com/images/input2_20130510.jpg) no-repeat 0 0;
+    border: 0;
+	*border:0;
+}
+.searchform .fromTable {
+	position:relative;
+}
+.searchform  .select2 {
+	top:0;
+	*left:0;
+	border: 0;
+    width: 135px;
+    height: 28px;
+	padding: 2px 5px 4px;
+    line-height: 24px;
+	position:absolute;
+    background: url(http://www.fei580.com/images/input2_20130510.jpg) no-repeat 0 0;
+}
+.searchmitcss {
+	float:right;
+    width: 131px;
+    height: 69px;
+    background: url(http://www.fei580.com/images/searchbtnl.jpg) no-repeat center center;
+    border: none;
+    cursor: pointer;
+    margin-right:15px;
+}
+.airline-list {
+    width: 100%;
+	height:auto;
+	margin-top: 10px;
+    background: url(http://www.fei580.com/images/plannumbg.gif) no-repeat 0 0;
+}
+.cate-title {
+	color: #fff;
+	width: 100%;
+    height: 35px;
+    font-size: 14px;
+	text-indent: 2em;
+    line-height: 35px;
+}
+.cate-title code {
+	color:#f60;
+	font-size:16px;
+	font-weight:600;
+}
+.otherfly_box {
+	width:201px;
+	height: auto;
+    margin: 5px auto;
+	padding:5px 6px;
+	border-left: solid 1px #24a3e0;
+    border-bottom: solid 1px #24a3e0;
+    border-right: solid 1px #24a3e0;
+}
+.otherfly_box li {
+	height:30px;
+	font-size:14px;
+	list-style:none;
+    line-height: 30px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.otherfly_box li:hover {
+	background: #eee;
+}
+.flyico {
+    float: left;
+	margin-top:1px;
+    padding-top:5px;
+    padding-right:10px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+.detail-banner {
+	width:980px;
+	height:200px;
+	margin:0 auto;
+	position:relative;
+	border-bottom:10px solid #134da6;
+	background:url(img/DetailBanner.jpg) no-repeat center 0;
+	/*box-shadow: 0 5px 5px #c6c0ab;*/
+}
+.detail-banner .chat-button {
+	left:50%;
+	width:110px;
+	height:20px;
+	bottom:50px;
+	display:block;
+	margin-left:-50px;
+	position:absolute;
+}
+.detail-info {
+	width:960px;
+	height:auto;
+	margin:0 auto;
+	overflow:hidden;
+	background:#fffbe0;
+	border-left:5px solid #134da6;
+	border-right:5px solid #134da6;
+	border-bottom:5px solid #134da6;
+}
+.detail-info .detail-box-shadow {
+	width:100%;
+	height:2px;
+	margin-top:-8px;
+	/*border-bottom:1 solid #134da6;*/
+	box-shadow:0 10px 5px #999;
+}
+.detail-info .detail-1 {
+	height:120px;
+	overflow:hidden;
+	padding:10px 10px 0 10px;
+	border-bottom:2px solid #ddd;
+}
+.detail-1 .detail-datetime {
+	float:left;
+	width:180px;
+	padding-left:5px;
+	padding-right:13px;
+}
+.detail-1 .detail-price {
+	float:left;
+	width:240px;
+	padding-left:13px;
+	padding-right:5px;
+}
+.detail-1 .detail-airline {
+	float:left;
+	width:480px;
+	border-left:2px solid #ddd;
+	border-right:2px solid #ddd;
+}
+.detail-datetime .trip_way {
+	height:40px;
+	font-size:15px;
+	line-height:40px;
+	border-bottom:1px dashed #ddd;
+}
+.trip_way .fa {
+	color:#0f53a2;
+	font-size:18px;
+	font-weight:600;
+	padding-right:10px;
+}
+.trip_way span, .trip_date span {
+	color:#0f53a2;
+}
+.detail-datetime .trip_date {
+	padding:10px 0;
+	font-size:15px;
+	line-height:30px;
+}
+.trip_date .fa {
+	color:#bebba8;
+	font-weight:600;
+}
+.trip_date ul li {
+	list-style:none;
+}
+.detail-airline .airlogo {
+	float:left;
+	width:120px;
+	height:100px;
+	padding:10px;
+	margin:0 10px;
+	overflow:hidden;
+}
+.detail-airline .airlogo img {
+	/* max-width:100%;
+	width:auto;
+	height:auto; */
+	width:120px;
+	height:100px;
+}
+.detail-airline .airline-info {
+	float:left;
+	width:280px;
+	height:100px;
+	padding:10px;
+	margin:0 10px;
+	overflow:hidden;
+}
+.airline-info h3 {
+	font-size:18px;
+	font-weight:600;
+	line-height:40px;
+}
+.airline-info ul {
+	margin-top:10px;
+}
+.airline-info ul li {
+	font-size:14px;
+	list-style:none;
+	line-height:24px;
+}
+.detail-price .detail-price-tax {
+	float:left;
+	width:140px;
+	padding:10px 0;
+}
+.detail-price-tax .price {
+	height:70px;
+	font-size:30px;
+	line-height:70px;
+}
+.detail-price-tax .tax {
+	height:30px;
+	line-height:30px;
+}
+.detail-price .detail-buy-chat {
+	float:right;
+	width:90px;
+	padding:10px 0;
+}
+.detail-buy-chat .buylink {
+	height: 60px;
+    line-height: 60px;
+	margin-top:0!important;
+	margin-bottom:10px!important;
+}
+.detail-buy-chat .onChat {
+	height:30px;
+	line-height:30px;
+}
+.detail-info .detail-2 {
+	height:auto;
+	padding:10px;
+	overflow:hidden;
+	position:relative;
+	border-bottom:2px solid #ddd;
+}
+.detail-info .rm_tips {
+	top:0;
+	right:0;
+	width:60px;
+	height:60px;
+	position: absolute;
+	background:url(img/remeber_tips.png) no-repeat;
+}
+.detail-2 .detail-fromcity, .detail-2 .detail-tocity {
+	float:left;
+	width:160px;
+	height:224px;
+	padding:0 10px;
+	display:table;
+}
+.detail-2 .cityport {
+	height:90px;
+    display: table-cell;
+	*margin-top:68px; /* IE兼容模式 */
+    vertical-align: middle;
+}
+.detail-2 .detail-line-detail {
+	float:left;
+	width:540px;
+	margin:0 10px;
+	overflow:hidden;
+	padding:20px 10px;
+}
+.detail-line-detail .detail-go-line {
+	width:100%;
+	height:60px;
+	line-height:30px;
+	position:relative;
+	background: url(img/plan_background.png) no-repeat 0 3px;
+}
+.detail-line-detail .detail-back-line {
+	width:100%;
+	height:60px;
+	line-height:30px;
+	position:relative;
+	background: url(img/plan_background.png) no-repeat 0 -63px;
+}
+.detail-line-detail .ticketline, .detail-line-detail .tickettime {
+	float:left;
+	width:200px;
+	height:30px;
+	color:#458dbf;
+	font-size:14px;
+	padding:0 35px;
+	text-align:center;
+}
+.detail-line-detail span {
+	width:50%;
+	padding:0 5px;
+}
+.detail-line-detail span code {
+	color:#7b7b7b;
+	padding-left:5px;
+}
+.detail-line-detail .detail-trun-line {
+	width:100%;
+	height:32px;
+	font-size:12px;
+	line-height:16px;
+	text-align:center;
+}
+.detail-info .detail-3 {
+	height:auto;
+	padding:10px;
+	overflow:hidden;
+}
+.detail-3 .detail-type {
+	float:left;
+	width:250px;
+	padding:20px;
+}
+.detail-type ol li {
+	list-style:none;
+	line-height:30px;
+}
+.detail-type .fa {
+	color:#bebba8;
+	font-weight:600;
+	padding-right:10px;
+}
+.detail-type span, .detail-type a {
+	color:#458dbf;
+	margin-left:10px;
+}
+.detail-3 .detail-clause {
+	float:left;
+	width:608px;
+	overflow:hidden;
+	padding:20px 20px 0 20px;
+	border-left: 2px solid #ddd;
+	background: url(img/Ellipse.png) no-repeat 20px 0;
+}
+.detail-clause ol {
+	padding:25px;
+}
+.detail-clause ol li {
+	font-size:14px;
+	line-height:28px;
+}
+.detail-info .detail-4 {
+	width:100%;
+	height:136px;
+	overflow:hidden;
+	background:#134da6;
+}
+.detail-4 .detail-order-name {
+	margin-top:12px;
+	position:relative;
+	border-bottom:6px solid #ff0000;
+}
+.detail-order-name span {
+	color:#fff;
+	padding:5px 10px;
+	background:#ff0000;
+}
+.detail-4 .detail-order-form {
+	width:100%;
+	height:100px;
+	background:#fff;
+}
+.detail-order-form table {
+	border-spacing:8px 12px;
+}
+.detail-order-form td {
+	font-size:14px;
+	padding:0 10px;
+}
+.detail-order-form input {
+	width:90px;
+	height:18px;
+	font-size:14px;
+	line-height:18px;
+	margin-left:5px;
+}
+.detail-order-form .fa {
+	margin-left:5px;
+}
+.detail-order-form .mess {
+	vertical-align:top;
+}
+.detail-order-form textarea {
+	height:60px;
+	margin-left:5px;
+}
+.detail-order-form .BookSubmit {
+	margin-left:-10px;
+	margin-right:-10px;
+	width:128px;
+	height:60px;
+	border: none;
+	cursor: pointer;
+    background: url(img/BookSubmit.png) no-repeat center center;
+}
+.detail-bottom-banner {
+	width:970px;
+	height:96px;
+	margin:10px auto;
+}
+.ticket-recommend {
+	width:980px;
+	height:auto;
+	margin:10px auto;
+	overflow:hidden;
+}
+.ticket-recommend ul li {
+	float:left;
+	width:235px;
+	height:115px;
+	list-style:none;
+	margin:10px 5px;
+}
+.ticket-recommend .ticket-card {
+	width:100%;
+	height:100%;
+	padding-top:10px;
+	position:relative;
+	background:#254066;
+}
+.ticket-card .card-title {
+	float:left;
+	color:#fff;
+	width:100px;
+	height:24px;
+	font-size:12px;
+	line-height:24px;
+	text-indent:15px;
+	position:relative;
+	background:#ff0000;
+}
+.ticket-card .card-line {
+	float:right;
+	color:#fff;
+	width:120px;
+	height:24px;
+	font-size:16px;
+	line-height:24px;
+	text-align:center;
+    overflow: hidden;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.ticket-card .card-line-title {
+	color:#fff;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	text-indent: 5px;
+	overflow: hidden;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.card-line-title .fa {
+	color:#ddd;
+	font-size:18px;
+	font-weight:600;
+}
+.card-line a, .card-line-title a {
+	color:#fff;
+}
+.ticket-card .card-line-price {
+	color:#fff;
+	font-size:24px;
+	line-height:40px;
+	text-align:center;
+}
+
+/*Triangle CSS**/
+#triangle-left {
+	right:0;
+	bottom:0;
+	width: 0;
+	height: 0;
+	position:absolute;
+	border-top: 12px solid transparent;
+	border-right: 24px solid #254066;
+	border-bottom: 12px solid transparent;
+}
+#triangle-bottomright {
+	right:0;
+	bottom:0;
+	width: 0;
+	height: 0;
+	position:absolute;
+	border-bottom: 30px solid #fff;
+	border-left: 30px solid transparent;
+}
+
+.widget {
+    margin: 0 0 10px 0;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+#sidebar h3 {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background: #1084dc;
+	white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#sidebar h3 a {
+    color: #fff!important;
+}
+.soticket {
+    color: #31708f;
+    padding: 5px 10px 0;
+    background: #d9edf7;
+    text-align: center;
+    overflow: hidden;
+}
+.soticket li {
+    float: left;
+    list-style: none;
+    overflow: hidden;
+}
+.soticket .goto li.txt {
+    width: 45%;
+    font-weight: 600;
+}
+.soticket .datetime li.txt {
+    width: 45%;
+    font-size: 0.825em;
+}
+.soticket .info {
+    margin-left: -10px;
+    margin-right: -10px;
+	overflow:hidden;
+}
+.soticket li {
+    float: left;
+    list-style: none;
+    overflow: hidden;
+}
+.soticket .info li {
+    width: 33.33333333%;
+    padding: 10px 0;
+    background: #fff!important;
+}
+.soticket code {
+    color: #fff;
+    background: #f00;
+    padding: 1px 3px;
+    margin-right: 5px;
+}
+.soticket b {
+    color: #f00;
+}
+.soticket span {
+    font-size: 0.825em;
+}
+.soticket .chat {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.soticket .chat a {
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgba(218,65,0,59);
+    border-color: rgba(218,65,0,59);
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**------------------------------------------------------------------------------------**/
+#footer {
+    height: 120px;
+    background: url(http://www.fei580.com/images/footerbg.jpg) no-repeat center 0;
+    margin: 5px auto 10px;
+    padding: 5px 12px;
+    overflow: hidden;
+}
+.ft-home-top {
+	width: 100%;
+    height: 21px;
+    line-height: 21px;
+    margin-top: -2px;
+    font-family: Open Sans,arial,verdana,sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+}
+.ft-home-top span {
+    float: right;
+    width: 60px;
+	height:20px;
+    text-align:center;
+}
+.ft-home-top code {
+    float: right;
+    width: 60px;
+    text-align:center;
+	margin-right:48px;
+}
+.ft-home-top a {
+	color:#fff;
+}
+.footer-logo {
+	float: left;
+    width: 256px;
+    text-indent: 36px;
+}
+.footer-copy {
+	float: left;
+    width: 636px;
+    font-size:13px;
+    color: #121212;
+    padding-left: 29px;
+    line-height: 20px;
+	border-left: 1px solid #C9C9C9;
+}
+/****/
+#circle {
+	float:left;
+	width: 30px;
+	height: 30px;
+	margin:0 10px;
+	line-height:30px;
+	text-align:center;
+	border: 3px #a72525 solid;
+	-webkit-border-radius: 20px;
+	background-color: transparent;
+}
+/*-------------------------------------------------------------------------------------------*/

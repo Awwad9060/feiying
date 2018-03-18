@@ -1,0 +1,1 @@
+INSERT INTO `dede_homepageset` VALUES('fei580/index.htm','../index.htm','1');

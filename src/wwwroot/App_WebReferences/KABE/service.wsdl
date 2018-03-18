@@ -1,0 +1,2724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://travel-data.org" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://travel-data.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://travel-data.org">
+      <s:element name="GetCheckValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="st" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fltno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cabin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCheckValueResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidationET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ticketno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidationETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetValidationETResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValues9C">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValues9CResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValues9CResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValues9Ccabin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValues9CcabinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValues9CcabinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="showround" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValuesV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesCV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="showround" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesCV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValuesCV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesVN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="showround" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatValuesVNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatValuesVNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailRoundFltValuesP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flt" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailRoundFltValuesPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetailRoundFltValuesPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailRoundFltValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetailRoundFltValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetailRoundFltValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSimpleRoundFltValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSimpleRoundFltValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSimpleRoundFltValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatSubValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFormatSubValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFormatSubValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStopAirportValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStopAirportValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStopAirportValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFlightScheduleValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFlightScheduleValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFlightScheduleValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRealTimeflightValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRealTimeflightValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRealTimeflightValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValuesV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="md5value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValuesV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterPolicyValuesV3Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQTax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getQTaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getQTaxResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailFltValuesV5Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailFltValuesV4Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailFltValuesV3Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailSpeciaFlt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailSpeciaFltResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailSpeciaFltResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRealInterFltValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRealInterFltValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRealInterFltValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailFltValuesV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValuesV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="md5value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValuesV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterPolicyValuesV2Result">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterDetailFltValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterDetailFltValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterSubClassFltValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ec" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ed" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="air" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ft" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="md5value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterSubClassFltValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterSubClassFltValuesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="md5value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="u" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInterPolicyValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInterPolicyValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCheckValueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCheckValue" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckValueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCheckValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETSoapIn">
+    <wsdl:part name="parameters" element="tns:GetValidationET" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETSoapOut">
+    <wsdl:part name="parameters" element="tns:GetValidationETResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValues" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValues9C" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValues9CResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValues9Ccabin" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValues9CcabinResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2SoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValuesV2" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2SoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValuesV2Response" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2SoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValuesCV2" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2SoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValuesCV2Response" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatValuesVN" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatValuesVNResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetailRoundFltValuesP" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetailRoundFltValuesPResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetailRoundFltValues" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetailRoundFltValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getSimpleRoundFltValues" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getSimpleRoundFltValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getFormatSubValues" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getFormatSubValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueSoapIn">
+    <wsdl:part name="parameters" element="tns:getStopAirportValue" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueSoapOut">
+    <wsdl:part name="parameters" element="tns:getStopAirportValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getFlightScheduleValues" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getFlightScheduleValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getRealTimeflightValues" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getRealTimeflightValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValuesV3" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValuesV3Response" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxSoapIn">
+    <wsdl:part name="parameters" element="tns:getQTax" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxSoapOut">
+    <wsdl:part name="parameters" element="tns:getQTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV5" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV5Response" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV4" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV4Response" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV3" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV3Response" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltSoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailSpeciaFlt" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltSoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailSpeciaFltResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getRealInterFltValues" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getRealInterFltValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV2" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesV2Response" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2SoapIn">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValuesV2" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2SoapOut">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValuesV2Response" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValues" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getInterDetailFltValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getInterSubClassFltValues" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getInterSubClassFltValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValues" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:getInterPolicyValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckValueHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="st" type="s:string" />
+    <wsdl:part name="fltno" type="s:string" />
+    <wsdl:part name="cabin" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckValueHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="orderno" type="s:string" />
+    <wsdl:part name="ticketno" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpGetIn">
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="fv" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2HttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2HttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="flt" type="s:string" />
+    <wsdl:part name="p" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="flt" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="fn" type="s:string" />
+    <wsdl:part name="v" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="fn" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesHttpGetIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="flno" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3HttpGetIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3HttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5HttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5HttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4HttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4HttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3HttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3HttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2HttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2HttpGetIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2HttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesHttpGetIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesHttpGetIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckValueHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="st" type="s:string" />
+    <wsdl:part name="fltno" type="s:string" />
+    <wsdl:part name="cabin" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckValueHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="orderno" type="s:string" />
+    <wsdl:part name="ticketno" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetValidationETHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpPostIn">
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="fv" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValues9CcabinHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2HttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesV2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2HttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesCV2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="showround" type="s:string" />
+    <wsdl:part name="f" type="s:string" />
+    <wsdl:part name="t" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatValuesVNHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="flt" type="s:string" />
+    <wsdl:part name="p" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="flt" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDetailRoundFltValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getSimpleRoundFltValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="fn" type="s:string" />
+    <wsdl:part name="v" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFormatSubValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="fn" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getStopAirportValueHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesHttpPostIn">
+    <wsdl:part name="u" type="s:string" />
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFlightScheduleValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="flno" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealTimeflightValuesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3HttpPostIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV3HttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getQTaxHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5HttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV5HttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4HttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV4HttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3HttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV3HttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailSpeciaFltHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRealInterFltValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2HttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesV2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2HttpPostIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesV2HttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="classtype" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterDetailFltValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesHttpPostIn">
+    <wsdl:part name="sc" type="s:string" />
+    <wsdl:part name="ec" type="s:string" />
+    <wsdl:part name="sd" type="s:string" />
+    <wsdl:part name="ed" type="s:string" />
+    <wsdl:part name="air" type="s:string" />
+    <wsdl:part name="ft" type="s:string" />
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterSubClassFltValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesHttpPostIn">
+    <wsdl:part name="md5value" type="s:string" />
+    <wsdl:part name="u" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getInterPolicyValuesHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetCheckValue">
+      <wsdl:input message="tns:GetCheckValueSoapIn" />
+      <wsdl:output message="tns:GetCheckValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <wsdl:input message="tns:GetValidationETSoapIn" />
+      <wsdl:output message="tns:GetValidationETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户信息查询函数，返回用户基础信息，和剩余查询次数【user:客户标示码】</wsdl:documentation>
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <wsdl:input message="tns:getFormatValuesSoapIn" />
+      <wsdl:output message="tns:getFormatValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <wsdl:input message="tns:getFormatValues9CSoapIn" />
+      <wsdl:output message="tns:getFormatValues9CSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <wsdl:input message="tns:getFormatValues9CcabinSoapIn" />
+      <wsdl:output message="tns:getFormatValues9CcabinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <wsdl:input message="tns:getFormatValuesV2SoapIn" />
+      <wsdl:output message="tns:getFormatValuesV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <wsdl:input message="tns:getFormatValuesCV2SoapIn" />
+      <wsdl:output message="tns:getFormatValuesCV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <wsdl:input message="tns:getFormatValuesVNSoapIn" />
+      <wsdl:output message="tns:getFormatValuesVNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <wsdl:input message="tns:getDetailRoundFltValuesPSoapIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <wsdl:input message="tns:getDetailRoundFltValuesSoapIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <wsdl:input message="tns:getSimpleRoundFltValuesSoapIn" />
+      <wsdl:output message="tns:getSimpleRoundFltValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <wsdl:input message="tns:getFormatSubValuesSoapIn" />
+      <wsdl:output message="tns:getFormatSubValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <wsdl:input message="tns:getStopAirportValueSoapIn" />
+      <wsdl:output message="tns:getStopAirportValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <wsdl:input message="tns:getFlightScheduleValuesSoapIn" />
+      <wsdl:output message="tns:getFlightScheduleValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <wsdl:input message="tns:getRealTimeflightValuesSoapIn" />
+      <wsdl:output message="tns:getRealTimeflightValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <wsdl:input message="tns:getInterPolicyValuesV3SoapIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <wsdl:input message="tns:getQTaxSoapIn" />
+      <wsdl:output message="tns:getQTaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <wsdl:input message="tns:getInterDetailFltValuesV5SoapIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <wsdl:input message="tns:getInterDetailFltValuesV4SoapIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <wsdl:input message="tns:getInterDetailFltValuesV3SoapIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <wsdl:input message="tns:getInterDetailSpeciaFltSoapIn" />
+      <wsdl:output message="tns:getInterDetailSpeciaFltSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <wsdl:input message="tns:getRealInterFltValuesSoapIn" />
+      <wsdl:output message="tns:getRealInterFltValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <wsdl:input message="tns:getInterDetailFltValuesV2SoapIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <wsdl:input message="tns:getInterPolicyValuesV2SoapIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <wsdl:input message="tns:getInterDetailFltValuesSoapIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <wsdl:input message="tns:getInterSubClassFltValuesSoapIn" />
+      <wsdl:output message="tns:getInterSubClassFltValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <wsdl:input message="tns:getInterPolicyValuesSoapIn" />
+      <wsdl:output message="tns:getInterPolicyValuesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpGet">
+    <wsdl:operation name="GetCheckValue">
+      <wsdl:input message="tns:GetCheckValueHttpGetIn" />
+      <wsdl:output message="tns:GetCheckValueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <wsdl:input message="tns:GetValidationETHttpGetIn" />
+      <wsdl:output message="tns:GetValidationETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户信息查询函数，返回用户基础信息，和剩余查询次数【user:客户标示码】</wsdl:documentation>
+      <wsdl:input message="tns:GetUserInfoHttpGetIn" />
+      <wsdl:output message="tns:GetUserInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <wsdl:input message="tns:getFormatValuesHttpGetIn" />
+      <wsdl:output message="tns:getFormatValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <wsdl:input message="tns:getFormatValues9CHttpGetIn" />
+      <wsdl:output message="tns:getFormatValues9CHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <wsdl:input message="tns:getFormatValues9CcabinHttpGetIn" />
+      <wsdl:output message="tns:getFormatValues9CcabinHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <wsdl:input message="tns:getFormatValuesV2HttpGetIn" />
+      <wsdl:output message="tns:getFormatValuesV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <wsdl:input message="tns:getFormatValuesCV2HttpGetIn" />
+      <wsdl:output message="tns:getFormatValuesCV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <wsdl:input message="tns:getFormatValuesVNHttpGetIn" />
+      <wsdl:output message="tns:getFormatValuesVNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <wsdl:input message="tns:getDetailRoundFltValuesPHttpGetIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <wsdl:input message="tns:getDetailRoundFltValuesHttpGetIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <wsdl:input message="tns:getSimpleRoundFltValuesHttpGetIn" />
+      <wsdl:output message="tns:getSimpleRoundFltValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <wsdl:input message="tns:getFormatSubValuesHttpGetIn" />
+      <wsdl:output message="tns:getFormatSubValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <wsdl:input message="tns:getStopAirportValueHttpGetIn" />
+      <wsdl:output message="tns:getStopAirportValueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <wsdl:input message="tns:getFlightScheduleValuesHttpGetIn" />
+      <wsdl:output message="tns:getFlightScheduleValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <wsdl:input message="tns:getRealTimeflightValuesHttpGetIn" />
+      <wsdl:output message="tns:getRealTimeflightValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <wsdl:input message="tns:getInterPolicyValuesV3HttpGetIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <wsdl:input message="tns:getQTaxHttpGetIn" />
+      <wsdl:output message="tns:getQTaxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <wsdl:input message="tns:getInterDetailFltValuesV5HttpGetIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV5HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <wsdl:input message="tns:getInterDetailFltValuesV4HttpGetIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV4HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <wsdl:input message="tns:getInterDetailFltValuesV3HttpGetIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <wsdl:input message="tns:getInterDetailSpeciaFltHttpGetIn" />
+      <wsdl:output message="tns:getInterDetailSpeciaFltHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <wsdl:input message="tns:getRealInterFltValuesHttpGetIn" />
+      <wsdl:output message="tns:getRealInterFltValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <wsdl:input message="tns:getInterDetailFltValuesV2HttpGetIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <wsdl:input message="tns:getInterPolicyValuesV2HttpGetIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <wsdl:input message="tns:getInterDetailFltValuesHttpGetIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <wsdl:input message="tns:getInterSubClassFltValuesHttpGetIn" />
+      <wsdl:output message="tns:getInterSubClassFltValuesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <wsdl:input message="tns:getInterPolicyValuesHttpGetIn" />
+      <wsdl:output message="tns:getInterPolicyValuesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ServiceHttpPost">
+    <wsdl:operation name="GetCheckValue">
+      <wsdl:input message="tns:GetCheckValueHttpPostIn" />
+      <wsdl:output message="tns:GetCheckValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <wsdl:input message="tns:GetValidationETHttpPostIn" />
+      <wsdl:output message="tns:GetValidationETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户信息查询函数，返回用户基础信息，和剩余查询次数【user:客户标示码】</wsdl:documentation>
+      <wsdl:input message="tns:GetUserInfoHttpPostIn" />
+      <wsdl:output message="tns:GetUserInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <wsdl:input message="tns:getFormatValuesHttpPostIn" />
+      <wsdl:output message="tns:getFormatValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <wsdl:input message="tns:getFormatValues9CHttpPostIn" />
+      <wsdl:output message="tns:getFormatValues9CHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <wsdl:input message="tns:getFormatValues9CcabinHttpPostIn" />
+      <wsdl:output message="tns:getFormatValues9CcabinHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <wsdl:input message="tns:getFormatValuesV2HttpPostIn" />
+      <wsdl:output message="tns:getFormatValuesV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <wsdl:input message="tns:getFormatValuesCV2HttpPostIn" />
+      <wsdl:output message="tns:getFormatValuesCV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <wsdl:input message="tns:getFormatValuesVNHttpPostIn" />
+      <wsdl:output message="tns:getFormatValuesVNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <wsdl:input message="tns:getDetailRoundFltValuesPHttpPostIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <wsdl:input message="tns:getDetailRoundFltValuesHttpPostIn" />
+      <wsdl:output message="tns:getDetailRoundFltValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <wsdl:input message="tns:getSimpleRoundFltValuesHttpPostIn" />
+      <wsdl:output message="tns:getSimpleRoundFltValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <wsdl:input message="tns:getFormatSubValuesHttpPostIn" />
+      <wsdl:output message="tns:getFormatSubValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <wsdl:input message="tns:getStopAirportValueHttpPostIn" />
+      <wsdl:output message="tns:getStopAirportValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <wsdl:input message="tns:getFlightScheduleValuesHttpPostIn" />
+      <wsdl:output message="tns:getFlightScheduleValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <wsdl:input message="tns:getRealTimeflightValuesHttpPostIn" />
+      <wsdl:output message="tns:getRealTimeflightValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <wsdl:input message="tns:getInterPolicyValuesV3HttpPostIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <wsdl:input message="tns:getQTaxHttpPostIn" />
+      <wsdl:output message="tns:getQTaxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <wsdl:input message="tns:getInterDetailFltValuesV5HttpPostIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV5HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <wsdl:input message="tns:getInterDetailFltValuesV4HttpPostIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV4HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <wsdl:input message="tns:getInterDetailFltValuesV3HttpPostIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <wsdl:input message="tns:getInterDetailSpeciaFltHttpPostIn" />
+      <wsdl:output message="tns:getInterDetailSpeciaFltHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <wsdl:input message="tns:getRealInterFltValuesHttpPostIn" />
+      <wsdl:output message="tns:getRealInterFltValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <wsdl:input message="tns:getInterDetailFltValuesV2HttpPostIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <wsdl:input message="tns:getInterPolicyValuesV2HttpPostIn" />
+      <wsdl:output message="tns:getInterPolicyValuesV2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <wsdl:input message="tns:getInterDetailFltValuesHttpPostIn" />
+      <wsdl:output message="tns:getInterDetailFltValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <wsdl:input message="tns:getInterSubClassFltValuesHttpPostIn" />
+      <wsdl:output message="tns:getInterSubClassFltValuesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <wsdl:input message="tns:getInterPolicyValuesHttpPostIn" />
+      <wsdl:output message="tns:getInterPolicyValuesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCheckValue">
+      <soap:operation soapAction="http://travel-data.org/GetCheckValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <soap:operation soapAction="http://travel-data.org/GetValidationET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://travel-data.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <soap:operation soapAction="http://travel-data.org/getFormatValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <soap:operation soapAction="http://travel-data.org/getFormatValues9C" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <soap:operation soapAction="http://travel-data.org/getFormatValues9Ccabin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <soap:operation soapAction="http://travel-data.org/getFormatValuesV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <soap:operation soapAction="http://travel-data.org/getFormatValuesCV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <soap:operation soapAction="http://travel-data.org/getFormatValuesVN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <soap:operation soapAction="http://travel-data.org/getDetailRoundFltValuesP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <soap:operation soapAction="http://travel-data.org/getDetailRoundFltValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <soap:operation soapAction="http://travel-data.org/getSimpleRoundFltValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <soap:operation soapAction="http://travel-data.org/getFormatSubValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <soap:operation soapAction="http://travel-data.org/getStopAirportValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <soap:operation soapAction="http://travel-data.org/getFlightScheduleValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <soap:operation soapAction="http://travel-data.org/getRealTimeflightValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <soap:operation soapAction="http://travel-data.org/getInterPolicyValuesV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <soap:operation soapAction="http://travel-data.org/getQTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailFltValuesV5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailFltValuesV4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailFltValuesV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailSpeciaFlt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <soap:operation soapAction="http://travel-data.org/getRealInterFltValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailFltValuesV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <soap:operation soapAction="http://travel-data.org/getInterPolicyValuesV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <soap:operation soapAction="http://travel-data.org/getInterDetailFltValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <soap:operation soapAction="http://travel-data.org/getInterSubClassFltValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <soap:operation soapAction="http://travel-data.org/getInterPolicyValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCheckValue">
+      <soap12:operation soapAction="http://travel-data.org/GetCheckValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <soap12:operation soapAction="http://travel-data.org/GetValidationET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://travel-data.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValues9C" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValues9Ccabin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValuesV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValuesCV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <soap12:operation soapAction="http://travel-data.org/getFormatValuesVN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <soap12:operation soapAction="http://travel-data.org/getDetailRoundFltValuesP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <soap12:operation soapAction="http://travel-data.org/getDetailRoundFltValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <soap12:operation soapAction="http://travel-data.org/getSimpleRoundFltValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <soap12:operation soapAction="http://travel-data.org/getFormatSubValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <soap12:operation soapAction="http://travel-data.org/getStopAirportValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <soap12:operation soapAction="http://travel-data.org/getFlightScheduleValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <soap12:operation soapAction="http://travel-data.org/getRealTimeflightValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <soap12:operation soapAction="http://travel-data.org/getInterPolicyValuesV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <soap12:operation soapAction="http://travel-data.org/getQTax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailFltValuesV5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailFltValuesV4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailFltValuesV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailSpeciaFlt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <soap12:operation soapAction="http://travel-data.org/getRealInterFltValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailFltValuesV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <soap12:operation soapAction="http://travel-data.org/getInterPolicyValuesV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <soap12:operation soapAction="http://travel-data.org/getInterDetailFltValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <soap12:operation soapAction="http://travel-data.org/getInterSubClassFltValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <soap12:operation soapAction="http://travel-data.org/getInterPolicyValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpGet" type="tns:ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetCheckValue">
+      <http:operation location="/GetCheckValue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <http:operation location="/GetValidationET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <http:operation location="/getFormatValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <http:operation location="/getFormatValues9C" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <http:operation location="/getFormatValues9Ccabin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <http:operation location="/getFormatValuesV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <http:operation location="/getFormatValuesCV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <http:operation location="/getFormatValuesVN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <http:operation location="/getDetailRoundFltValuesP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <http:operation location="/getDetailRoundFltValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <http:operation location="/getSimpleRoundFltValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <http:operation location="/getFormatSubValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <http:operation location="/getStopAirportValue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <http:operation location="/getFlightScheduleValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <http:operation location="/getRealTimeflightValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <http:operation location="/getInterPolicyValuesV3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <http:operation location="/getQTax" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <http:operation location="/getInterDetailFltValuesV5" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <http:operation location="/getInterDetailFltValuesV4" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <http:operation location="/getInterDetailFltValuesV3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <http:operation location="/getInterDetailSpeciaFlt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <http:operation location="/getRealInterFltValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <http:operation location="/getInterDetailFltValuesV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <http:operation location="/getInterPolicyValuesV2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <http:operation location="/getInterDetailFltValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <http:operation location="/getInterSubClassFltValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <http:operation location="/getInterPolicyValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceHttpPost" type="tns:ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetCheckValue">
+      <http:operation location="/GetCheckValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationET">
+      <http:operation location="/GetValidationET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues">
+      <http:operation location="/getFormatValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9C">
+      <http:operation location="/getFormatValues9C" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValues9Ccabin">
+      <http:operation location="/getFormatValues9Ccabin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesV2">
+      <http:operation location="/getFormatValuesV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesCV2">
+      <http:operation location="/getFormatValuesCV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatValuesVN">
+      <http:operation location="/getFormatValuesVN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValuesP">
+      <http:operation location="/getDetailRoundFltValuesP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailRoundFltValues">
+      <http:operation location="/getDetailRoundFltValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSimpleRoundFltValues">
+      <http:operation location="/getSimpleRoundFltValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFormatSubValues">
+      <http:operation location="/getFormatSubValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopAirportValue">
+      <http:operation location="/getStopAirportValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightScheduleValues">
+      <http:operation location="/getFlightScheduleValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealTimeflightValues">
+      <http:operation location="/getRealTimeflightValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV3">
+      <http:operation location="/getInterPolicyValuesV3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQTax">
+      <http:operation location="/getQTax" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV5">
+      <http:operation location="/getInterDetailFltValuesV5" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV4">
+      <http:operation location="/getInterDetailFltValuesV4" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV3">
+      <http:operation location="/getInterDetailFltValuesV3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailSpeciaFlt">
+      <http:operation location="/getInterDetailSpeciaFlt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealInterFltValues">
+      <http:operation location="/getRealInterFltValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValuesV2">
+      <http:operation location="/getInterDetailFltValuesV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValuesV2">
+      <http:operation location="/getInterPolicyValuesV2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterDetailFltValues">
+      <http:operation location="/getInterDetailFltValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterSubClassFltValues">
+      <http:operation location="/getInterSubClassFltValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInterPolicyValues">
+      <http:operation location="/getInterPolicyValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://services.travel-data.cn/systemquery/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://services.travel-data.cn/systemquery/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpGet" binding="tns:ServiceHttpGet">
+      <http:address location="http://services.travel-data.cn/systemquery/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceHttpPost" binding="tns:ServiceHttpPost">
+      <http:address location="http://services.travel-data.cn/systemquery/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

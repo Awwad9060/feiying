@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="leave_box.aspx.cs" Inherits="leave_box" %>

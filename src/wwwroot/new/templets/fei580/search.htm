@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>搜索结果_{dede:global.cfg_webname/}-飞瀛网</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+<link href="{dede:global.cfg_templeturl/}/fei580/css/main.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/fei580/css/index_new.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="mainbody" >
+{dede:include filename="head.htm"/}
+<div class="contain">
+    <div class="flylist_box">
+     <h1>搜索</h1>
+     <div class="searchr">
+     <form action="{dede:field name='phpurl'/}/search.php" name="formsearch">
+		<div class="s1">搜索</div>
+		<div class="s2">
+           <input type="hidden" name="kwtype" value="0" />
+           <input name="keyword" type="text" class="search-keyword" id="search-keyword" value="{dede:global.keyword/}" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="titlekeyword" selected='1'>智能模糊搜索</option>
+               <option value="title">仅搜索标题</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>        
+        </div>
+    </form>
+    </div>
+    <div class="clear"></div>
+    <div class="msgbar">
+	<p>搜索 <strong class="fc_03c">{dede:global name='keyword'/}</strong> 的结果</p>
+    </div>
+    <div class="resultlist">
+	{dede:list perpage='20'}
+	<div class="item">
+		<h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+		<p class="intro">[field:description/]...</p>
+		<p class="info">
+			<small>分类：</small><span> <a href="[field:typeurl/]" target="_blank">[field:typename/]</a></span>
+			<small>点击：</small><span> [field:click/]</span>
+			<small>日期：</small><span> [field:stime/]</span>
+		</p>
+        <p><span><a href="[field:arcurl/]" target="_blank">[field:arcurl/]</a></span></p>
+	</div>
+        {/dede:list}
+        </div>
+        <div class="dede_pages">
+	<ul class="pagelist">
+		{dede:pagelist listsize='5'/}  
+	</ul>
+        </div><!-- /pages -->
+
+        <div class="othersearch">
+	<h2>相关搜索:</h2>
+	<ul>
+		{dede:likewords num='8'/}
+	</ul>
+        </div>
+  </div>
+</div>
+<div class="clear"></div>
+{dede:include filename="foot.htm"/}
+</div>
+{dede:include filename="kf.html"/} 
+</body>
+</html>

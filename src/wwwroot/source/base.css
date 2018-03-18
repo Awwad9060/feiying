@@ -1,0 +1,18 @@
+﻿/*底部横条提示框样式*/
+#gg {margin:0;position: fixed;left:0;bottom:0;width: 100%;height:150px;z-index: 9999;_bottom:0px;_width: 100%;_position: absolute !important;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+.gg {height:150px;background:#001122; opacity:.8; filter: alpha(opacity=80);}
+.gglayout {position:absolute; height:150px; z-index:1; width:100%; top:0; left:0;}
+.all980 {width:980px;height:150px;margin:0 auto;}
+.gapic {float:left;width:169px; height:255px;display:block;position:absolute; left:15%;bottom:0; background:url(foot_2wm.png) no-repeat;_background:url(foot_2wm.png) no-repeat;}
+.gatext {float:left;width:340px;height:150px;margin-left:160px;position:absolute; left:16%;top:20px;}
+.gatext h1 {color:#ffffff;}
+.gatext p {line-height:30px;font-size:18px;font-weight:800;color:#ffc000;text-indent:2em;}
+.gachat {float:left;width:320px;padding:0 10px;position:absolute; left:55%;bottom:30px;}
+.gachat p {font-size:14px; line-height:15px; }
+.gachat a {float:left;font-size:14px; height:36px; width:98px; display:block; color:#fff; padding-left:44px; line-height:36px; margin:15px 0 0 2px; border-radius:2px;text-decoration:none;}
+.gachat a:hover { color:#fff; }
+.gachat a.baidu_chat { background:url(soft_icon.png) 15px 0 no-repeat #1f96f5; }
+.gachat a.tentcent_chat { background:url(soft_icon.png) 15px -36px no-repeat #86be30; }
+.gachat a.baidu_chat:hover { background:url(soft_icon.png) 15px -72px no-repeat #49a4ed; }
+.gachat a.tentcent_chat:hover { background:url(soft_icon.png) 15px -108px no-repeat #8bd519; }
+.gaclose {width:24px; height:24px; display:block; position:absolute; top:15px; left:80%; background:url(footer_soft_close.png) no-repeat; opacity:.8; filter: alpha(opacity=80);}

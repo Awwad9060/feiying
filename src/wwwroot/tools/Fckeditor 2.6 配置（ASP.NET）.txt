@@ -1,0 +1,41 @@
+Fckeditor 2.6 配置（ASP.NET）   Post By：2008-9-28 15:17:00 
+
+ 从官方网站http://www.fckeditor.net/download下载最新版的Fckeditor。
+
+需要下载Fckeditor 2.X .X，当前的最新版本是2.6.3
+
+还需要下载Fckeditor.Net，这里面包含的有.NET编译文件。
+
+   1. 把FCKEditor2.6解压到你的网站文件夹中
+
+        解压后生成了一个以FCKEditor命名的文件夹。
+
+   2.把DLL添加到你的BIN目录下
+
+      把Fckeditor.Net解压到你网站所在的文件夹。
+
+     在VS中右击你的BIN文件夹，（没有的话，新建一个），添加引用->浏览->找到Fckeditor.Net解压目录，在BIN/debug/2.0中找到dll文件，添加。
+
+    3.在工具栏中加入DLL文件
+
+       在工具栏里找到常规，右击->选择项，在.NET FRAMEWORk组件里点击浏览，找到刚才添加到BIN里的DLL文件。添加。
+
+    4.配置fckeditor
+
+     找到fckeditor\editor\filemanager\connectors\aspx,把函数CheckAuthentication()中的return false 改为return true
+
+     找到fckeditor\fckconfig.js
+     将var _FileBrowserLanguage = 'PHP' ; // asp | aspx | cfm | lasso | perl | php | py
+        var _QuickUploadLanguage = 'PHP' ; // asp | aspx | cfm | lasso | perl | php | py
+
+     改为
+
+     var _FileBrowserLanguage = 'aspx' ; // asp | aspx | cfm | lasso | perl | php | py
+     var _QuickUploadLanguage = 'aspx' ; // asp | aspx | cfm | lasso | perl | php | py
+
+     5.配置文件的路径
+        打开VS的，菜单栏中的"网站"，"asp.net配置"，点“应用程序设置”，“创建应用程序设置”，在名称栏里填写FCKeditor:BasePath，值选项里面填写~/fckeditor/（注意：这是fckeditoR文件夹相对于bin文件夹中的dll的路径，填错的话，会找不到文件的。）保存。
+
+     同上再添加一下“名称”FCKeditor:UserFilesPath，值~/Files/(这也是相对于dll的路径)，files用于存放上传的文件。然后在你的网站里建一个files文件夹，里面再建一上image文件夹。
+
+     到这就配置完了，试一下吧，新建一个ASPX页面。从常规里面把FCKEDITOR拖动到页面上，(在第3步添加过的哟)。预览一下，试试看吧。 

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+    /*城市控件*/
+    .hotcity-box { background-color: #FFFFFF; font-size: 12px; width: 353px;top: 261px; box-shadow: 2px 2px 5px #ababab; z-index: 800; position: absolute; left: 312px; }
+    .hotcity-title { background-color: #65c0d9; border-color:#CCCCCC; border-style: solid; border-width: 1px 1px 0; color: #FFF; height: 28px; line-height: 28px; padding-left: 10px; background:url(CityClient/hotcity-nav.gif) scroll repeat-x 0 0 transparent; }
+    .hotcity-list { border-color: #999999; border-style: solid; border-width: 0 1px 1px; overflow: hidden; padding: 5px; }
+    .hotcity-list ol{ list-style:none; }
+    .hotcity-list ul { list-style:none; }
+    .hotcity-list-nav { border-bottom: 1px solid #CCCCCC; padding-bottom: 20px; }
+    .hotcity-list-nav li { color: #df3232; cursor: pointer; float: left; height: 20px; line-height: 20px; list-style-type: none; text-align: center; }
+    .hotcity-list-nav li span { padding: 0 8px; }
+    .hotcity-list-nav li .over { background-color: #FFFFFF; border-color: #CCCCCC; border-style: solid; border-width: 1px 1px 0; color: #000000; display: block; font-weight: bold; padding: 0 7px; }
+    .hotcity-list-content { padding-top: 4px; width: 100%; }
+    .hotcity-list-content li { float: left; height: 24px; overflow: hidden; width: 67px; }
+    .hotcity-list-content li a { border: 1px solid #FFFFFF; color: #000000; display: block; height: 30px; line-height: 30px; padding-left: 5px; text-decoration:none; }
+    .hotcity-list-content li a:hover { background-color: #cefcf7; border: 1px solid #45b8ab; text-decoration: none;color: #000000; }
+    .hotcity-list-content li code {display:none;}
+    </style>
+</head>
+<body>
+<!--热门城市-->
+<div class="hotcity-title"><strong>热门城市</strong>（可直接输入拼音或中文查找）</div>
+<div class="hotcity-list">
+<ol class="hotcity-list-nav">
+    <li onmousemove="changeHot(1)" ><span class="over">亚洲</span></li>
+    <li onmousemove="changeHot(2)" ><span>欧洲</span></li>
+    <li onmousemove="changeHot(3)" ><span>北美</span></li>
+    <li onmousemove="changeHot(4)" ><span>南美</span></li>
+    <li onmousemove="changeHot(5)" ><span>澳洲</span></li>
+    <li onmousemove="changeHot(6)" ><span>非洲</span></li>
+</ol>
+<ul id="hotcity_ul_1" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">新加坡</a><code>新加坡</code></li>
+    <li><a href="javascript:void(0)">曼谷</a><code>曼谷</code></li>
+    <li><a href="javascript:void(0)">首尔</a><code>首尔</code></li>
+    <li><a href="javascript:void(0)">东京</a><code>东京</code></li>
+    <li><a href="javascript:void(0)">大阪</a><code>大阪</code></li>
+    <li><a href="javascript:void(0)">吉隆坡</a><code>吉隆坡</code></li>
+    <li><a href="javascript:void(0)">雅加达</a><code>雅加达</code></li>
+    <li><a href="javascript:void(0)">马尼拉</a><code>马尼拉</code></li>
+    <li><a href="javascript:void(0)">加德满都</a><code>加德满都</code></li>
+    <li><a href="javascript:void(0)">普吉</a><code>普吉</code></li>
+    <li><a href="javascript:void(0)">金边</a><code>金边</code></li>
+    <li><a href="javascript:void(0)">迪拜</a><code>迪拜</code></li>
+    <li><a href="javascript:void(0)">河内</a><code>河内</code></li>
+    <li><a href="javascript:void(0)">胡志明</a><code>胡志明</code></li>
+    <li><a href="javascript:void(0)">巴厘岛</a><code>巴厘岛</code></li>
+    <li><a href="javascript:void(0)">暹粒</a><code>暹粒</code></li>
+    <li><a href="javascript:void(0)">马尔代夫</a><code>马尔代夫</code></li>
+    <li><a href="javascript:void(0)">新德里</a><code>新德里</code></li>
+    <li><a href="javascript:void(0)">高雄</a><code>高雄</code></li>
+    <li><a href="javascript:void(0)">台北</a><code>台北</code></li>
+    <li><a href="javascript:void(0)">槟城</a><code>槟城</code></li>
+    <li><a href="javascript:void(0)">仰光</a><code>仰光</code></li>
+    <li><a href="javascript:void(0)">釜山</a><code>釜山</code></li>
+    <li><a href="javascript:void(0)">名古屋</a><code>名古屋</code></li>
+    <li><a href="javascript:void(0)">札幌</a><code>札幌</code></li>
+    <li><a href="javascript:void(0)">福冈</a><code>福冈</code></li>
+    <li><a href="javascript:void(0)">科伦坡</a><code>科伦坡</code></li>
+    <li><a href="javascript:void(0)">毛里求斯</a><code>毛里求斯</code></li>
+    <li><a href="javascript:void(0)">孟买</a><code>孟买</code></li>
+</ul>
+<ul id="hotcity_ul_2" style="display:none" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">巴黎</a><code>巴黎</code></li>
+    <li><a href="javascript:void(0)">伦敦</a><code>伦敦</code></li>
+    <li><a href="javascript:void(0)">法兰克福</a><code>法兰克福</code></li>
+    <li><a href="javascript:void(0)">罗马</a><code>罗马</code></li>
+    <li><a href="javascript:void(0)">米兰</a><code>米兰</code></li>
+    <li><a href="javascript:void(0)">莫斯科</a><code>莫斯科</code></li>
+    <li><a href="javascript:void(0)">阿姆斯特丹</a><code>阿姆斯特丹</code></li>
+    <li><a href="javascript:void(0)">柏林</a><code>柏林</code></li>
+    <li><a href="javascript:void(0)">汉堡</a><code>汉堡</code></li>
+    <li><a href="javascript:void(0)">马德里</a><code>马德里</code></li>
+    <li><a href="javascript:void(0)">里昂</a><code>里昂</code></li>
+    <li><a href="javascript:void(0)">伯明翰</a><code>伯明翰</code></li>
+    <li><a href="javascript:void(0)">雅典</a><code>雅典</code></li>
+    <li><a href="javascript:void(0)">慕尼黑</a><code>慕尼黑</code></li>
+    <li><a href="javascript:void(0)">苏黎世</a><code>苏黎世</code></li>
+    <li><a href="javascript:void(0)">哥本哈根</a><code>哥本哈根</code></li>
+    <li><a href="javascript:void(0)">赫尔辛基</a><code>赫尔辛基</code></li>
+    <li><a href="javascript:void(0)">哥本哈根</a><code>哥本哈根</code></li>
+    <li><a href="javascript:void(0)">赫尔辛基</a><code>赫尔辛基</code></li>
+    <li><a href="javascript:void(0)">维也纳</a><code>维也纳</code></li>
+    <li><a href="javascript:void(0)">日内瓦</a><code>日内瓦</code></li>
+    <li><a href="javascript:void(0)">爱丁堡</a><code>爱丁堡</code></li>
+    <li><a href="javascript:void(0)">布拉格</a><code>布拉格</code></li>
+    <li><a href="javascript:void(0)">巴塞罗那</a><code>巴塞罗那</code></li>
+    <li><a href="javascript:void(0)">斯德哥尔摩</a><code>斯德哥尔摩</code></li>
+    <li><a href="javascript:void(0)">纽卡斯尔</a><code>纽卡斯尔</code></li>
+    <li><a href="javascript:void(0)">杜塞尔多夫</a><code>杜塞尔多夫</code></li>
+    <li><a href="javascript:void(0)">布达佩斯</a><code>布达佩斯</code></li>
+    <li><a href="javascript:void(0)">纽卡斯尔</a><code>纽卡斯尔</code></li>
+    <li><a href="javascript:void(0)">尼斯</a><code>尼斯</code></li>
+    <li><a href="javascript:void(0)">曼彻斯特</a><code>曼彻斯特</code></li>
+</ul>
+<ul id="hotcity_ul_3" style="display:none" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">多伦多</a><code>多伦多</code></li>
+    <li><a href="javascript:void(0)">温哥华</a><code>温哥华</code></li>
+    <li><a href="javascript:void(0)">纽约</a><code>纽约</code></li>
+    <li><a href="javascript:void(0)">洛杉矶</a><code>洛杉矶</code></li>
+    <li><a href="javascript:void(0)">三藩市</a><code>三藩市</code></li>
+    <li><a href="javascript:void(0)">芝加哥</a><code>芝加哥</code></li>
+    <li><a href="javascript:void(0)">华盛顿</a><code>华盛顿</code></li>
+    <li><a href="javascript:void(0)">西雅图</a><code>西雅图</code></li>
+    <li><a href="javascript:void(0)">波士顿</a><code>波士顿</code></li>
+    <li><a href="javascript:void(0)">达拉斯</a><code>达拉斯</code></li>
+    <li><a href="javascript:void(0)">亚特兰大</a><code>亚特兰大</code></li>
+    <li><a href="javascript:void(0)">蒙特利尔</a><code>蒙特利尔</code></li>
+    <li><a href="javascript:void(0)">休斯顿</a><code>休斯顿</code></li>
+    <li><a href="javascript:void(0)">拉斯维加斯</a><code>拉斯维加斯</code></li>
+    <li><a href="javascript:void(0)">底特律</a><code>底特律</code></li>
+    <li><a href="javascript:void(0)">迈阿密</a><code>迈阿密</code></li>
+    <li><a href="javascript:void(0)">渥太华</a><code>渥太华</code></li>
+    <li><a href="javascript:void(0)">丹佛</a><code>丹佛</code></li>
+    <li><a href="javascript:void(0)">明尼阿波利斯</a><code>明尼阿波利斯</code></li>
+    <li><a href="javascript:void(0)">卡尔加里</a><code>卡尔加里</code></li>
+    <li><a href="javascript:void(0)">费城</a><code>费城</code></li>
+    <li><a href="javascript:void(0)">渥太华</a><code>渥太华</code></li>
+    <li><a href="javascript:void(0)">夏威夷</a><code>夏威夷</code></li>
+    <li><a href="javascript:void(0)">圣路易斯</a><code>圣路易斯</code></li>
+    <li><a href="javascript:void(0)">爱德蒙顿</a><code>爱德蒙顿</code></li>
+    <li><a href="javascript:void(0)">奥兰多</a><code>奥兰多</code></li>
+    <li><a href="javascript:void(0)">水牛城</a><code>水牛城</code></li>
+    <li><a href="javascript:void(0)">圣地亚哥</a><code>圣地亚哥</code></li>
+    <li><a href="javascript:void(0)">盐湖城</a><code>盐湖城</code></li>
+</ul>
+<ul id="hotcity_ul_4" style="display:none" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">布宜诺斯艾利斯</a><code>布宜诺斯艾利斯</code></li>
+    <li><a href="javascript:void(0)">墨西哥城</a><code>墨西哥城</code></li>
+    <li><a href="javascript:void(0)">圣保罗</a><code>圣保罗</code></li>
+    <li><a href="javascript:void(0)">哈瓦那</a><code>哈瓦那</code></li>
+    <li><a href="javascript:void(0)">利马</a><code>利马</code></li>
+    <li><a href="javascript:void(0)">加拉加斯</a><code>加拉加斯</code></li>
+    <li><a href="javascript:void(0)">里约热内卢</a><code>里约热内卢</code></li>
+    <li><a href="javascript:void(0)">圣地亚哥</a><code>圣地亚哥</code></li>
+    <li><a href="javascript:void(0)">巴拿马</a><code>巴拿马</code></li>
+    <li><a href="javascript:void(0)">基多</a><code>基多</code></li>
+    <li><a href="javascript:void(0)">圣何塞</a><code>圣何塞</code></li>
+    <li><a href="javascript:void(0)">蒙得维的亚</a><code>蒙得维的亚</code></li>
+    <li><a href="javascript:void(0)">复活岛</a><code>复活岛</code></li>
+    <li><a href="javascript:void(0)">瓜达拉哈拉</a><code>瓜达拉哈拉</code></li>
+    <li><a href="javascript:void(0)">坎昆</a><code>坎昆</code></li>
+    <li><a href="javascript:void(0)">帕拉马里博</a><code>帕拉马里博</code></li>
+    <li><a href="javascript:void(0)">波哥大</a><code>波哥大</code></li>
+    <li><a href="javascript:void(0)">伯利兹城</a><code>伯利兹城</code></li>
+    <li><a href="javascript:void(0)">拉巴斯</a><code>拉巴斯</code></li>
+    <li><a href="javascript:void(0)">太子港</a><code>太子港</code></li>
+    <li><a href="javascript:void(0)">瓜亚基尔</a><code>瓜亚基尔</code></li>
+    <li><a href="javascript:void(0)">巴西利亚</a><code>巴西利亚</code></li>
+    <li><a href="javascript:void(0)">危地马拉</a><code>危地马拉</code></li>
+    <li><a href="javascript:void(0)">迷纳蒂兰</a><code>迷纳蒂兰</code></li>
+    <li><a href="javascript:void(0)">蒙特雷</a><code>蒙特雷</code></li>
+    <li><a href="javascript:void(0)">圣萨尔瓦多</a><code>圣萨尔瓦多</code></li>
+    <li><a href="javascript:void(0)">利韦利亚</a><code>利韦利亚</code></li>
+    <li><a href="javascript:void(0)">库斯科</a><code>库斯科</code></li>
+    <li><a href="javascript:void(0)">伊斯塔帕</a><code>伊斯塔帕</code></li>
+    <li><a href="javascript:void(0)">爱德林</a><code>爱德林</code></li>
+</ul>
+<ul id="hotcity_ul_5" style="display:none" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">悉尼</a><code>悉尼</code></li>
+    <li><a href="javascript:void(0)">墨尔本</a><code>墨尔本</code></li>
+    <li><a href="javascript:void(0)">奥克兰</a><code>奥克兰</code></li>
+    <li><a href="javascript:void(0)">布里斯班</a><code>布里斯班</code></li>
+    <li><a href="javascript:void(0)">阿德莱德</a><code>阿德莱德</code></li>
+    <li><a href="javascript:void(0)">珀斯</a><code>珀斯</code></li>
+    <li><a href="javascript:void(0)">惠灵顿</a><code>惠灵顿</code></li>
+    <li><a href="javascript:void(0)">塞班</a><code>塞班</code></li>
+    <li><a href="javascript:void(0)">堪培拉</a><code>堪培拉</code></li>
+    <li><a href="javascript:void(0)">凯恩斯</a><code>凯恩斯</code></li>
+    <li><a href="javascript:void(0)">关岛</a><code>关岛</code></li>
+    <li><a href="javascript:void(0)">苏瓦</a><code>苏瓦</code></li>
+    <li><a href="javascript:void(0)">黄金海岸</a><code>黄金海岸</code></li>
+    <li><a href="javascript:void(0)">达尔文</a><code>达尔文</code></li>
+    <li><a href="javascript:void(0)">女皇镇</a><code>女皇镇</code></li>
+    <li><a href="javascript:void(0)">达尼丁</a><code>达尼丁</code></li>
+    <li><a href="javascript:void(0)">帝力</a><code>帝力</code></li>
+</ul>
+<ul id="hotcity_ul_6" style="display:none" class="hotcity-list-content">
+    <li><a href="javascript:void(0)">开罗</a><code>开罗</code></li>
+    <li><a href="javascript:void(0)">约翰内斯堡</a><code>约翰内斯堡</code></li>
+    <li><a href="javascript:void(0)">内罗毕</a><code>内罗毕</code></li>
+    <li><a href="javascript:void(0)">开普敦</a><code>开普敦</code></li>
+    <li><a href="javascript:void(0)">亚的斯亚贝巴</a><code>亚的斯亚贝巴</code></li>
+    <li><a href="javascript:void(0)">阿克拉</a><code>阿克拉</code></li>
+    <li><a href="javascript:void(0)">达累斯萨拉姆</a><code>达累斯萨拉姆</code></li>
+    <li><a href="javascript:void(0)">的黎波里</a><code>的黎波里</code></li>
+    <li><a href="javascript:void(0)">卢萨卡</a><code>卢萨卡</code></li>
+    <li><a href="javascript:void(0)">卡萨布兰卡</a><code>卡萨布兰卡</code></li>
+    <li><a href="javascript:void(0)">卢安达</a><code>卢安达</code></li>
+    <li><a href="javascript:void(0)">阿布贾</a><code>阿布贾</code></li>
+    <li><a href="javascript:void(0)">阿尔及尔</a><code>阿尔及尔</code></li>
+    <li><a href="javascript:void(0)">喀土穆</a><code>喀土穆</code></li>
+    <li><a href="javascript:void(0)">塔那那利佛</a><code>塔那那利佛</code></li>
+    <li><a href="javascript:void(0)">突尼斯</a><code>突尼斯</code></li>
+    <li><a href="javascript:void(0)">洛美</a><code>洛美</code></li>
+    <li><a href="javascript:void(0)">雅温得</a><code>雅温得</code></li>
+    <li><a href="javascript:void(0)">路易港</a><code>路易港</code></li>
+    <li><a href="javascript:void(0)">达喀尔</a><code>达喀尔</code></li>
+    <li><a href="javascript:void(0)">的黎波里</a><code>的黎波里</code></li>
+    <li><a href="javascript:void(0)">巴马科</a><code>巴马科</code></li>
+    <li><a href="javascript:void(0)">杜阿拉</a><code>杜阿拉</code></li>
+    <li><a href="javascript:void(0)">哈拉雷</a><code>哈拉雷</code></li>
+    <li><a href="javascript:void(0)">科托努</a><code>科托努</code></li>
+    <li><a href="javascript:void(0)">恩贾梅纳</a><code>恩贾梅纳</code></li>
+    <li><a href="javascript:void(0)">金沙萨</a><code>金沙萨</code></li>
+    <li><a href="javascript:void(0)">塔那那利佛</a><code>塔那那利佛</code></li>
+    <li><a href="javascript:void(0)">拉各斯</a><code>拉各斯</code></li>
+    <li><a href="javascript:void(0)">马拉博</a><code>马拉博</code></li>
+</ul>
+</div>
+</body>
+</html>

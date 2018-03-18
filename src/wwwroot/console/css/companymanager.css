@@ -1,0 +1,87 @@
+.companynav{
+float:left;width:100%;padding:7px 0px 3px 0px;background:#FEF4EA;color:#676566;margin-top:10px;font-weight:bold;text-indent:8px;
+}
+.companynav a{
+margin:0px 5px;
+}
+.companyleft{
+float:left;width:170px;
+}
+.companyulone{
+border-left:1px solid #DBDBDB;border-right:1px solid #DBDBDB;padding-bottom:8px;float:left;width:168px;
+}
+.companyulone li.one{
+float:left;width:100%;background:url(../images/company1.jpg) repeat-x bottom;padding-bottom:5px;text-align:center;padding-top:3px;font-size:14px;font-weight:bold;color:#666666
+}
+.companyulone li.two{
+float:left;width:100%;font-weight:bold;text-indent:56px;margin-top:10px;
+}
+.companyultwo{
+float:left;width:170px;
+}
+.companyultwo li.one{
+float:left;width:100%;background:url(../images/company2.jpg) no-repeat;height:20px;padding-top:9px;text-indent:41px;margin-top:14px;font-size:14px;
+}
+.companyultwo li.two{
+float:left;width:100%;border-bottom:1px solid #E6E6E6;margin-top:14px;text-align:center;padding-bottom:10px;
+}
+.companyultwo li.three{
+float:left;width:100%;margin-top:14px;text-indent:14px;font-weight:bold;
+}
+.companyultwo li.three img{
+margin:0px 10px;
+}
+.companyultwo li.four{
+float:left;width:160px;margin-top:14px;padding-left:10px;font-weight:bold;line-height:200%;
+}
+
+.companyright{
+float:right;width:768px;padding-bottom:15px;
+}
+.companyright h2{
+float:left;width:100%;border-bottom:1px solid #ccc;color:#999;font-size:14px;text-indent:12px;margin-top:18px;
+}
+.companylist{
+background:#EDF5F8;float:left;width:100%;height:27px;line-height:27px;text-indent:12px;margin-top:5px;
+}
+.companyfloat{
+float:left;width:100%;position:relative;left:0px;top:0px;
+}
+.tablecsscom{
+float:left;width:468px;margin-top:86px;
+}
+.tablecsscom code{
+color:red;
+}
+.tablecsscom th{
+color:#666
+}
+.cominputs{
+border:1px solid #999999;width:208px;
+}
+.cominputssubmit{
+width:81px;background:url(../images/company6.jpg) no-repeat;height:25px;padding-top:4px;color:#6D6D75;border:none;margin-top:5px;margin-right:10px;cursor: pointer;
+}
+
+.companytips{
+float:left;width:237px;
+}
+.comtips{
+float:left;width:100%;text-indent:28px;color:#FF6543;margin-top:15px;font-weight:bold;
+}
+.tipcontent{
+float:left;width:215px;border:1px solid #676767;padding:0px 10px 10px 10px;line-height:150%;
+}
+.tipcontent code{
+color:red;
+}
+.tipcontentstrong{
+display:block;margin:12px 0px 5px 0px;
+}
+
+.companyrightedit{
+float:right;width:706px;padding:15px 0px 0px 62px;
+}
+.companyrightedit p{
+clear:both;width:626px;padding-top:15px;padding-left:80px;
+}

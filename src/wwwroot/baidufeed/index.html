@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>国际机票专家_旅游达人推荐国际机票预订网站 - 飞瀛网</title>
+<meta name="robots" CONTENT="noindex,follow">
+<link rel="stylesheet" href="css/jquery.fullPage.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans|Source+Sans+Pro">
+<style>
+* { margin: 0; padding: 0; font-family: 'Open Sans', '微软雅黑', '宋体';}
+ul { list-style-type: none;}
+.top { position: fixed; left: 0; right: 0; top: 0; z-index: 999; height: 50px; background-color: rgba(0, 0, 0, 0.6);}
+.menu { width: 1000px; margin: 0 auto; overflow: hidden;}
+.logo { float: left; margin-top: 9px;}
+.logo a { display: inline-block; float:left;width: 32px; height: 32px; background-image: url(img/logo.png); background-size: 32px 32px;}
+.logo span {display: block;float:left;font-size:16px;line-height:32px;margin:0 0 0 5px;color:#fff;}
+.nav { float: right; margin-top: 10px; font-size: 0;}
+.nav li { display: inline-block; margin-left: 40px;}
+.nav a { display: inline-block; height: 30px; line-height: 30px; font-size: 14px; color: #eee; text-decoration: none;text-shadow:2px 2px 1px #333;}
+.nav a:hover { color: #83c3f3;}
+.section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden;}
+#section0 { background-image: url(img/1bg.jpg);}
+#section1 { background-image: url(img/2bg.jpg);}
+#section2 { background-image: url(img/3bg.jpg);}
+#section3 { background-image: url(img/4bg.jpg);}
+.title1 { opacity: 0.8; font-size: 60px; line-height: 93px; background: url(img/titleline1.png) no-repeat center bottom;}
+.title2 { opacity: 0.8; font-size: 40px; line-height: 75px;}
+.title3 { font-size: 24px; line-height: 48px; margin-top: 20px; opacity: 0.7;}
+.title3 a {color:#f60;text-decoration:none;}
+#section1 .title1, #section1 .title2, #section2 .title1, #section2 .title2 { color: #fff; opacity: 1;}
+#section1 .title3, #section2 .title3 { color: #fff;}
+#section3 .title3 { color: #000;}
+#section1 .title1 { background: url(img/titleline2.png) no-repeat center bottom;}
+#section2 .title1 { background: url(img/titleline3.png) no-repeat center bottom;}
+#section3 .title1 { background: url(img/titleline4.png) no-repeat center bottom;}
+.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(img/oneTxt.png) no-repeat 0 0;}
+.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
+.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff;}
+.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(img/oneTxt.png) no-repeat 0 0;}
+.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
+.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff; text-decoration: none;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff;}
+.fp-controlArrow.fp-prev {left: 35px!important;}
+.fp-controlArrow.fp-next {right: 35px!important;}
+/*微信样式*/
+.wx{display: none;}
+.divhover{width:180px;height:180px;position: absolute;left: 70%;top: 50px;display: block;z-index: 501;}
+.moqrcode{width:180px;height:180px;position: absolute;left: 78%;top: 50px;display: block;z-index: 501;}
+.divhover img, .moqrcode img {display:block;max-width:100%;width:auto;height:auto;}
+</style>
+<script type="text/javascript" src="http://www.fei580.com/ticket/script.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function() {
+$('#fullpage').fullpage({
+	navigation: true
+});
+});
+//获取当前url的参数值
+function getRequest(name){ 
+	var url = location.href;  
+	var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+	var paraObj = {};
+	for (i=0; j=paraString[i]; i++){  
+		paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+	}
+	var returnValue = paraObj[name.toLowerCase()];  
+	return typeof(returnValue)=="undefined" ? "" : returnValue;
+}
+</script>
+</head>
+
+<body>
+<div class="top">
+	<div class="menu">
+		<h1 class="logo"><a href="http://www.fei580.com/"></a><span>飞瀛网</span></h1>
+		<ul class="nav">
+			<li><a href="http://www.fei580.com/international.aspx">国际机票</a></li>
+			<li><a href="http://www.fei580.com/sm/s4.html">营业资质</a></li>
+			<li><a href="http://weibo.com/gzfeiying" target="_blank" rel="nofollow">新浪微博</a></li>
+			<li><a id="wx_a" href="javascript:void(0);">微信服务号<div id="wx" class="wx"><img src="http://open.weixin.qq.com/qr/code/?username=fei580_com" alt="飞瀛官方微信" /></div></a></li>
+			<li><a id="mo_home" href="http://m.fei580.com/">手机飞瀛网<div id="mobile" class="wx"><img src="http://www.fei580.com/images/mobile-qrcode.png" alt="手机飞瀛网" /></div></a></li>
+		</ul>
+	</div>
+</div>
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="title1">不仅特价 而且安全</div>
+		<div class="title2">优惠不是首选，安全便捷才是重点</div>
+		<div class="title3">我们相信，单纯的优惠不能满足客户需求<br>除了特价折扣，更要优质的服务和安全快捷<br>不妨试试拔打免费电话查询国际机票，有惊喜</div>
+		<div class="DownloadBtn"><a id="Tel" href="http://www.fei580.com/chat/" target="_blank" rel="nofollow">400-885-0663</a></div>
+	</div>
+	<div class="section" id="section1">
+		<div class="title1">先验票后付款 可靠</div>
+		<div class="title2">噱头只能一时有效，真诚才能永远</div>
+		<div class="title3">绝对不是噱头，真正的先验真机票后付款出票<br>预订后可访问权威网站查询验真票号才付款出票<br>多种支付方式，可用淘宝店铺担保，安全可靠有保障</div>
+		<div class="DownloadBtn"><a id="Safe" href="http://www.fei580.com/chat/" target="_blank" rel="nofollow">立即咨询</a></div>
+	</div>
+	<div class="section" id="section2">
+		<div class="slide">
+		<div class="title1">用户口碑 97% 好评</div>
+		<div class="title2">百度口碑，用户心声，真实感受</div>
+		<div class="title3">百度用户口碑网，网站信誉权威表现点评<br>帮助用户解决问题，提供优质服务是我们的宗旨<br>客户的真实心声，体验感受，也将会是你的心声感受</div>
+		<div class="DownloadBtn"><a href="http://www.fei580.com/sm/s4.html" target="_blank" rel="nofollow">查看资质</a></div>
+		</div>
+		<div class="slide">
+		<div class="title1">百度口碑商家信息</div>
+		<div class="title2">相关资质信息，可以通过查看资质了解</div>
+		<div class="title3"><img src="img/koubei-1.png" alt="百度口碑飞瀛网"/></div>
+		</div>
+		<div class="slide">
+		<div class="title3"><img src="img/koubei-2.png" alt="飞瀛网口碑评论"/></div>
+		</div>
+		<div class="slide">
+		<div class="title3"><img src="img/koubei-3.png" alt="飞瀛网口碑评论"/></div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="title1">旅游达人 攻略游记</div>
+		<div class="title2">旅游小贴士，结伴相游，达人分享</div>
+		<div class="title3">旅游达人分享游记攻略，旅游小贴士，美景分享<br>独乐乐不如众乐乐，乐于分享旅游精彩的故事圈子</div>
+		<div class="DownloadBtn"><a id="Homepage" href="http://www.fei580.com/" rel="nofollow">访问主页</a></div>
+	</div>
+</div>
+<script type="text/javascript" src="http://www.fei580.com/js/ppc.chat.sign.js"></script>
+<script type="text/javascript">
+    //首页顶部微信二维码
+    $(function() {
+        $("#wx_a").mouseover(function() { $("#wx").attr('class', 'divhover'); }).mouseout(function() { $("#wx").attr('class', 'wx'); });
+		$("#mo_home").mouseover(function() { $("#mobile").attr('class', 'moqrcode'); }).mouseout(function() { $("#mobile").attr('class', 'wx'); });
+    });
+</script>
+</body>
+</html>

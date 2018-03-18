@@ -1,0 +1,149 @@
+﻿#goTop {
+    position:fixed;
+    width:54px;
+    left:50%;
+    margin-left:512px;
+    bottom:80px;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop || document.body.scrollTop) +eval(document.documentElement.clientHeight || document.body.clientHeight) -305+'px');
+    z-index:998;
+}
+#goTop div {
+    height:48px;
+    margin-top:3px;
+    position:relative;
+    width:48px;
+}
+#goTop div a,#goTop div a:link {
+    display:inline-block;
+    height  :18px;
+    width:100%;
+    color:#fff;
+    background:#b7c5ca url(../images/gotop.png) no-repeat;
+    font-size:12px;
+    line-height:14px;
+    text-align:center;
+    text-decoration:none;
+    padding-top:30px;
+}
+#goTop div.hotword a {
+    background-position:0 -48px;
+    cursor: pointer;
+}
+#goTop .hotword a:hover {
+    background-position:0 0;
+}
+#goTop div.media a {
+    background-position:-49px -48px;
+}
+#goTop .media a:hover {
+    background-position:-49px 0;
+}
+#goTop div.search a {
+    background-position:-98px -48px;
+}
+#goTop .search a:hover {
+    background-position:-98px 0;
+}
+#goTop .search dl {
+    position:absolute;
+    top:0;
+    right:0;
+    white-space:nowrap;
+}
+#goTop div.feedback a {
+    padding:10px;
+    height:28px;
+    width:28px;
+    line-height:14px;
+    background:#b7c5ca;
+}
+#goTop .feedback a:hover {
+    background:#59a9c6;
+}
+#goTop div.gotop a {
+    background-position:-147px -48px;
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight));cursor:pointer;
+}
+#goTop .gotop a:hover {
+    background-position:-147px 0;
+}
+#goTop .search dt {
+    font-size:0;
+    white-space:nowrap;
+    vertical-align:top;
+}
+#goTop .search dt a {
+    height:18px;
+    width:48px;
+}
+#goTop .search dd {
+    display:inline-block;
+    vertical-align:top;
+    background:#69b8d1;
+    height:48px;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    -webkit-transition:width  .5s;
+    -moz-transition:width  .5s;
+    -ms-transition:width  .5s;
+    -o-transition:width  .5s;
+    transition:width  .5s;
+}
+#goTop .search.show dd {
+    width:256px;
+}
+#goTop .search input {
+    border:0;
+    color:#666;
+    font-size:12px;
+    height:28px;
+    line-height:28px;
+    padding:2px 0 2px 6px;
+    vertical-align:middle;
+    width:178px;
+    margin:0;
+}
+#goTop .search form {
+    margin:8px 8px 8px 16px;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+#goTop .search dd span {
+    display:block;
+    width:16px;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:url(../images/gotop.png) no-repeat  -234px 0;
+    cursor:hand;
+}
+#goTop .search button {
+    color:#fff;
+    border:0;
+    margin:0;
+    padding:0;
+    width:48px;
+    height:32px;
+    text-align:middle;
+    font-size:12px;
+    line-height:32px;
+    background:#b7c5ca;
+    vertical-align:middle;
+}
+.flyingwx {
+     display: none;
+}
+.wxhover {
+     left:75%;
+     top:-48px;
+     margin-left:12px;
+     display: block;
+     z-index: 501;
+     cursor: pointer;
+}

@@ -1,0 +1,415 @@
+﻿/* 
+	Theme Name: é£žç€›å›½é™…æœºç¥¨
+	Theme URL: http://www.fei580.com
+	Description: èŽ·å¾—æŠ€æœ¯æ”¯æŒ è®¿é—® https://www.imahui.com
+	Author: iMahui
+	Author URI: https://www.imahui.com
+*/
+/** å…¨å±€è®¾ç½® **/
+/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4,img, ol, ul,p{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	background: transparent;
+}*/
+ul {list-style: none;}
+a {text-decoration: none;}
+.clear{clear: both;}
+:focus{outline:0}
+#wrapper {
+	width: 990px;
+	margin: 0 auto;
+	line-height: 22px;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #f30;
+	text-decoration: none;
+}
+a:active { }
+.top {
+	margin-top:0;
+	margin-left:62%;
+	width:260px;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+}
+.top h1 {
+	text-indent:-9999px;
+}
+.cityflag {
+    width:990px;
+	height:240px;
+	margin:10px auto;
+}
+.cityflag .flag {
+    width:160px;
+	height:110px;
+	margin-top:90px;
+	margin-left:320px;
+}
+.cityflag h4 {
+    margin-top:30px;
+    width:100%;
+	height:36px;
+    color:#eee;
+	line-height:36px;
+	text-indent:320px;
+	font-size:64px;
+	text-shadow: 0 0 10px #000;
+}
+.cityflag h5 {
+    margin-top:30px;
+    width:100%;
+	height:18px;
+    color:#eee;
+	line-height:18px;
+	text-indent:320px;
+	font-size:36px;
+	text-shadow: 0 0 10px #000;
+}
+.footertips {
+	width:100%;
+	height:200px;
+}
+.footertips img {
+	max-width:100%;
+	width:auto;
+	height:auto;
+}
+/*------------------------------------*/
+#divselect{width:210px;height:35px;line-height:35px;position:relative; z-index:2;font-size:18px;font-family:"é»‘ä½“";color:#06F;background:#ffffff;}
+#divselect cite{width:188px; height:33px;line-height:33px;border:1px solid #e2e2e2;  display:block; color:#06F; cursor:pointer;font-style:normal;padding-left:10px; padding-right:10px;background:url(../images/fcinputbg.jpg) no-repeat;}
+#divselect ul{width:207px;background-color:#ffffff; position:absolute; z-index:2; margin-top:-1px;margin-left:1px;display:none;border:1px solid #e2e2e2;}
+#divselect ul li{height:24px; line-height:24px;font-size:18px;font-style:normal;font-family:"å®‹ä½“";color:#06F;}
+#divselect ul li a{display:block; height:24px; color:#06F; text-decoration:none; padding-left:10px; padding-right:10px;}
+#divselect ul li a:hover{background-color:#CCC;font-family:"é»‘ä½“";color:#06F;cursor:pointer;_cursor:hand;}
+.s_box {
+	float:left;
+	width:60%;
+	height:auto;
+	margin-top:40px;
+	margin-bottom:20px;
+	/* position:relative; */
+	overflow:hidden;
+}
+.c_box {
+	float:left;
+	width:40%;
+	height:335px;
+	margin-top:40px;
+	overflow:hidden;
+}
+.main_box {
+	float:left;
+	width:540px;
+	height:100%;
+	background:#258cd9;
+	overflow:hidden;
+}
+.select_name {
+	float:left;
+	width:180px;
+	height:40px;
+}
+.select_choose {
+	float:left;
+	color:#fff;
+	width:360px;
+	height:40px;
+	font-size:18px;
+	font-weight:600;
+	line-height:60px;
+}
+input[type="radio"] + label::before {
+    content: "\a0"; /*ä¸æ¢è¡Œç©ºæ ¼*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-indent: .2em;
+    line-height: 1; 
+}
+input[type="radio"]:checked + label::before {
+    background-color: #fff;
+    background-clip: content-box;
+    padding: .2em;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.search_box {
+	float:left;
+	width:316px;
+	height:auto;
+	margin-top:20px;
+	margin-left:60px;
+	overflow:hidden;
+}
+.input_area {
+	/*width:100%;*/
+	height:35px;
+	margin-bottom:10px;
+}
+.input_addr {
+	float:left;
+	width:100px;
+	font-size:15px;
+	line-height:35px;
+	/*text-indent:2em;
+	background: #e0e0e0 url("http://www.fei580.com/images/fginputbg.jpg");*/
+    background: #e0e0e0;
+    text-align: center;
+}
+.input_date {
+	float:left;
+	width:100px;
+	font-size:15px;
+	line-height:35px;
+	text-indent:2em;
+	background: #e0e0e0 url("http://www.fei580.com/images/sdatetit.jpg");
+}
+.input_text {
+	float:left;
+	width:210px;
+	line-height:33px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.input_right {
+    float:right;
+    margin-right: 5px;
+}
+.input_left {
+    float:left;
+    margin-left: 5px;
+}
+
+.input_text .inputcss {
+	border:0;
+	width:100%;
+	height:33px;
+	font-size:15px;
+	text-indent:10px;
+}
+.inputFromcity {
+	border:0;
+	width:190px;
+	height:33px;
+	font-size:15px;
+	margin-top:-2px;
+}
+.search-button {
+	float:left;
+	width:120px;
+	height:255px;
+	margin-top:20px;
+	margin-left:20px;
+}
+.search_submit {
+	border:0;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	background:url(search_button_bg.jpg) no-repeat;
+}
+.ads_box {
+	float:left;
+	width:45px;
+	height:150px;
+	/* position:absolute; */
+}
+.qrcode {
+	float:left;
+	width:100px;
+	height:100px;
+	margin-top:235px;
+}
+.kefu_info {
+	float:left;
+	width:280px;
+	height:335px;
+	margin-left:16px;
+}
+.kefu_icon {
+	width:100%;
+	height:255px;
+	position:relative;
+}
+.icon-image {
+	margin-top:10px;
+	text-align:center;
+}
+.icon-name {
+	top:160px;
+	color:#eee;
+	width:100%;
+	height:60px;
+	font-size:32px;
+	line-height:72px;
+	text-align:center;
+	text-indent:20px;
+	background:url(kefuNbg.png) no-repeat 22px center;
+	position:absolute;
+}
+.icon-tips {
+	top:200px;
+	left:22px;
+	position:absolute;
+}
+.kefu_chat {
+	width:100%;
+	height:80px;
+	text-align:center;
+	margin-top:10px;
+}
+.ticket-list ul {
+	margin:0;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.ticket-list li {
+	float:left;
+	width:50%;
+	height:240px;
+	overflow:hidden;
+}
+.ticket-list li .ticket {
+	height:100%;
+	padding:0 10px;
+	background:url(ticket-list-background.png) no-repeat center center;
+}
+.ticket-airline {
+	width:70%;
+	height:40px;
+	font-size:21px;
+	font-weight:500;
+	line-height:40px;
+	margin-left:30%;
+	padding-top:10px;
+}
+.ticket-airline span {
+	display:block;
+	float:left;
+	width:50%;
+}
+.ticket-airline .airline-name {
+	text-align:center;
+}
+.ticket-airline .airline-plane {
+	text-indent:0.5em;
+}
+.flight-detail {
+	height:100px;
+	padding:0 20px;
+}
+.detail-city {
+	height:60px;
+}
+.detail-fly {
+	height:40px;
+	line-height:40px;
+}
+.detail-city .goto {
+	color:#fff;
+	font-size:32px;
+	font-weight:900;
+	line-height:60px;
+	text-indent:10px;
+	margin-right:10px;
+}
+.detail-city .change {
+	font-size:20px;
+	font-weight:500;
+	line-height:80px;
+	margin-left:15px;
+}
+.detail-fly .flytime {
+	color:#333333;
+}
+.detail-fly .flytime b {
+	margin:0 5px;
+	font-size:18px;
+}
+.detail-fly .times {
+	float:right;
+	font-size:16px;
+	margin-right:24px;
+}
+.detail-fly .times b {
+	margin:0 5px;
+	font-size:20px;
+}
+.ticket-price {
+	height:60px;
+	line-height:60px;
+}
+.ticket-price .price {
+	float:left;
+	width:50%;
+	color:#fff;
+	font-size:20px;
+	text-align:right;
+}
+.ticket-price .price b {
+	font-size:32px;
+}
+.ticket-price .in-tax {
+	float:left;
+	width:50%;
+	color:#333;
+	font-size:20px;
+	text-indent:10px;
+}
+
+/*-------------------------------------*/
+#footer {
+	width:1000px;
+	height:auto;
+	margin:10px auto 0;
+}
+#footer p {
+	line-height:30px;
+	letter-spacing:2px;
+	text-align:center;
+}
+
+#scrolltop {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 50%;
+_position: absolute;
+_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight));
+margin-right: -538px;
+font-size: 32px;
+text-align: center;
+color: #ff3600;
+cursor: pointer;
+height: 40px;
+width: 40px;
+line-height:40px;
+background:#fff; 
+}
+#scrolltop:hover {
+border: 0;
+padding: 0;
+background: #ff3600;
+color: #fff;
+}
+
+/*IE6*/
+#ie6-warning{background:rgb(255,255,225);position:absolute;top:0;left:0;font-size:15px;color:#333;width:100%;height:30px;line-height:30px;padding: 2px 15px 2px 23px;text-align:left;}
+#ie6-warning a {color:#f00;text-decoration:none;}

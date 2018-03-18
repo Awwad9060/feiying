@@ -1,0 +1,78 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="location" content="province=广东;city=广州;coord=113.322717,23.128623">
+<!--meta http-equiv="refresh" content="0;url='http://p.qiao.baidu.com/cps/chat?siteId=293251&userId=2415525';"-->
+<title>正在为您启动在线客服系统，请稍候...</title>
+<meta name="robots" content="noindex,nofollow" />
+<script type="text/javascript" src="http://www.fei580.com/plugin/js/jquery-1.4.2.min.js"></script>
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline}body {background: #3498db;}#loader-container {width: 188px;height: 188px;color: white;margin: 0 auto;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);border: 5px solid #3498db;border-radius: 50%;-webkit-animation: borderScale 1s infinite ease-in-out;animation: borderScale 1s infinite ease-in-out;}#loadingText {font-family: 'Raleway', sans-serif;font-size: 1.4em;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);}@-webkit-keyframes borderScale {0% {border: 5px solid white;}50% {border: 25px solid #3498db;}100% {border: 5px solid white;}}@keyframes borderScale {0% {border: 5px solid white;}50% {border: 25px solid #3498db;}100% {border: 5px solid white;}}
+</style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ca5e9c7fe4ba2457d6da5b2bfcecb0f4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	//获取当前url的参数值
+	function getRequest(name){ 
+		var url = document.referrer;  
+		var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+		var paraObj = {};
+		for (i=0; j=paraString[i]; i++){  
+			paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+		}
+		var returnValue = paraObj[name.toLowerCase()];  
+		return typeof(returnValue)=="undefined" ? "" : returnValue;
+	}
+
+	//获取当前相对路径
+	function GetUrlRelativePath(){
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+　　　　if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}
+　　　　return relUrl;
+　　}
+
+    $(function() {
+		//调用不同的咨询链接
+		var hmsr = getRequest("hmsr");
+		//var source = getRequest("utm_source");
+		var medium = getRequest("utm_medium");
+		var campaign = getRequest("utm_campaign");
+		var keywords = getRequest("utm_content");
+		//var key = GetUrlRelativePath();
+		if(hmsr==null || hmsr==""){hmsr = getRequest("utm_source");} else {hmsr = getRequest("hmsr");}
+		if(keywords==null || keywords==""){keywords=GetUrlRelativePath();}else{keywords = getRequest("utm_content");}
+		if(medium==null || medium==""){medium = "PPC";} else {medium = getRequest("utm_medium");}
+		if(campaign==null || campaign==""){campaign = getRequest("hmpl");} else {campaign = getRequest("utm_campaign");}
+		if(hmsr==null || hmsr==""){
+			window.location="http://www.fei580.com/chat/?utm_source=PageLink&utm_medium=Organic&utm_campaign=BaiduBridge&utm_content="+keywords;
+		} else {
+			window.location="http://www.fei580.com/chat/?utm_source="+hmsr+"&utm_medium="+medium+"&utm_campaign="+campaign+"&utm_content="+keywords;
+		}
+    });
+</script>
+<div id="loader-container"><p id="loadingText">页面加载中...</p></div>
+<div style="display:none;">
+<!--站长统计-->
+<script src="http://s6.cnzz.com/stat.php?id=3579146&web_id=3579146" language="JavaScript"></script>
+</div>
+</body>
+</html>

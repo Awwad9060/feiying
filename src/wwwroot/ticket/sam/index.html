@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="mobile-agent" content="format=xhtml;url=http://m.fei580.com/ticket/sam/">
+<title>南美机票专区_南美商务机票_特价南美机票-飞瀛商旅</title>
+<meta name="keywords" content="南美机票,南美商务机票,特价南美机票" />
+<meta name="description" content="飞瀛网为您提供广州,北京,上海,香港等全国各地出发的特价国际机票,国际商务机票,国际特价机票.免费咨询：400-885-0663." />
+<meta name="robots" CONTENT="index,follow">
+<link rel="canonical" href="http://www.fei580.com/ticket/sam/" />
+<link rel="stylesheet" href="http://www.fei580.com/plugin/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="body.css" type="text/css" media="screen" />
+<link href="http://www.fei580.com/plugin/css/select.css" rel="stylesheet" type="text/css" />
+<link href="http://www.fei580.com/plugin/css/hotcity.css" rel="stylesheet" type="text/css" />
+<link href="http://www.fei580.com/plugin/css/datepicker.css" rel="stylesheet" type="text/css" />
+<link href="http://www.fei580.com/plugin/css/CitySelector2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.fei580.com/plugin/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://www.fei580.com/ticket/script.js"></script>
+<script src="http://www.fei580.com/plugin/js/postdata.min.js" type="text/javascript"></script>
+<script src="http://www.fei580.com/plugin/js/index.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://www.fei580.com/js/ticket.search.index.js"></script>
+<script type="text/javascript" src="http://www.fei580.com/js/JQuery.cookie.js"></script>
+<script type="text/javascript" src="http://www.fei580.com/plugin/js/CityData.js"></script>
+<script type="text/javascript" src="http://www.fei580.com/plugin/js/CitySelector.js"></script>
+<script type="text/javascript" src="http://www.fei580.com/plugin/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+    jQuery.divselect = function (divselectid, inputselectid) {
+        var inputselect = $(inputselectid);
+        $(divselectid + " cite").click(function () {
+            var ul = $(divselectid + " ul");
+            if (ul.css("display") == "none") {
+                ul.slideDown("fast");
+            } else {
+                ul.slideUp("fast");
+            }
+        });
+        $(divselectid + " ul li a").click(function () {
+            var txt = $(this).text();
+            $(divselectid + " cite").html(txt);
+            var value = $(this).attr("selectid");
+            inputselect.val(value);
+            $(divselectid + " ul").hide();
+
+        });
+        $(document).click(function () {
+            $(divselectid + " ul").hide();
+        });
+    };
+	
+	//获取当前url的参数值
+	function getRequest(name){ 
+		var url = location.href;  
+		var paraString = url.substring(url.indexOf("?")+1,url.length).split("&");  
+		var paraObj = {};
+		for (i=0; j=paraString[i]; i++){  
+			paraObj[j.substring(0,j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=")+1,j.length);  
+		}
+		var returnValue = paraObj[name.toLowerCase()];  
+		return typeof(returnValue)=="undefined" ? "" : returnValue;
+	}
+
+	//获取当前相对路径
+	function GetUrlRelativePath(){
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+　　　　if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}
+　　　　return relUrl;
+　　}
+
+    $(function() {
+        ////目的城市
+        var dx = new VSxClientCountrySelector('tocityName', CityData);
+        dx.Init();
+        //日期控件
+        TripBackDate(document.getElementById("fromtripDate"), document.getElementById("backtripDate"));
+        //日期控件
+        TripBackDate(document.getElementById("fDate"), document.getElementById("tDate"));
+        $.divselect("#divselect", "#inputselect");
+		//调用不同的咨询链接
+		var hmsr = getRequest("hmsr");
+		//var source = getRequest("utm_source");
+		var medium = getRequest("utm_medium");
+		var campaign = getRequest("utm_campaign");
+		var keywords = getRequest("utm_content");
+		//var key = GetUrlRelativePath();
+		if(hmsr==null || hmsr==""){hmsr = getRequest("utm_source");} else {hmsr = getRequest("hmsr");}
+		if(keywords==null || keywords==""){keywords=GetUrlRelativePath();}else{keywords = getRequest("utm_content");}
+		if(medium==null || medium==""){medium = "PPC";} else {medium = getRequest("utm_medium");}
+		if(campaign==null || campaign==""){campaign = getRequest("hmpl");} else {campaign = getRequest("utm_campaign");}
+		if(hmsr==null || hmsr==""){
+			$(".chat a").attr("href",function(i,origValue){ return origValue + "?utm_source=PageLink&utm_medium=Organic&utm_campaign=BaiduBridge&utm_content="+keywords; });
+		} else {
+			$(".chat a").attr("href",function(i,origValue){ return origValue + "?utm_source="+hmsr+"&utm_medium="+medium+"&utm_campaign="+campaign+"&utm_content="+keywords; });
+			$(".ticket a").attr("href",function(i,origValue){ return origValue + "&utm_source="+hmsr+"&utm_content="+keywords; });
+		}
+    });
+	
+	//平台、设备和操作系统 
+        var system = { 
+            win: false, 
+            mac: false, 
+            xll: false, 
+            ipad:false 
+        }; 
+    //检测平台 
+        var p = navigator.platform; 
+        system.win = p.indexOf("Win") == 0; 
+        system.mac = p.indexOf("Mac") == 0; 
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false; 
+    //跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面 
+        if (system.win || system.mac || system.xll||system.ipad) { 
+        } else { 
+            window.location.href = "http://m.fei580.com/ticket/sam/"; 
+        } 
+</script>
+<!--[if lte IE 6]>
+    <script type="text/javascript">
+    function position_fixed(el, eltop, elleft){
+    // check if this is IE6
+    if(!window.XMLHttpRequest)
+    window.onscroll = function(){
+    el.style.top = (document.documentElement.scrollTop + eltop)+"px";
+    el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
+    }
+    else el.style.position = "fixed";
+    }
+    position_fixed(document.getElementById("ie6-warning"),0, 0);
+    </script>
+ <![endif]-->
+</head>
+
+<body>
+<div class="top"><a href="http://www.fei580.com" target="_blank" title="飞瀛网"><h1>国际机票</h1></a></div>
+<div class="cityflag">
+ <div class="flag"></div>
+ <h4>北美机票专区</h4>
+ <h5>North America Ticket</h5>
+</div>
+<div class="chat"><a href="http://www.fei580.com/chat/" target="_blank" title="国际机票查询预订" rel="nofollow" onclick="_czc.push(['_trackEvent', '着陆页机票咨询','咨询','点击']);_hmt.push(['_trackEvent', '着陆页机票咨询', '咨询', '点击']);"><h2>国际机票查询</h2></a></div>
+<div id="wrapper">
+ <div class="search">
+  <span class="sti">机票查询</span>
+  <span class="scho">
+      <input id="tripType2" type="radio" name="tripType" checked="checked" value="0" />单程&nbsp;
+      <input id="tripType3" type="radio" name="tripType" value="1" />往返
+  </span>
+  <span class="sinbox">
+   <span class="stit">出发地&nbsp;</span><div id="divselect">
+         <cite><input name="fromCityHidden" type="text" class="siborder2" id="fromCityHidden" value="广州" /></cite>
+         <ul>
+             <li><a onclick="clickFromCity(1,'广州');">广州</a></li>
+             <li><a onclick="clickFromCity(2,'北京');">北京</a></li>
+             <li><a onclick="clickFromCity(3,'上海');">上海</a></li>
+             <li><a onclick="clickFromCity(4,'香港');">香港</a></li>
+             <li><a onclick="clickFromCity(5,'澳门');">澳门</a></li>
+             <li><a onclick="clickFromCity(6,'深圳');">深圳</a></li>
+             <li><a onclick="clickFromCity(7,'长沙');">长沙</a></li>
+             <li><a onclick="clickFromCity(8,'杭州');">杭州</a></li>
+             <li><a onclick="clickFromCity(9,'宁波');">宁波</a></li>
+             <li><a onclick="clickFromCity(10,'南京');">南京</a></li>
+             <li><a onclick="clickFromCity(11,'武汉');">武汉</a></li>
+             <li><a onclick="clickFromCity(12,'成都');">成都</a></li>
+         </ul>
+     </div>
+     <input name="fromCity" type="hidden" value="1" id="fromCity" />
+     <input name="fromCity" type="hidden" value="广州" id="fromCityName" />
+   <span class="stit">&nbsp;&nbsp;&nbsp;目的地&nbsp;&nbsp;<input type="text" class="siborder" id="tocityName" /></span>
+   <span class="stit">&nbsp;&nbsp;出发日期&nbsp;&nbsp;<input name="fromtripDate" type="text" id="fromtripDate" class="siborder" /></span>
+   <span class="stit">&nbsp;&nbsp;回程日期&nbsp;&nbsp;<input name="backtripDate" type="text" id="backtripDate" class="siborder" /></span>
+  </span>
+     <span class="sbtn" id="btnSearch"  onclick="_czc.push(['_trackEvent', '着陆页查询机票','搜索','点击']);_hmt.push(['_trackEvent', '着陆页查询机票','搜索','点击']);">搜索</span>
+     <script type="text/javascript">var ts = TicketSearch();</script>
+ </div>
+ <script language="javascript" type="text/javascript" src="http://www.fei580.com/plugin/js/tocity.js"></script>
+ <div class="ticket">
+  <ul>
+   <a href="bue/" target="_blank">
+   <li>
+    <h2>布宜诺斯艾利斯机票</h2>
+    <span>往返 ￥<b>8360</b></span>
+    <h3>荷兰航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="mex/" target="_blank">
+   <li>
+    <h2>墨西哥城机票</h2>
+    <span>单程 ￥<b>6240</b></span>
+    <h3>东方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="sao/" target="_blank">
+   <li>
+    <h2>圣保罗机票</h2>
+    <span>往返 ￥<b>4700</b></span>
+    <h3>美国航空</h3>
+    <p>有效期：0-1个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="hav/" target="_blank">
+   <li>
+    <h2>哈瓦那机票</h2>
+    <span>单程 ￥<b>12843</b></span>
+    <h3>加拿大航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="lim/" target="_blank">
+   <li>
+    <h2>利马机票</h2>
+    <span>往返 ￥<b>9542</b></span>
+    <h3>法国航空</h3>
+    <p>有效期：0-1个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="ccs/" target="_blank">
+   <li>
+    <h2>加拉加斯机票</h2>
+    <span>单程 ￥<b>9875</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="rio/" target="_blank">
+   <li>
+    <h2>里约热内卢机票</h2>
+    <span>往返 ￥<b>8360</b></span>
+    <h3>法国航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="panama/" target="_blank">
+   <li>
+    <h2>巴拿马机票</h2>
+    <span>单程 ￥<b>7085</b></span>
+    <h3>东方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="uio/" target="_blank">
+   <li>
+    <h2>基多机票</h2>
+    <span>往返 ￥<b>9547</b></span>
+    <h3>大韩航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="sjo/" target="_blank">
+   <li>
+    <h2>圣何塞机票</h2>
+    <span>单程 ￥<b>5338</b></span>
+    <h3>日本航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="mvd/" target="_blank">
+   <li>
+    <h2>蒙得维的亚机票</h2>
+    <span>往返 ￥<b>10389</b></span>
+    <h3>南非航空</h3>
+    <p>有效期：0-1个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="ipc/" target="_blank">
+   <li>
+    <h2>复活节岛机票</h2>
+    <span>单程 ￥<b>14147</b></span>
+    <h3>加拿大航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="gdl/" target="_blank">
+   <li>
+    <h2>瓜达拉哈拉机票</h2>
+    <span>往返 ￥<b>6027</b></span>
+    <h3>达美航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="cun/" target="_blank">
+   <li>
+    <h2>坎昆机票</h2>
+    <span>单程 ￥<b>5550</b></span>
+    <h3>卡塔尔航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="pbm/" target="_blank">
+   <li>
+    <h2>帕拉马里博机票</h2>
+    <span>往返 ￥<b>10070</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：0-1个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="bog/" target="_blank">
+   <li>
+    <h2>波哥大机票</h2>
+    <span>单程 ￥<b>6402</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="lpb/" target="_blank">
+   <li>
+    <h2>拉巴斯机票</h2>
+    <span>往返 ￥<b>10030</b></span>
+    <h3>大韩航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="pap/" target="_blank">
+   <li>
+    <h2>太子港机票</h2>
+    <span>单程 ￥<b>6346</b></span>
+    <h3>东方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="gye/" target="_blank">
+   <li>
+    <h2>瓜亚基尔机票</h2>
+    <span>往返 ￥<b>8551</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="bsb/" target="_blank">
+   <li>
+    <h2>巴西利亚机票</h2>
+    <span>单程 ￥<b>6444</b></span>
+    <h3>南非航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="gua/" target="_blank">
+   <li>
+    <h2>危地马拉机票</h2>
+    <span>往返 ￥<b>7620</b></span>
+    <h3>达美航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="mty/" target="_blank">
+   <li>
+    <h2>蒙特雷机票</h2>
+    <span>单程 ￥<b>5047</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="sal/" target="_blank">
+   <li>
+    <h2>圣萨尔瓦多机票</h2>
+    <span>往返 ￥<b>7761</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-3个月 / 机位有限</p>
+   </li>
+   </a>
+   <a href="cuz/" target="_blank">
+   <li>
+    <h2>库斯科机票</h2>
+    <span>单程 ￥<b>7522</b></span>
+    <h3>南方航空</h3>
+    <p>有效期：1-2个月 / 机位有限</p>
+   </li>
+   </a>
+  </ul>
+ </div>
+ <div class="clear"></div>
+ <div class="bz">注：以上价格为不含税价，税价以航空公司公布为准。</div>
+ <div class="clear"></div>
+</div>
+<div id="footer">
+ <p><a href="http://www.fei580.com/sm/" target="_blank" rel="nofollow">关于飞瀛</a> | <a href="http://www.fei580.com/sm/s4.html" target="_blank" rel="nofollow">荣誉资质</a> | <a href="http://www.fei580.com/sm/9.htm" target="_blank" rel="nofollow">服务承诺</a> | <a href="http://www.fei580.com/yinlian/" target="_blank" rel="nofollow">在线支付</a> | <a href="http://www.travelsky.com/tsky/validate.jsp" target="_blank" rel="nofollow">机票验真</a> | <a href="http://www.fei580.com/sm/16.htm" target="_blank" rel="nofollow">售后服务</a> | <a href="http://www.fei580.com/sm/4.htm" target="_blank" rel="nofollow">订票流程</a> | <a href="http://www.fei580.com/sm/s5.html" target="_blank" rel="nofollow">联系我们</a></p>
+ <p>订票热线：400-885-0663(免费) 020-22382632(国际)　020-22382631(国内) 办公时间：9:00～18:00 </p>
+ <p>Copyright © 2009 - 2017 <a href="http://www.fei580.com" target="_blank" rel="nofollow">飞瀛网</a> 广州市飞瀛商务服务有限公司 All Rights Reserved</p>
+ <div style="display:none">
+    <!--站长工具统计-->
+	<script src="http://s17.cnzz.com/stat.php?id=3579146&web_id=3579146&show=pic" language="JavaScript"></script>
+ </div>
+</div>
+<!--时间控件JS-->
+<script language="javascript" type="text/javascript" src="http://www.fei580.com/plugin/js/datepicker.js"></script>
+<!-- TOP快捷按钮 -->
+<script type="text/javascript" src="http://v.fei580.com/js/scrolltop.js" ></script>
+<div id="scrolltop">⇪</div>
+<!-- End TOP快捷按钮 -->
+<!--[if lte IE 6]>
+<div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank" rel="nofollow">Internet Explorer 8</a> 或以下浏览器： <a href="http://www.mozillaonline.com/" target="_blank" rel="nofollow">Firefox</a> / <a href="http://www.google.com/chrome/?hl=zh-CN" target="_blank" rel="nofollow">Chrome</a> / <a href="http://www.apple.com.cn/safari/" target="_blank" rel="nofollow">Safari</a> / <a href="http://www.operachina.com/" target="_blank" rel="nofollow">Opera</a> | <a href="javascript:void(0)" onclick="$('#ie6-warning').slideUp('slow');" title="关闭">关闭提示</a>
+</div>
+<![endif]-->
+</body>
+</html>

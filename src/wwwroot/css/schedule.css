@@ -1,0 +1,232 @@
+﻿/** Default **/
+.result_list {
+    line-height: 20px;
+}
+.result_list .result_thead {
+    padding: 3px 0;
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+    /*background: #f5f5f5;*/
+    font-weight: 700;
+    line-height: 18px;
+}
+.fix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.result_list .c1 {
+    width: 138px;
+}
+.result_list .result_thead .c1 {
+    margin-left: 28px;
+    width: 115px;
+}
+.result_list span {
+    float: left;
+    margin: 0 6px;
+    display: inline;
+}
+.result_list .result_thead span em {
+	font-style: normal;
+    font-weight: 100;
+}
+.result_list .c2 {
+    width: 72px;
+    text-align: center;
+    margin: 0 6px 0 0;
+}
+.result_list .c3 {
+    width: 76px;
+    text-align: center;
+}
+.result_list .c4 {
+    width: 52px;
+    text-align: center;
+    margin: 0;
+}
+.result_list .c5 {
+    width: 126px;
+    text-align: center;
+    margin: 0 6px 0 0;
+}
+.result_list .c6 {
+    width: 65px;
+    text-align: center;
+    margin: 0 6px 0 0;
+}
+.result_list .c7 {
+    width: 66px;
+    text-align: center;
+    margin: 0;
+}
+.result_list .c8 {
+    float: right;
+    width: 94px;
+    text-align: center;
+}
+.result_content li {
+	width:100%;
+	height:auto;
+	padding:5px 0;
+	overflow:hidden;
+}
+.circular_blue {
+	margin-left:4px!important;
+	margin-right:0!important;
+	padding:0 3px;
+	color:#fff;
+	background:#008bc5;
+}
+.circular_gray {
+	margin-left:4px!important;
+	margin-right:0!important;
+	padding:0 3px;
+	color:#fff;
+	background:#666666;
+}
+.state_detail {
+	display:block;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	padding:20px 10px;
+}
+.state_detail dd {
+	width:100%;
+	overflow:hidden;
+}
+.sd_1 {
+	float:left;
+	width:50%;
+	line-height:32px;
+}
+.sd_2, .sd_3, .sd_4, .sd_5, .sd_6 {
+	float:left;
+	width:30%;
+	line-height:32px;
+}
+.result_table h2 {
+	font-size:14px;
+	line-height:28px;
+}
+.fquery_thead, .state_list {
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.fquery_thead {
+	background:#ccc;
+	margin-bottom:15px;
+}
+.state_list li {
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin:5px auto;
+}
+.state_list li:nth-child(2), .state_list li:nth-child(4), .state_list li:nth-child(6), .state_list li:nth-child(8), .state_list li:nth-child(10) {
+	background:#eee;
+}
+.ctime1, .ctime2, .ctime3, .ctime4, .ctime5, .ctime6 {
+	float:left;
+}
+.ctime1 {
+	width:15%;
+}
+.ctime2 {
+	width:10%;
+}
+.ctime3 {
+	width:14%;
+}
+.ctime4 {
+	width:12%;
+}
+.ctime5 {
+	width:24%;
+}
+.ctime6, .ctime6mt12{
+	width:10%;
+	text-align:center;
+}
+.state_list .ctime1, .state_list .ctime5 {
+	padding-top:10px;
+}
+.flightnolist {
+	padding:20px 10px;
+	overflow:hidden;
+}
+.flightnolist li {
+	float:left;
+	width:25%;
+	line-height:30px;
+	overflow:hidden;
+	margin:5px 0;
+}
+.schedhead {
+	clear:both;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	background:#ccc;
+	margin:10px auto;
+	text-indent:10px;
+}
+.schedtime {
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.schedtime li {
+	float:left;
+	width:25%;
+	height:24px;
+	text-indent:10px;
+	line-height:24px;
+	list-style:none;
+}
+.sc_ticket_rightbox {
+    width: 280px;
+    height: auto;
+    overflow: hidden;
+    padding: 0px 5px;
+    margin-top: 10px;
+	border-left: 1px solid #DFDFDF;
+	border-bottom: 1px solid #DFDFDF;
+	border-right: 1px solid #DFDFDF;
+}
+.sc_ticket_title {
+	clear: both;
+    width: 100%;
+	line-height:28px;
+    padding-top: 9px;
+}
+.sc_ticket_title strong {
+	color: #fff;
+    text-indent:5px;
+	padding:2px 5px;
+	overflow: hidden;
+    background: #77c234;
+}
+.sc_ticket_list {
+    width: 100%;
+    overflow:hidden;
+	padding-bottom:20px;
+}
+.sc_ticket_list li {
+	clear:both;
+    width: 100%;
+    height: 13px;
+    line-height: 14px;
+    overflow: hidden;
+    margin-top: 10px;
+	list-style:square inside;
+}
+.sc_ticket_list li span{
+	float:right;
+	color:#f00;
+}

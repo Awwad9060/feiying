@@ -1,0 +1,388 @@
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Web;
+using System.Net;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml;
+using System.Text.RegularExpressions;
+using System.IO;
+using System.Collections;
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Text;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using eap.share;
+
+
+/// <summary>
+///AiFeiService 的摘要说明
+/// </summary>
+public class AiFeiService
+{ 
+
+    private string aifeServerUrl = "http://data.faredata.cn/webService/";
+    private string globalTicketUrl = "globalTicket/";
+    private string ticketInfoUrl = "ticketInfo/";
+    private string globalFlightUrl = "globalFlight/";
+    private readonly string _account = "fyjp/";
+
+    public AiFeiService()
+    {
+        //
+        //TODO: 在此处添加构造函数逻辑
+        //
+    }
+
+    /*
+    private void Request()
+    {
+        WebRequest request = WebRequest.Create(_httpUrl);
+        WebResponse response = request.GetResponse();
+        string text = new StreamReader(response.GetResponseStream(), Encoding.Default).ReadToEnd();
+    }
+    */
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="Account">账号</param>
+    /// <param name="Dpt">出发城市三字码</param>
+    /// <param name="Arr">母的城市三字码</param>
+    /// <param name="ToTime">出发日期</param>
+    /// <param name="ReTime">返回日期</param>
+    /// <param name="Cate">all 全部，DC 单程，SF往返</param>
+    /// <returns></returns>
+    public ArrayList GlobalTicket(string Dpt, string Arr, string ToTime, string ReTime, string Cate)
+    {
+        ///获得三字码
+        string url = aifeServerUrl + globalTicketUrl + _account + Dpt + "/" + Arr + "/" + ToTime + "/" + ReTime + "/" + Cate;
+        
+//        string url = "http://data.faredata.cn/webService/globalTicket/fyjp/PEK/DXB/20130718/20130807/SF";
+        
+        WebRequest request = WebRequest.Create(url);
+        WebResponse response = request.GetResponse();
+        string responseText = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+        ArrayList tickets = new ArrayList();
+        //解析返回字符串
+        string[] ticketArray = responseText.Split('@');
+
+        foreach (string ticketText in ticketArray)
+        {
+            string[] ticketOptions = ticketText.Split('^');
+
+            if (ticketOptions.Length == 10)
+            {
+                AiFeiTicketEntity afte = new AiFeiTicketEntity();
+                afte.fromCity = ticketOptions[0];
+                afte.toCity = ticketOptions[1];
+                afte.type = ticketOptions[2];
+                afte.seatShip = ticketOptions[3];
+                afte.shotstayDate = ticketOptions[4];
+                afte.longstayDate = ticketOptions[5];
+                afte.totripDate = ticketOptions[6];
+                afte.airlineCode = ticketOptions[7];
+                afte.ticketPrice = ticketOptions[8];
+                afte.ticketCode = ticketOptions[9];
+                tickets.Add(afte);
+            }
+        }
+
+        return tickets;
+    }
+
+
+    
+    /// <summary>
+    /// 机票具体信息查询接口
+    /// </summary>
+    public void TicketInfo(){
+
+    }
+    
+    /// <summary>
+    /// 实时航班查询接口
+    /// </summary>
+    public ArrayList GlobalFlight(string fromCode,string toCode,string airLineCode,string cls,int num,string goTime){
+        //string url = aifeServerUrl + globalFlightUrl + _account + cls + "/" + fromCode + "/" + toCode + "/" + airLineCode + "/" + num + "/" + goTime;
+        string url = "http://data.faredata.cn/ticketWebService.do?method=globalFlight&account=fyjp&cls=Y&fromCode="+fromCode+"&toCode="+toCode+"&airLineCode="+airLineCode+"&mnum=1&goTime="+goTime;
+        
+        ArrayList flgihts = new ArrayList();
+		try{
+			WebRequest request = WebRequest.Create(url);
+			WebResponse response = request.GetResponse();
+			string responseText = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+			//解析返回字符串
+			string[] flightArray = responseText.Trim().Split('@');//舱位分隔符 @
+	        
+			//cache ticket 插入ticket信息
+			string ticketId = null;
+			string sql = "insert into FY_Aifei_Ticket (fromCity,toCity,airline,fromTime) values ('"+fromCode+"','"+toCode+"','"+airLineCode+"','"+goTime+"') select ID=@@identity";
+			DataSet dsTicket = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, sql);
+			if (dsTicket != null)
+			{
+				ticketId = dsTicket.Tables[0].Rows[0]["ID"].ToString();
+			}
+
+			//只用一个舱位数据
+			foreach (string flightText in flightArray)
+			{
+				ArrayList flight = new ArrayList();
+				//转机分割符 *
+				string[] relayArray = flightText.Split('*');
+	            
+				int flightNum = 1;
+				foreach (string relayText in relayArray)
+				{
+					string[] flightOptions = relayText.Split('^');
+					if (flightOptions.Length == 9)
+					{
+						AiFeiFlightEntity affe = new AiFeiFlightEntity();
+
+						affe.airlineCode = flightOptions[0];
+						affe.flightNum = flightOptions[1];
+						affe.fromAirport = flightOptions[2];
+						affe.toAirport = flightOptions[3];
+						affe.toTime = flightOptions[4];
+						affe.arriveTime = flightOptions[5];
+						affe.airplan = flightOptions[6];
+						affe.seats = Convert.ToInt32(flightOptions[7]);
+						affe.isRelay = Convert.ToInt32(flightOptions[8]);
+	                    
+						//cache 舱位信息
+						if(ticketId!=null&&!ticketId.Trim().Equals("")&&!ticketId.Trim().Equals("0")){
+							sql = "insert into FY_Aifei_Flights (airline,flightNum,toAirport,fromAirport,toTime,arriveTime,airplan,seats,num,ticketid) values ('"+affe.airlineCode+"','"+affe.flightNum+"','"+affe.toAirport+"','"+affe.fromAirport+"','"+affe.toTime+"','"+affe.arriveTime+"','"+affe.airplan+"','"+affe.seats+"','"+flightNum+"','"+ticketId+"')";
+							SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, sql);
+						}
+						flightNum++;
+	                    
+						flight.Add(affe);
+					}
+				}
+				flgihts.Add(flight);
+				return flgihts;
+			}
+	        
+        }catch(Exception e){
+			return flgihts;
+        }
+        
+        return flgihts;
+    }
+
+    public ArrayList AiFeiTickets(string Dpt, string Arr, string ToTime, string ReTime, string Cate)
+    {
+        ArrayList ticketsList = this.GlobalTicket(Dpt, Arr, ToTime, ReTime, Cate);
+        ArrayList tickets = new ArrayList();
+
+        foreach(object obj in ticketsList)
+        {
+            AiFeiTicket aifeiTicket = new AiFeiTicket();
+            AiFeiTicketEntity ticketObj = (AiFeiTicketEntity)obj;
+            aifeiTicket.price = Convert.ToInt32(ticketObj.ticketPrice);
+           
+            aifeiTicket.fromCityCode = ticketObj.fromCity;
+            //查找city信息
+            string str = "select * from FY_FromCity where cityCode='" + ticketObj.fromCity.Trim() + "'";
+            DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+            if (ds != null)
+            {
+                aifeiTicket.fromCity = ds.Tables[0].Rows[0]["chName"].ToString();
+                aifeiTicket.fromCityId = ds.Tables[0].Rows[0]["fId"].ToString();
+            }
+            else
+            {
+                aifeiTicket.fromCity = "";
+                aifeiTicket.fromCityId = "0";
+            }
+            
+            aifeiTicket.toCityCode = ticketObj.toCity;
+            //查找city信息
+            str = "select * from FY_ToCity where cityCode='" + ticketObj.toCity.Trim() + "'";
+            ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+            if (ds != null)
+            {
+                aifeiTicket.toCity = ds.Tables[0].Rows[0]["chName"].ToString();
+                aifeiTicket.toCityId = ds.Tables[0].Rows[0]["tId"].ToString();
+            }
+            else
+            {
+                aifeiTicket.toCity = "";
+                aifeiTicket.toCityId = "0";
+            }
+
+            aifeiTicket.airlineCode = ticketObj.airlineCode;
+            //查找airline信息
+            str = "select * from FY_Airline where airlineCode='" + ticketObj.airlineCode.Trim() +"'";
+            ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                aifeiTicket.airline =  ds.Tables[0].Rows[0]["chName"].ToString();
+                aifeiTicket.airlineId = ds.Tables[0].Rows[0]["aId"].ToString();
+                aifeiTicket.airlineSmallPic = ds.Tables[0].Rows[0]["smallPic"].ToString();
+            }
+            else
+            {
+                aifeiTicket.airline = "";
+                aifeiTicket.airlineId = "0";
+            }
+
+            aifeiTicket.sourceType = "aifei";
+            if (ticketObj.type == "SF")
+            {
+                aifeiTicket.tripType = "1";
+            }else if(ticketObj.type == "DC")
+            {
+                aifeiTicket.tripType = "0";
+            }
+            //aifeiTicket.isRelay = ticketObj.type;
+
+            //查找税费信息
+            str = "select * from FY_Tax where airline='" + aifeiTicket.airlineId + "' and fromCity='" + getFromCityIdByCode(ticketObj.fromCity.Trim()) + "' and toCity='" + getToCityIdByCode(ticketObj.toCity) + "'";
+            ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                aifeiTicket.tax = ds.Tables[0].Rows[0]["tax"].ToString();
+            }
+            else
+            {
+                aifeiTicket.tax = "---";
+            }
+            
+
+
+            //请求航班信息
+            //ArrayList fightList = this.GlobalFlight(ticketObj.fromCity, ticketObj.toCity, ticketObj.airlineCode, ticketObj.seatShip, 1, ToTime);
+            //aifeiTicket.flights = fightList;
+            aifeiTicket.flights = new ArrayList();
+
+            tickets.Add(aifeiTicket);
+        }
+        //this.GlobalFlight(string fromCode,string toCode,string airLineCode,string cls,int num,string goTime);
+
+        return tickets;
+    }
+
+
+    private int getToCityIdByCode(string code)
+    {
+        int aId = 0;
+        
+        string str = "select tId,cityCode,chName from FY_ToCity where cityCode='" + code + "'";
+        DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+        if (ds != null)
+        {
+            if (code == ds.Tables[0].Rows[0]["cityCode"].ToString())
+            {
+                aId = Convert.ToInt32(ds.Tables[0].Rows[0]["tId"].ToString());
+            }
+        }
+
+        return aId;
+    }
+
+
+    private int getFromCityIdByCode(string code)
+    {
+        int aId = 0;
+       
+        string str = "select fId,cityCode,chName from FY_FromCity where cityCode='" + code + "'";
+        DataSet ds = SqlHelper.ExecuteDataset(SqlHelper.ConnString_select, CommandType.Text, str);
+        if (ds != null)
+        {
+            if (code == ds.Tables[0].Rows[0]["cityCode"].ToString())
+            {
+                aId = Convert.ToInt32(ds.Tables[0].Rows[0]["fId"].ToString());
+            }
+        }
+       
+        return aId;
+    }
+   
+}
+
+/// <summary>
+/// 机票实体
+/// </summary>
+public class AiFeiTicketEntity
+{
+    public string fromCity;//出发城市
+    public string toCity;
+    public string type;
+    public string seatShip;//舱位
+    public string shotstayDate;//最短停留
+    public string longstayDate;//最长停留
+    public string totripDate;//截止出发日期
+    public string airlineCode;//航空公司代码
+    public string ticketPrice;
+    public string ticketCode;
+}
+
+public class AiFeiFlightEntity
+{
+    public string airlineCode;//航空公司代码
+    public string flightNum;//航班号
+    public string fromAirport;//出发机场三字码
+    public string fromAirportName;
+    public string toAirport;
+    public string toAirportName;
+    public string toTime;
+    public string arriveTime;
+    public string airplan;//机型信息
+    public int seats;//座位数
+    public int isRelay;//是否转机
+}
+
+public class AiFeiTicket
+{
+	public string flightNum;//航班号
+    public int price;//票价
+    public string fromCity;
+    public string fromCityCode;
+    public string fromCityId;
+    
+    public string toCity;
+    public string toCityCode;
+    public string toCityId;
+
+    public string airlineCode;
+    public string airline;
+    public string airlineId;
+    public string airlineSmallPic;
+
+    public string tax;//税费
+
+    public int isRelay;
+    public string sourceType;
+    public string tripType;
+  
+    public ArrayList flights;//转机航班
+}
+
+public class AiFeiAirline
+{
+    public string airlineCode;
+    public string airlineName;
+    public string airlineId;
+    public string minPrice;
+    public string airlinePic;
+}
+
+
+

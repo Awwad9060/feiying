@@ -1,0 +1,127 @@
+.s-f-empty-text { color: #999 !important;}
+.htCitySelector
+{
+    z-index: 20;
+    border: #ababab 1px solid;
+    min-height: 330px;
+    width: 230px;
+    background: #fcfcfc;
+    height:330px;
+    color: #0055aa;
+    overflow: visible;
+}
+.htCitySelector .tip 
+{
+    font-weight: bold;
+    font-size:12px; 
+    color:#999;
+    line-height:24px;
+    padding-left:25px; 
+    height:24px; 
+}
+
+.htCitySelector .list
+{
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+.htCitySelector .list span
+{
+    display:block;
+    padding-left:5px;
+    padding-top:5px;
+}
+
+.htCitySelector .list .emptyList
+{
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0px;
+}
+.htCitySelector .list DIV.selected
+{
+    background: #e9f6fc;
+    color: #00a0d8;
+}
+.htCitySelector .list DIV
+{
+    font-size:12px;
+    padding-left:8px;
+    padding-right:8px;
+    height:24px; 
+    line-height:24px;
+    border-bottom:1px dotted #DCDCDC;
+    overflow:hidden;
+    color:#333;
+}
+.htCitySelector .list DIV.even
+{
+    background: #f9fcfe;
+}
+.htCitySelector .list DIV.hover
+{
+    background: #fcf9d7;
+}
+.htCitySelector .list DIV .p
+{
+    white-space: nowrap;
+    float: left;
+    overflow: hidden;
+}
+.htCitySelector .list DIV .z
+{
+    white-space: nowrap;
+    float: right;
+    overflow: hidden;
+}
+.htCitySelector .list DIV .c
+{
+    white-space: nowrap;
+    float: right;
+    overflow: hidden;
+}
+.htCitySelector .pager
+{
+    text-align: center;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font: 12px 宋体;
+    overflow: hidden;
+    padding-top: 6px;
+}
+.htCitySelector .pager A
+{
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #00a0d8;
+    padding-top: 4px;
+}
+.htCitySelector .pager SPAN
+{
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: black;
+    padding-top: 4px;
+}
+
+/*城市控件*/
+.hotcity-box { background-color: #FFFFFF; font-size: 12px; width: 353px;top: 261px; box-shadow: 2px 2px 5px #ababab; z-index: 800; position: absolute; left: 312px; }
+.hotcity-title { background-color: #65c0d9; border-color:#CCCCCC; border-style: solid; border-width: 1px 1px 0; color: #FFF; height: 24px; line-height: 24px; padding-left: 10px; background:url(CityClient/hotcity-nav.gif) scroll repeat-x 0 0 transparent; }
+.hotcity-list { border-color: #999999; border-style: solid; border-width: 0 1px 1px; overflow: hidden; padding: 5px; }
+.hotcity-list ol{ list-style:none; }
+.hotcity-list ul { list-style:none; }
+.hotcity-list-nav { border-bottom: 1px solid #CCCCCC; padding-bottom: 20px; }
+.hotcity-list-nav li { color: #df3232; cursor: pointer; float: left; height: 20px; line-height: 20px; list-style-type: none; text-align: center; }
+.hotcity-list-nav li span { padding: 0 8px; }
+.hotcity-list-nav li .over { background-color: #FFFFFF; border-color: #CCCCCC; border-style: solid; border-width: 1px 1px 0; color: #000000; display: block; font-weight: bold; padding: 0 7px; }
+.hotcity-list-content { padding-top: 4px; width: 100%; }
+.hotcity-list-content li { float: left; height: 24px; overflow: hidden; width: 67px; }
+.hotcity-list-content li a { border: 1px solid #FFFFFF; color: #000000; display: block; height: 30px; line-height: 30px; padding-left: 5px; text-decoration:none; }
+.hotcity-list-content li a:hover { background-color: #cefcf7; border: 1px solid #45b8ab; text-decoration: none;color: #000000; }
+.hotcity-list-content li code {display:none;}

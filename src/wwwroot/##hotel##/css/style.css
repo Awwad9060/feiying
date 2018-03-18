@@ -1,0 +1,23 @@
+.small {	FONT-SIZE: 9pt	}
+.smallh20 {	FONT-SIZE: 12px; LINE-HEIGHT: 20pt	}
+.smallh15 {	FONT-SIZE: 12px; LINE-HEIGHT: 15pt	}
+.medium {	FONT-SIZE: 14px	}
+.mediumh15 {	FONT-SIZE: 14px; LINE-HEIGHT: 15pt	}
+.mediumh20 {	FONT-SIZE: 14px; LINE-HEIGHT: 20pt	}
+.big {	FONT-SIZE: 16px	}
+
+p,td,input,select {font-size: 9pt ;}
+.font {font-size: 9pt ; line-height:14pt;}
+A { text-decoration:none;} 
+A:visited { color:purple; text-decoration:none;} 
+A:active { color:ff0000; } 
+A:hover { color:ff0000; text-decoration:none;}
+.input1 {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; COLOR: #666666; FONT-FAMILY: "ËÎÌו", "Arial", "Verdana", "sans-serif"; FONT-SIZE: 9pt
+}
+.input_blue {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; COLOR: blue;TEXT-ALIGN: right; FONT-FAMILY: "ËÎÌו", "Arial", "Verdana", "sans-serif"; FONT-SIZE: 9pt
+}
+.grayline{
+	border-bottom-color:gray;border-bottom-width: 1px;BORDER-LEFT: medium none; BORDER-RIGHT: medium none; BORDER-TOP: medium none; TEXT-ALIGN:right;background:white;
+}

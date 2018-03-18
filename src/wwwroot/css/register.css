@@ -1,0 +1,25 @@
+﻿.registertitle{
+font-size:20px;text-align:center;
+}
+.registerbox{
+padding:5px 15px 15px 30px;line-height:20px;border:1px solid #E7E7E7;margin-top:12px;
+}
+.registerbox p{
+margin-top:12px;
+}
+
+.registerbutton{
+padding:15px 0px 20px 0px;text-align:center;
+}
+.registersubmit{
+background:url(../images/bg.gif) no-repeat 0px -1102px;width:102px;height:28px;line-height:34px;overflow:hidden;font-size:18px;border:none;cursor:pointer;
+}
+.registertable{
+margin:0px auto;width:446px;font-size:14px;
+}
+.registertable td{
+padding-top:12px;
+}
+.regtextcss{
+background:url(../images/bg.gif) no-repeat 0px -1139px;width:182px;height:17px;padding:2px 4px 2px 4px;overflow:hidden;border:none;
+}

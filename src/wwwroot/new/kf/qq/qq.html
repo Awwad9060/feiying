@@ -1,0 +1,241 @@
+<link type="text/css" rel="stylesheet" href="images/kfmenu.css">
+<script language="javascript">
+var iscolse=false;
+var thisSeeHeiht=((document.documentElement.clientHeight==0)?document.body.clientHeight:document.documentElement.clientHeight);
+var isotherhide=((thisSeeHeiht>400)?false:true);
+String.prototype.Trim = function() 
+{ 
+	return this.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+function dolookmenu(v){
+	if(v=="close"){
+		document.getElementById("kfbox").style.display="none";
+	}else if(v=="xiao"){
+		iscolse=true;
+		closeed();
+	}
+}
+
+</script>
+<div onMouseOver="javascript:showkf()" id="kfbox" class="kfbox" style="width: 25px;">
+	<div class="kfhead">
+                 <img onClick="javascript:dolookmenu('xiao')" id="qqtitlelog" class="log" src="images/qq_11.gif" style="display: none;">
+                <img onClick="javascript:dolookmenu('xiao')" id="qqxiao" class="xiao" src="images/qq_06.gif">
+<!--                 <img onclick="javascript:dolookmenu('close')" id="qqclose" class="close" src="images/qq_08.gif"> -->
+    <!--<img border="0" src="images/index_bot2_01.gif" />-->
+    </div>
+
+    <div id="kfmain" class="kfmain" style="height: 205px;">
+	<div id="kfcontent" class="kfcontent" style="display: none;">
+        		<div style="margin-top: 0px;" class="kfitemtitle">
+				<img src="images/boot.jpg" style="margin: 5px auto;">&nbsp;&nbsp;&nbsp;&nbsp;QQ咨询</div>
+				<div id="k0" class="kfitem"><ul>
+				<li class="QQonline">&nbsp;&nbsp;
+				<a onClick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=32335510&site=qq&menu=yes', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">
+				<img src="images/pa.gif"></a>&nbsp;&nbsp;
+				<a onClick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=32335510&site=qq&menu=yes', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">飞瀛_Carol</a></li>
+				
+				<li class="QQonline">&nbsp;&nbsp;
+				<a onClick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=421428259&site=qq&menu=yes', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">
+				<img src="images/pa.gif"></a>&nbsp;&nbsp;
+				<a onClick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=421428259&site=qq&menu=yes', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">吴小姐</a></li>
+				
+				
+				</ul></div>
+				
+				
+				<div style="margin-top: 0px;" class="kfitemtitle">
+				<img src="images/msn.bmp" style="margin: 5px auto;">&nbsp;&nbsp;&nbsp;&nbsp;MSN咨询</div>
+				<div id="k0" class="kfitem"><ul>
+				<li class="QQonline">&nbsp;&nbsp;
+				<a onClick="javascript:window.open('msnim:chat?contact=gzfeiyue_carol@hotmail.com', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">
+				<img src="images/media.gif"></a>&nbsp;&nbsp;
+				<a onClick="javascript:window.open('msnim:chat?contact=gzfeiyue_carol@hotmail.com', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" href="#">gzfeiyue</a></li>
+								
+								
+				</ul></div>
+				
+				
+				
+        </div>
+        <div onClick="javascript:showkf()" class="kfmenu" id="kfmenu" style="height: 152px;"><img border="0" onClick="javascript:dolookmenu('xiao')" id="kfmenuimg" src="images/menu_on.gif"></div>
+      <div id="kf53button" style="display: none;" class="kf53button">
+        
+        <a target="_blank" href="http://chatserver.comm100.cn/ChatWindow.aspx?siteId=80012788&visitorId=28281&planId=698&r=5132"><img border="0" src="images/qq2.gif"></a>
+   </div>
+
+	</div>
+    <div class="kffoot"><img border="0" src="images/index_bot2_04.gif"></div>
+</div>
+<script language="javascript"> 
+function showandhide(ii) {
+	var alli=4;//总项数,以0开始
+	for(var c=0;c<=alli;c++){
+		var doobj=document.getElementById("k"+c);
+		doobj.style.display="none";
+	}
+		if(isotherhide){
+			document.getElementById("k"+ii).style.display="";
+		}else if(ii==1 || ii==0){
+			document.getElementById("k"+1).style.display="";
+			document.getElementById("k"+0).style.display="";
+		}else{
+			document.getElementById("k"+ii).style.display="";
+		}
+}
+ 
+var tips; 
+var theTop = 186;
+var old = theTop;
+var prox;
+var proy;
+var proxc;
+var proyc;
+var dopar;
+var dropmsg;
+var movetop=56;//设定上移多少px '180
+var ismovetop=true;
+var objbox=document.getElementById("kfbox");
+var objmenuimg=document.getElementById("kfmenuimg");
+var objcontent=document.getElementById("kfcontent");
+var objboxmain=document.getElementById("kfmain");
+var objkfmenu=document.getElementById("kfmenu");
+//objkfmenu.style.height=isotherhide?"310px":"465px";
+//var kfboxh=isotherhide?380:530;//parseInt(objboxmain.offsetHeight);
+objkfmenu.style.height="152px";
+var kfboxh=215;
+var kfboxh1=kfboxh;
+
+objboxmain.style.height="210px";
+function initFloatTips() 
+{ 
+	tips = document.getElementById('kfbox');
+	moveTips();
+}
+ 
+function moveTips()
+{
+		clearTimeout(dropmsg);
+	 	  var tt=10; 
+		  if (window.innerHeight) 
+		  {
+			  pos = window.pageYOffset  
+		  }else if (document.documentElement && document.documentElement.scrollTop) {
+			 pos = document.documentElement.scrollTop  
+		  }else if (document.body) {
+		    pos = document.body.scrollTop;  
+		  }
+		  
+		  pos=pos-tips.offsetTop+theTop; 
+		  pos=tips.offsetTop+pos/5; 
+		  if (pos < theTop){
+			 pos = theTop;
+		  }
+		  if (pos != old) { 
+			 tips.style.top = pos+"px";
+			 tt=10; 
+		  }
+		  old = pos;
+		  dropmsg=setTimeout(moveTips,tt);
+}
+initFloatTips();
+
+function showkf(){
+	if(iscolse)
+		return;
+	clearInterval(prox);
+	clearInterval(proy);
+	clearInterval(proxc);
+	clearInterval(proyc);
+	clearTimeout(dopar);
+	
+	objmenuimg.src="images/menu_off.gif";
+	prox = setInterval(function(){openx(objbox,150)},10);
+}
+function openx(o,x){//横起打开
+	var cx = parseInt(o.offsetWidth);
+	if(cx < x)
+	{
+		o.style.width = (cx + Math.ceil((x-cx)/2)) +"px";
+	}
+	else
+	{
+		if(ismovetop){
+			var thistop=objbox.offsetTop;
+			//objbox.style.top=(thistop - movetop)+"px";
+			theTop=theTop-movetop;
+			ismovetop=false;
+			objcontent.style.display="block";
+			document.getElementById("kf53button").style.display="";
+			document.getElementById("qqtitlelog").style.display="";
+			document.getElementById("qqxiao").style.display="";	
+		}
+		clearInterval(prox);
+		
+		proy = setInterval(function(){openy(objboxmain,kfboxh)},10);
+	}
+
+} 
+function openy(o,y){
+	var cy = parseInt(o.offsetHeight);
+	if(cy < y)
+	{
+		o.style.height = (cy + Math.ceil((y-cy)/1)) +"px";
+	}
+	else
+	{
+		
+		clearInterval(proy);	
+		
+		return;
+	}
+}
+function closeed(){
+		clearInterval(prox);
+		clearInterval(proy);
+		clearInterval(proxc);
+		clearInterval(proyc);
+		clearTimeout(dopar);
+		proyc = setInterval(function(){closey(objbox)},10);			
+}	
+function closey(o){
+		if(kfboxh1 > 210)
+		{
+			kfboxh1 = kfboxh1-Math.ceil(kfboxh1/10);
+			
+			objboxmain.style.height =kfboxh1  +"px";
+		}
+		else
+		{
+			clearInterval(proyc);
+			kfboxh1=kfboxh;
+			//objcontent.style.width=0;
+			objcontent.style.display="none";
+			document.getElementById("kf53button").style.display="none";
+				document.getElementById("qqtitlelog").style.display="none";
+				document.getElementById("qqxiao").style.display="none";	
+			proxc = setInterval(function(){closex(o)},10);
+			
+		}
+}
+function closex(o){
+		var cx = parseInt(o.offsetWidth);
+		if(cx>25)
+		{
+			o.style.width = (cx - Math.ceil(cx/10)) +"px";
+		}else{
+			if(!ismovetop){
+				var thistop=objbox.offsetTop;
+				theTop=theTop+movetop;
+				ismovetop=true;
+			}
+			clearInterval(proxc);
+			objmenuimg.src="images/menu_on.gif";
+			iscolse=false;
+			return;
+		}
+}
+
+</script>
+
+<script language="javascript">showkf();</script>
